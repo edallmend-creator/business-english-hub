@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Simulator - Business English in 4 Wochen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #28A745 0%, #1e8449 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #28A745, #1e8449);
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .scenario-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #28A745;
+            margin-bottom: 20px;
+        }
+
+        .dialogue {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 4px solid #28A745;
+        }
+
+        .speaker {
+            font-weight: 700;
+            color: #28A745;
+            margin-bottom: 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .quote {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #333;
+            font-style: italic;
+        }
+
+        .dialogue-item {
+            margin-bottom: 16px;
+        }
+
+        .dialogue-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .your-turn {
+            font-size: 12px;
+            color: #999;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #e0e0e0;
+            font-weight: 500;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            padding: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+            background: white;
+        }
+
+        .option:hover {
+            border-color: #28A745;
+            background: #f0fdf4;
+        }
+
+        .option.selected {
+            border-color: #28A745;
+            background: #f0fdf4;
+        }
+
+        .option.correct {
+            border-color: #28A745;
+            background: #e8f5e9;
+            color: #1b5e20;
+        }
+
+        .option.incorrect {
+            border-color: #dc3545;
+            background: #ffebee;
+            color: #b71c1c;
+        }
+
+        .option.disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .option-letter {
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        .feedback {
+            margin-top: 20px;
+            padding: 16px;
+            border-radius: 8px;
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+
+        .feedback.show {
+            display: block;
+        }
+
+        .feedback.correct {
+            background: #e8f5e9;
+            border-left: 4px solid #28A745;
+            color: #1b5e20;
+        }
+
+        .feedback.incorrect {
+            background: #ffebee;
+            border-left: 4px solid #dc3545;
+            color: #b71c1c;
+        }
+
+        .feedback-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .feedback-text {
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .explanation {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid currentColor;
+            opacity: 0.9;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #28A745 0%, #1e8449 100%);
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .summary {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .summary-score {
+            font-size: 48px;
+            font-weight: 700;
+            color: #28A745;
+            margin-bottom: 16px;
+        }
+
+        .summary-text {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 24px;
+        }
+
+        .summary-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .summary-stat {
+            padding: 16px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .summary-stat-label {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .summary-stat-value {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .summary-stat.correct .summary-stat-value {
+            color: #28A745;
+        }
+
+        .summary-stat.incorrect .summary-stat-value {
+            color: #dc3545;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .back-button {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: inline-block;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        .back-button:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 24px 16px;
+            }
+
+            .scenario-title {
+                font-size: 20px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .summary-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html#week-3" class="back-button">← Zurück zu Woche 4</a>
+
+        <div class="header">
+            <h1>🎯 Meeting Simulator</h1>
+            <p>Woche 4: Anwendung - Real-World Szenarien trainieren</p>
+        </div>
+
+        <div class="card" id="simulatorCard">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text">
+                Szenario <span id="currentScenario">1</span> von <span id="totalScenarios">5</span>
+            </div>
+
+            <div class="scenario-title" id="scenarioTitle">Szenario lädt...</div>
+
+            <div class="dialogue" id="dialogueContainer"></div>
+
+            <div class="options" id="optionsContainer"></div>
+
+            <div class="feedback" id="feedback"></div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" id="submitBtn" onclick="checkAnswer()">Antwort Prüfen</button>
+            </div>
+        </div>
+
+        <div id="summaryCard" style="display: none;">
+            <div class="card summary">
+                <div class="summary-score" id="finalScore">100%</div>
+                <div class="summary-text" id="summaryText">Großartig gemacht!</div>
+                
+                <div class="summary-details">
+                    <div class="summary-stat correct">
+                        <div class="summary-stat-label">Richtig</div>
+                        <div class="summary-stat-value" id="correctCount">0</div>
+                    </div>
+                    <div class="summary-stat incorrect">
+                        <div class="summary-stat-label">Falsch</div>
+                        <div class="summary-stat-value" id="incorrectCount">0</div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="restartSimulator()" style="margin-top: 24px;">Simulator Neustarten</button>
+                <button class="btn btn-secondary" onclick="window.location.href='index.html#week-3'" style="margin-top: 10px;">Zurück zu Woche 4</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Meeting Szenarien
+        const scenarios = [
+            {
+                title: "Szenario 1: Launch Delay",
+                dialogue: [
+                    { speaker: "Nina (Manager)", quote: "The supplier confirmed late last night. The launch is delayed by 2 weeks." },
+                    { speaker: "Sam (Marketing)", quote: "Two weeks?! I need clarity on what to tell the team internally." }
+                ],
+                prompt: "Wie antwortest du?",
+                options: [
+                    {
+                        text: "This is bad news.",
+                        isCorrect: false,
+                        explanation: "Zu direkt und negativ. Das verstärkt nur die Frustration ohne konstruktiven Weg zu zeigen."
+                    },
+                    {
+                        text: "Let me frame where we are. Supplier delayed, launch moves 2 weeks. Sam, what does your team need?",
+                        isCorrect: true,
+                        explanation: "Perfekt! Du verwendest Framing (wo wir stehen), erkennst die Sorge an und fragst nach Bedarf. Das ist Leadership."
+                    },
+                    {
+                        text: "Maybe we can talk about this later?",
+                        isCorrect: false,
+                        explanation: "Vermeidungsverhalten. Damit verlierst du Momentum und vertrauenst dem Team nicht, mit der Info umzugehen."
+                    }
+                ]
+            },
+            {
+                title: "Szenario 2: Feature Request Pushback",
+                dialogue: [
+                    { speaker: "Lena (Product)", quote: "We need to add this feature before launch. It's critical." },
+                    { speaker: "Raj (Engineering)", quote: "Critical? We're already 2 weeks behind. Adding scope is impossible." },
+                    { speaker: "Lena", quote: "But our customers are expecting..." }
+                ],
+                prompt: "Du moderierst. Was sagst du?",
+                options: [
+                    {
+                        text: "Both points are valid. Let's make a decision trigger.",
+                        isCorrect: true,
+                        explanation: "Exzellent! Du erkennst beide Seiten an, stellst klar, dass eine Entscheidung nötig ist (Decision Trigger aus dem Buch)."
+                    },
+                    {
+                        text: "Engineering has to deliver what Product asks for.",
+                        isCorrect: false,
+                        explanation: "Falsch. Du ignorierst die realistischen Constraints von Engineering und beschädigst das Vertrauen."
+                    },
+                    {
+                        text: "Let's make a list of all features and decide later.",
+                        isCorrect: false,
+                        explanation: "Zu passiv. Das Meeting braucht einen klaren nächsten Schritt, keine endlose Diskussion."
+                    }
+                ]
+            },
+            {
+                title: "Szenario 3: Budget Cut",
+                dialogue: [
+                    { speaker: "CFO", quote: "We need to cut spending by 20% across all teams." },
+                    { speaker: "You", quote: "[Stille - what do you say?]" }
+                ],
+                prompt: "Wie reagierst du als Team Lead?",
+                options: [
+                    {
+                        text: "That's impossible. My team can't function with less.",
+                        isCorrect: false,
+                        explanation: "Defensiv und nicht konstruktiv. Keine Lösungsorientierung."
+                    },
+                    {
+                        text: "I understand the pressure. Before we commit to 20%, can we clarify the timeline and which areas have flexibility?",
+                        isCorrect: true,
+                        explanation: "Stark! Du erkennst die Situation an, fragst aber nach Details statt blindlings zu akzeptieren oder zu widersprechen."
+                    },
+                    {
+                        text: "OK, we'll make it work somehow.",
+                        isCorrect: false,
+                        explanation: "Zu schnelle Zusage. Du hast keine Bedingungen gestellt oder Informationen gesammelt."
+                    }
+                ]
+            },
+            {
+                title: "Szenario 4: Blame & Responsibility",
+                dialogue: [
+                    { speaker: "Manager", quote: "The Q3 report is late. Who's responsible?" },
+                    { speaker: "Team Member", quote: "Well, we didn't get the data from Finance in time..." }
+                ],
+                prompt: "Du bist der Team Lead. Was sagst du?",
+                options: [
+                    {
+                        text: "That's not an excuse. I need the report done by Friday.",
+                        isCorrect: false,
+                        explanation: "Zu hart und unhilfreich. Du ignorierst die echten Blockaden."
+                    },
+                    {
+                        text: "Let's clarify: when did we ask Finance, and when did we get the data? What's our realistic deadline now?",
+                        isCorrect: true,
+                        explanation: "Perfekt! Du sammelst Fakten (Framing), vermeidest Schuldzuweisungen und setzt realistische Erwartungen."
+                    },
+                    {
+                        text: "Finance is always slow. That's just how it is.",
+                        isCorrect: false,
+                        explanation: "Du akzeptierst das Problem, ohne es zu lösen. Keine Veränderung, keine Führung."
+                    }
+                ]
+            },
+            {
+                title: "Szenario 5: Difficult Feedback",
+                dialogue: [
+                    { speaker: "Director", quote: "Your presentation last week wasn't clear. We need better communication." }
+                ],
+                prompt: "Wie antwortest du?",
+                options: [
+                    {
+                        text: "I did my best with the time I had.",
+                        isCorrect: false,
+                        explanation: "Defensiv und nicht konstruktiv. Du fragst nicht nach, was verbessert werden kann."
+                    },
+                    {
+                        text: "Thank you for the feedback. Can you give me specific examples of what wasn't clear? I want to improve.",
+                        isCorrect: true,
+                        explanation: "Sehr stark! Du akzeptierst Feedback, fragst nach Details und zeigst Lernbereitschaft. Das ist professionell."
+                    },
+                    {
+                        text: "I'll try harder next time.",
+                        isCorrect: false,
+                        explanation: "Vage und nicht konkret. Du weißt nicht, was konkret verbessert werden muss."
+                    }
+                ]
+            }
+        ];
+
+        let currentIndex = 0;
+        let correct = 0;
+        let incorrect = 0;
+        let answered = false;
+
+        function shuffle(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        function loadScenario() {
+            answered = false;
+            const scenario = scenarios[currentIndex];
+            
+            document.getElementById('scenarioTitle').textContent = scenario.title;
+            document.getElementById('currentScenario').textContent = currentIndex + 1;
+            document.getElementById('totalScenarios').textContent = scenarios.length;
+            
+            const progress = ((currentIndex + 1) / scenarios.length) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+
+            // Build dialogue
+            const dialogueHTML = scenario.dialogue.map(d => `
+                <div class="dialogue-item">
+                    <div class="speaker">${d.speaker}</div>
+                    <div class="quote">"${d.quote}"</div>
+                </div>
+            `).join('');
+            
+            document.getElementById('dialogueContainer').innerHTML = dialogueHTML + `
+                <div class="your-turn">${scenario.prompt}</div>
+            `;
+
+            // Create options
+            const shuffledOptions = shuffle(scenario.options);
+            const container = document.getElementById('optionsContainer');
+            container.innerHTML = '';
+
+            shuffledOptions.forEach((opt, idx) => {
+                const div = document.createElement('div');
+                div.className = 'option';
+                div.innerHTML = `<span class="option-letter">${String.fromCharCode(65 + idx)}.</span> ${opt.text}`;
+                div.onclick = () => selectOption(div, opt);
+                div.dataset.correct = opt.isCorrect;
+                div.dataset.explanation = opt.explanation;
+                container.appendChild(div);
+            });
+
+            document.getElementById('feedback').innerHTML = '';
+            document.getElementById('feedback').classList.remove('show', 'correct', 'incorrect');
+            document.getElementById('submitBtn').textContent = 'Antwort Prüfen';
+        }
+
+        function selectOption(element, option) {
+            if (answered) return;
+            
+            document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+            element.dataset.selected = 'true';
+        }
+
+        function checkAnswer() {
+            if (answered) {
+                nextScenario();
+                return;
+            }
+
+            const selected = document.querySelector('.option[data-selected="true"]');
+            if (!selected) return;
+
+            answered = true;
+            const isCorrect = selected.dataset.correct === 'true';
+            const explanation = selected.dataset.explanation;
+            
+            if (isCorrect) {
+                correct++;
+                selected.classList.add('correct');
+            } else {
+                incorrect++;
+                selected.classList.add('incorrect');
+            }
+
+            const feedback = document.getElementById('feedback');
+            const feedbackClass = isCorrect ? 'correct' : 'incorrect';
+            const feedbackTitle = isCorrect ? '✅ Ausgezeichnet!' : '❌ Nicht optimal...';
+
+            feedback.innerHTML = `
+                <div class="feedback-title">${feedbackTitle}</div>
+                <div class="feedback-text">
+                    <div class="explanation"><strong>Warum:</strong> ${explanation}</div>
+                </div>
+            `;
+            feedback.classList.add('show', feedbackClass);
+
+            document.getElementById('submitBtn').textContent = 'Nächstes Szenario';
+            document.querySelectorAll('.option').forEach(opt => opt.classList.add('disabled'));
+        }
+
+        function nextScenario() {
+            currentIndex++;
+            if (currentIndex < scenarios.length) {
+                loadScenario();
+            } else {
+                showSummary();
+            }
+        }
+
+        function showSummary() {
+            document.getElementById('simulatorCard').style.display = 'none';
+            document.getElementById('summaryCard').style.display = 'block';
+
+            const percentage = Math.round((correct / scenarios.length) * 100);
+            document.getElementById('finalScore').textContent = percentage + '%';
+            document.getElementById('correctCount').textContent = correct;
+            document.getElementById('incorrectCount').textContent = incorrect;
+
+            let message = '';
+            if (percentage === 100) {
+                message = '🌟 Perfekt! Du bist ein Meeting-Leader!';
+            } else if (percentage >= 80) {
+                message = '🎉 Sehr gut! Du verstehst echte Meeting-Dynamiken!';
+            } else if (percentage >= 60) {
+                message = '👍 Gute Leistung! Mit Praxis wird es noch besser!';
+            } else {
+                message = '💪 Anfang gemacht! Meetings brauchen Übung!';
+            }
+
+            document.getElementById('summaryText').textContent = message;
+        }
+
+        function restartSimulator() {
+            currentIndex = 0;
+            correct = 0;
+            incorrect = 0;
+            document.getElementById('summaryCard').style.display = 'none';
+            document.getElementById('simulatorCard').style.display = 'block';
+            loadScenario();
+        }
+
+        // Start
+        loadScenario();
+    </script>
+</body>
+</html>

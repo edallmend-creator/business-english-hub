@@ -1,0 +1,75 @@
+/* ================================================================
+   FLASHCARDS & LERNMODUS
+   ================================================================ */
+.fc-start { text-align: center; padding: 20px 0; }
+.fc-start h3 {
+  font-family: var(--font-display); font-size: 26px; font-weight: 900;
+  text-transform: uppercase; color: var(--navy); margin-bottom: 16px;
+}
+.fc-card {
+  background: var(--bg); border: 1.5px solid var(--border); border-radius: 16px;
+  padding: 28px 24px; min-height: 160px; display: flex;
+  flex-direction: column; justify-content: center; gap: 12px; margin-bottom: 16px;
+}
+.fc-q { font-size: 24px; font-weight: 600; line-height: 1.3; color: var(--navy); }
+.fc-a { font-size: 17px; color: var(--muted); display: none; line-height: 1.4; }
+.fc-example {
+  font-size: 14px; color: var(--muted); font-style: italic; display: none;
+  border-left: 3px solid var(--gold); padding-left: 12px;
+}
+.fc-label {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold); display: none; margin-bottom: -6px;
+}
+.fc-controls {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 10px; flex-wrap: wrap;
+}
+.fc-controls-left { display: flex; gap: 8px; flex-wrap: wrap; }
+.fc-controls-right { display: flex; gap: 8px; align-items: center; }
+.fc-pill {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 999px; padding: 5px 12px; font-size: 13px;
+  color: var(--muted); font-variant-numeric: tabular-nums;
+}
+.fc-hint { font-size: 12px; color: var(--muted); margin-top: 10px; }
+
+/* Retrieval Timer */
+.rt-settings {
+  display: flex; gap: 14px; align-items: flex-end; flex-wrap: wrap;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 12px;
+  padding: 14px 16px;
+}
+.rt-field { display: flex; flex-direction: column; gap: 5px; }
+.rt-label {
+  font-size: 11px; color: var(--muted); text-transform: uppercase;
+  letter-spacing: 0.08em; font-weight: 600;
+}
+.rt-input {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: 8px; padding: 8px 12px; font-size: 14px; color: var(--text);
+  font-family: var(--font-body); width: 110px; outline: none;
+}
+.rt-toggle-row { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.rt-switch { position: relative; display: inline-block; width: 44px; height: 24px; }
+.rt-switch input { opacity: 0; width: 0; height: 0; }
+.rt-slider {
+  position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--border); border-radius: 999px; transition: 0.2s;
+}
+.rt-slider:before {
+  position: absolute; content: ""; height: 18px; width: 18px;
+  left: 3px; top: 50%; transform: translateY(-50%);
+  background: var(--muted); border-radius: 999px; transition: 0.2s;
+}
+.rt-switch input:checked + .rt-slider { background: var(--navy); }
+.rt-switch input:checked + .rt-slider:before { transform: translate(20px,-50%); background: var(--gold); }
+.rt-time-pill {
+  background: var(--gold-light); border: 1.5px solid var(--gold); border-radius: 999px;
+  padding: 5px 14px; font-size: 13px; color: var(--navy);
+  font-weight: 700; font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 600px) {
+  .fc-q { font-size: 20px; }
+}

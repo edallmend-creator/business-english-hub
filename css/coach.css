@@ -1,0 +1,510 @@
+/* ================================================================
+   COACH STYLES - im Hub-Design
+   ================================================================ */
+
+/* Coach Wrapper */
+.coach-wrapper {
+  max-width: 1100px;
+  margin: 40px auto 80px;
+  padding: 0 24px;
+}
+
+/* Dashboard Container */
+.dashboard {
+  margin-bottom: 40px;
+}
+
+.dashboard-header {
+  background: var(--primary);
+  color: white;
+  padding: 24px 32px;
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0;
+}
+
+.dashboard-header h1 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.dashboard-header .version {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.dashboard-body {
+  background: var(--surface);
+  padding: 32px;
+  border-radius: 0 0 16px 16px;
+  border: 1px solid var(--border);
+  border-top: none;
+}
+
+/* Dashboard Stats */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--primary);
+  font-family: var(--font-display);
+}
+
+.stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* Deck Grid */
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.deck-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.deck-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.deck-category {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.deck-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--primary);
+  line-height: 1.15;
+}
+
+.deck-progress {
+  margin: 8px 0;
+}
+
+.progress-bar {
+  background: var(--surface2);
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s;
+}
+
+.progress-text {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Coach Card (beim Lernen) */
+.coach-card {
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 28px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.coach-question {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--primary);
+  text-align: center;
+}
+
+.coach-answer {
+  font-size: 18px;
+  color: var(--muted);
+  text-align: center;
+  display: none;
+}
+
+.coach-answer.revealed {
+  display: block;
+}
+
+.coach-example {
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+  border-left: 3px solid var(--accent);
+  padding-left: 12px;
+  display: none;
+}
+
+.coach-example.revealed {
+  display: block;
+}
+
+/* Input Field */
+.coach-input {
+  width: 100%;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 16px;
+  color: var(--text);
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.coach-input:focus {
+  border-color: var(--primary);
+}
+
+.coach-input.correct {
+  border-color: #34C759;
+  background: #f0fdf4;
+}
+
+.coach-input.wrong {
+  border-color: var(--red);
+  background: #fef2f2;
+}
+
+/* Emoji Display */
+.emoji-display {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  font-size: 36px;
+  margin: 12px 0;
+}
+
+/* Emoji Picker */
+.emoji-picker {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.emoji-picker button {
+  width: 52px;
+  height: 52px;
+  font-size: 28px;
+  border: 2px solid var(--border);
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emoji-picker button:hover:not(:disabled) {
+  transform: scale(1.05);
+  border-color: var(--primary);
+}
+
+.emoji-picker button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+/* Controls */
+.coach-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.nav-buttons button {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid var(--border);
+  background: white;
+  color: var(--muted);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.nav-buttons button:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.nav-buttons button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.coach-controls-left {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.coach-pill {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Rate Buttons */
+.rate-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.rate-btn {
+  padding: 12px 24px;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.rate-btn:hover {
+  border-color: var(--primary);
+  background: #f0f7ff;
+}
+
+.rate-btn.rate-wrong {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.rate-btn.rate-wrong:hover {
+  background: #fef2f2;
+  border-color: var(--red);
+}
+
+.rate-btn.rate-correct {
+  border-color: #34C759;
+  color: #34C759;
+}
+
+.rate-btn.rate-correct:hover {
+  background: #f0fdf4;
+  border-color: #34C759;
+}
+
+/* Settings Toggle */
+.settings-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.setting-label {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--border);
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--muted);
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background: var(--primary);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+  transform: translate(20px, -50%);
+  background: var(--accent);
+}
+
+/* Modal Overrides for Coach */
+.modal h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.modal h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.modal p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+/* Section Labels */
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+  margin-top: 32px;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .coach-wrapper {
+    padding: 0 16px;
+  }
+  
+  .dashboard h1 {
+    font-size: 28px;
+  }
+  
+  .coach-question {
+    font-size: 20px;
+  }
+  
+  .deck-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .rate-buttons {
+    flex-direction: column;
+  }
+  
+  .rate-btn {
+    width: 100%;
+  }
+}

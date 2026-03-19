@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Test - BE4W Coach</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        
+        .test-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .test-section h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .accent-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .accent-btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .accent-btn.active {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+        
+        .audio-player {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #667eea;
+        }
+        
+        .play-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #667eea;
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            transition: transform 0.2s;
+        }
+        
+        .play-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .speed-controls {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+        
+        .speed-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        
+        .speed-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .phrase {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .phrase-de {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .phrase-en {
+            font-size: 18px;
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            line-height: 1.6;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .status {
+            text-align: center;
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #666;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎧 Audio Integration Test</h1>
+        
+        <div class="test-section">
+            <h2>1. Accent Toggle</h2>
+            <div class="accent-toggle">
+                <button class="accent-btn active" id="btn-us" onclick="setAccent('us')">
+                    🇺🇸 American
+                </button>
+                <button class="accent-btn" id="btn-uk" onclick="setAccent('uk')">
+                    🇬🇧 British
+                </button>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>2. Phrase Display</h2>
+            <div class="phrase">
+                <div class="phrase-de">Lassen Sie mich kurz zusammenfassen.</div>
+                <div class="phrase-en" id="phrase-en">Let me quickly summarize.</div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>3. Audio Player</h2>
+            <div class="audio-player">
+                <button class="play-btn" id="play-btn" onclick="toggleAudio()">
+                    🔊
+                </button>
+                <div style="text-align: center; margin-bottom: 15px; font-size: 12px; color: #666;" id="audio-status">
+                    Click to play
+                </div>
+                <div class="speed-controls">
+                    <button class="speed-btn" onclick="setSpeed(0.75)">0.75x</button>
+                    <button class="speed-btn active" onclick="setSpeed(1.0)">1.0x</button>
+                    <button class="speed-btn" onclick="setSpeed(1.25)">1.25x</button>
+                    <button class="speed-btn" onclick="setSpeed(1.5)">1.5x</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info">
+            <strong>ℹ️ Test Info:</strong><br>
+            • Verwendet Test-File-ID (w1_001.mp3)<br>
+            • Accent-Wechsel zeigt US/UK Schreibweise<br>
+            • Speed Control ändert Playback-Rate<br>
+            • Audio lädt von Google Drive
+        </div>
+        
+        <div class="status" id="status">
+            Ready
+        </div>
+    </div>
+    
+    <script>
+        // Simple test state
+        let currentAccent = 'us';
+        let currentSpeed = 1.0;
+        let audioElement = null;
+        
+        const TEST_FILE_ID = '11HnnIIArn63YVq2OXe72dUY70Hp-oE7t';
+        const BASE_URL = 'https://drive.google.com/uc?export=download&id=';
+        
+        const phrases = {
+            us: 'Let me quickly summarize.',
+            uk: 'Let me quickly summarise.'
+        };
+        
+        function setAccent(accent) {
+            currentAccent = accent;
+            
+            // Update buttons
+            document.getElementById('btn-us').classList.toggle('active', accent === 'us');
+            document.getElementById('btn-uk').classList.toggle('active', accent === 'uk');
+            
+            // Update phrase
+            document.getElementById('phrase-en').textContent = phrases[accent];
+            
+            // Stop audio if playing
+            if (audioElement) {
+                audioElement.pause();
+                audioElement = null;
+                document.getElementById('play-btn').textContent = '🔊';
+            }
+            
+            updateStatus(`Switched to ${accent === 'us' ? 'American' : 'British'}`);
+        }
+        
+        function setSpeed(speed) {
+            currentSpeed = speed;
+            
+            // Update buttons
+            document.querySelectorAll('.speed-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent === `${speed}x`);
+            });
+            
+            // Apply to audio if playing
+            if (audioElement) {
+                audioElement.playbackRate = speed;
+            }
+            
+            updateStatus(`Speed set to ${speed}x`);
+        }
+        
+        function toggleAudio() {
+            if (!audioElement) {
+                playAudio();
+            } else if (audioElement.paused) {
+                audioElement.play();
+            } else {
+                audioElement.pause();
+            }
+        }
+        
+        function playAudio() {
+            const audioUrl = BASE_URL + TEST_FILE_ID;
+            
+            updateStatus('Loading audio...');
+            document.getElementById('play-btn').textContent = '⏳';
+            
+            audioElement = new Audio(audioUrl);
+            audioElement.playbackRate = currentSpeed;
+            
+            audioElement.addEventListener('canplay', () => {
+                updateStatus('Audio ready - playing...');
+                document.getElementById('play-btn').textContent = '⏸';
+            });
+            
+            audioElement.addEventListener('playing', () => {
+                document.getElementById('play-btn').textContent = '⏸';
+            });
+            
+            audioElement.addEventListener('pause', () => {
+                document.getElementById('play-btn').textContent = '🔊';
+            });
+            
+            audioElement.addEventListener('ended', () => {
+                document.getElementById('play-btn').textContent = '🔊';
+                audioElement = null;
+                updateStatus('Playback finished');
+            });
+            
+            audioElement.addEventListener('error', (e) => {
+                console.error('Audio error:', e);
+                document.getElementById('play-btn').textContent = '❌';
+                updateStatus('ERROR: Could not load audio. Check console.');
+                audioElement = null;
+            });
+            
+            audioElement.play().catch(err => {
+                console.error('Playback error:', err);
+                updateStatus('ERROR: ' + err.message);
+            });
+        }
+        
+        function updateStatus(msg) {
+            document.getElementById('status').textContent = msg;
+            console.log('🎵', msg);
+        }
+    </script>
+</body>
+</html>

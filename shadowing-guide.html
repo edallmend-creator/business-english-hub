@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadowing Content Guide - Business English in 4 Wochen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #FFC107 0%, #FF9500 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #FFC107;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-item {
+            padding: 16px;
+            background: #f9f9f9;
+            border-left: 4px solid #FFC107;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+
+        .content-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .content-category {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #999;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .content-description {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .content-why {
+            font-size: 12px;
+            background: white;
+            padding: 8px;
+            border-radius: 4px;
+            color: #555;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        .tip-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+        }
+
+        .tip-title {
+            font-weight: 700;
+            color: #856404;
+            margin-bottom: 8px;
+        }
+
+        .tip-text {
+            font-size: 13px;
+            color: #856404;
+            line-height: 1.6;
+        }
+
+        .difficulty {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 3px;
+            margin-top: 8px;
+        }
+
+        .difficulty.easy {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .difficulty.medium {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .difficulty.hard {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .step-by-step {
+            background: #e7f3ff;
+            border: 1px solid #0066cc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .step {
+            margin-bottom: 16px;
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background: #0066cc;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        .step-text {
+            display: inline-block;
+            font-size: 14px;
+            color: #0066cc;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .grid-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .grid-item-emoji {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .grid-item-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .grid-item-text {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            transition: all 0.2s;
+        }
+
+        .back-button:hover {
+            background: #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 24px 16px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎧 Shadowing Content Guide</h1>
+        <p>Woche 3: Die besten Ressourcen zum Nachsprechen</p>
+    </div>
+
+    <div class="container">
+        <a href="index.html#week-3" class="back-button">← Zurück zu Woche 3</a>
+
+        <div class="section">
+            <div class="section-title">📺 TV-SERIEN FÜR SHADOWING</div>
+            
+            <div class="content-item">
+                <div class="content-title">The Office (US)</div>
+                <div class="content-category">Sitcom</div>
+                <div class="content-description">
+                    Witze, Dialoge, Büroalltag - Die Charaktere sprechen relativ klar und nicht zu schnell.
+                </div>
+                <div class="content-why">
+                    <strong>Warum gut für Shadowing:</strong> Kurze Szenen (15-20 Min), relatable Gespräche, American English
+                </div>
+                <div class="difficulty easy">Leicht</div>
+            </div>
+
+            <div class="content-item">
+                <div class="content-title">Breaking Bad</div>
+                <div class="content-category">Drama</div>
+                <div class="content-description">
+                    Intensive Dialoge, klare Aussprache, emotionale Spannung - Motiviert zu üben!
+                </div>
+                <div class="content-why">
+                    <strong>Warum gut für Shadowing:</strong> Starke Emotionen helfen beim Merken, gutes Pacing
+                </div>
+                <div class="difficulty medium">Mittelschwer</div>
+            </div>
+
+            <div class="content-item">
+                <div class="content-title">Friends</div>
+                <div class="content-category">Sitcom</div>
+                <div class="content-description">
+                    Klassische Serie mit jungen Erwachsenen. Einfache, wiederholbare Dialoge.
+                </div>
+                <div class="content-why">
+                    <strong>Warum gut für Shadowing:</strong> Sehr zugänglich, viele Wiederkehr-Phrases
+                </div>
+                <div class="difficulty easy">Leicht</div>
+            </div>
+
+            <div class="content-item">
+                <div class="content-title">The Crown</div>
+                <div class="content-category">Drama</div>
+                <div class="content-description">
+                    Britisches Englisch, formale Sprache, politische Dialoge - für Business Englisch sehr wertvoll!
+                </div>
+                <div class="content-why">
+                    <strong>Warum gut für Shadowing:</strong> British English, formale Register, professional language
+                </div>
+                <div class="difficulty hard">Schwierig</div>
+            </div>
+
+            <div class="content-item">
+                <div class="content-title">Severance</div>
+                <div class="content-category">Sci-Fi Drama</div>
+                <div class="content-description">
+                    Corporate Umgebung, klare Business-Dialoge, moderne Themen.
+                </div>
+                <div class="content-why">
+                    <strong>Warum gut für Shadowing:</strong> Business-Setting, klare Artikulation, relevant
+                </div>
+                <div class="difficulty medium">Mittelschwer</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🎙️ PODCASTS FÜR SHADOWING</div>
+            
+            <div class="content-item">
+                <div class="content-title">TED Talks Daily</div>
+                <div class="content-category">Bildung / Inspirational</div>
+                <div class="content-description">
+                    Kurze Vorträge zu interessanten Themen. Sprecher sind engagiert und klar.
+                </div>
+                <div class="content-why">
+                    <strong>Warum gut für Shadowing:</strong> 10-15 Min Episoden, klare Aussprache, verfügbar mit Transkription
+                </div>
+                <div class="difficulty medium">Mittelschwer</div>
+            </div>
+
+            <div class="content-item">
+                <div class="content-title">BBC Learning English</div>
+                <div class="content-category">Sprachenlernen</div>
+                <div class="content-description">
+                    Speziell für English Learner gemacht. Kurz, präzise, mit Fokus auf Aussprache.
+                </div>
+                <div class="content-why">
+                    <strong>Warum gut für Shadowing:</strong> Designed zum Lernen, langsamer Tempo, klare Strukturen
+                </div>
+                <div class="difficulty easy">Leicht</div>
+            </div>
+
+            <div class="content-item">
+                <div class="content-title">HBR IdeaCast (Harvard Business Review)</div>
+                <div class="content-category">Business</div>
+                <div class="content-description">
+                    Interviews mit Business Leaders. Business English auf höchstem Niveau.
+                </div>
+                <div class="content-why">
+                    <strong>Warum gut für Shadowing:</strong> Professionelle Sprache, Business Kontext, Expert-Interviews
+                </div>
+                <div class="difficulty hard">Schwierig</div>
+            </div>
+
+            <div class="content-item">
+                <div class="content-title">Stuff You Should Know</div>
+                <div class="content-category">Bildung / Podcast</div>
+                <div class="content-description">
+                    Zwei Moderatoren diskutieren interessante Themen. Conversational, aber intelligent.
+                </div>
+                <div class="content-why">
+                    <strong>Warum gut für Shadowing:</strong> Dialog (nicht nur Monolog), natürliche Sprache, engagierend
+                </div>
+                <div class="difficulty medium">Mittelschwer</div>
+            </div>
+
+            <div class="content-item">
+                <div class="content-title">NPR News Now</div>
+                <div class="content-category">Nachrichten</div>
+                <div class="content-description">
+                    Professionelle Nachrichtensprecherei. Klare, präzise Aussprache.
+                </div>
+                <div class="content-why">
+                    <strong>Warum gut für Shadowing:</strong> 5 Min Episoden, Standard American English, professionell
+                </div>
+                <div class="difficulty medium">Mittelschwer</div>
+            </div>
+
+            <div class="content-item">
+                <div class="content-title">The Economist Espresso</div>
+                <div class="content-category">Nachrichten / Business</div>
+                <div class="content-description">
+                    Tägliche Business-Zusammenfassung. Kurz, prägnant, relevant.
+                </div>
+                <div class="content-why">
+                    <strong>Warum gut für Shadowing:</strong> 5-10 Min, British English, Business-Vokabel, täglich
+                </div>
+                <div class="difficulty hard">Schwierig</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">📺 YOUTUBE KANÄLE</div>
+            
+            <div class="grid">
+                <div class="grid-item">
+                    <div class="grid-item-emoji">🎓</div>
+                    <div class="grid-item-title">TED-Ed</div>
+                    <div class="grid-item-text">Animierte Lernvideos zu interessanten Themen. Perfekt zum Nachsprechen!</div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="grid-item-emoji">💼</div>
+                    <div class="grid-item-title">LinkedIn Learning</div>
+                    <div class="grid-item-text">Business Kurse mit professionellen Moderatoren. Direkt relevant!</div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="grid-item-emoji">🎬</div>
+                    <div class="grid-item-title">English Speeches</div>
+                    <div class="grid-item-text">Reden von bekannten Personen. Großartig für Intonation und Rhythmus!</div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="grid-item-emoji">🗣️</div>
+                    <div class="grid-item-title">Rachel's English</div>
+                    <div class="grid-item-text">Spezifisch für Natural English Pronunciation. Sehr detailliert!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="step-by-step">
+            <div style="font-weight: 700; color: #0066cc; margin-bottom: 16px; font-size: 16px;">
+                📝 SHADOWING SCHRITT-FÜR-SCHRITT
+            </div>
+            
+            <div class="step">
+                <span class="step-number">1</span>
+                <span class="step-text"><strong>Schauen/Hören:</strong> Erste Runde mit Untertiteln. Verständnis aufbauen.</span>
+            </div>
+
+            <div class="step">
+                <span class="step-number">2</span>
+                <span class="step-text"><strong>Pause & Wiederhole:</strong> 1-2 Sätze pausieren, dann nachsprechen.</span>
+            </div>
+
+            <div class="step">
+                <span class="step-number">3</span>
+                <span class="step-text"><strong>Ohne Untertitel:</strong> Zweite Runde ohne Text. Fokus auf Aussprache.</span>
+            </div>
+
+            <div class="step">
+                <span class="step-number">4</span>
+                <span class="step-text"><strong>Fließend Nachsprechen:</strong> Mit dem Audio sprechen, als wärst du der Sprecher.</span>
+            </div>
+
+            <div class="step">
+                <span class="step-number">5</span>
+                <span class="step-text"><strong>Aufnehmen & Vergleichen:</strong> Dich selbst aufnehmen, mit Original vergleichen.</span>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-title">💡 PRO-TIPPS FÜR BESSERES SHADOWING</div>
+            <div class="tip-text">
+                <div style="margin-bottom: 8px;"><strong>Start small:</strong> Nicht gleich 45-Minuten-Episoden. Fang mit 5-10 Minuten an.</div>
+                <div style="margin-bottom: 8px;"><strong>Repeatability:</strong> Wähle Content den du mehrmals schauen kannst. Jede Runde ist anders!</div>
+                <div style="margin-bottom: 8px;"><strong>Emotionale Connection:</strong> Wähle Themen die DICH interessieren. Dann ist es kein Lernen, sondern Vergnügen.</div>
+                <div style="margin-bottom: 8px;"><strong>Akzent wählen:</strong> American oder British? Entscheide dich und bleibe dabei in einer Serie.</div>
+                <div><strong>Regelmäßigkeit:</strong> 15 Min täglich > 2h am Wochenende. Gehirn braucht Kontinuität!</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🎯 WOCHENPLAN - SHADOWING IN WOCHE 3</div>
+            
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 8px;">
+                <div style="margin-bottom: 16px;">
+                    <div style="font-weight: 600; color: #333; margin-bottom: 4px;">Montag - Mittwoch:</div>
+                    <div style="color: #666;">TED-Ed oder BBC Learning English (5-10 Min daily)</div>
+                </div>
+
+                <div style="margin-bottom: 16px;">
+                    <div style="font-weight: 600; color: #333; margin-bottom: 4px;">Donnerstag - Freitag:</div>
+                    <div style="color: #666;">Eine Folge deiner Lieblings-Serie (20-30 Min)</div>
+                </div>
+
+                <div>
+                    <div style="font-weight: 600; color: #333; margin-bottom: 4px;">Wochenende:</div>
+                    <div style="color: #666;">Ein Business Podcast oder Rede, die dich inspiriert</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="background: linear-gradient(135deg, #FFC107 0%, #FF9500 100%); color: white;">
+            <div style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">🚀 Ready to Shadowing?</div>
+            <div style="font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+                Wähle eine Serie oder einen Podcast aus dieser Liste und starte HEUTE. 15 Minuten Shadowing ist wertvoll als 2 Stunden im Klassenzimmer!
+            </div>
+            <a href="index.html#week-3" style="display: inline-block; padding: 12px 24px; background: white; color: #FF9500; text-decoration: none; border-radius: 6px; font-weight: 600; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                Zurück zu Woche 3 Coach →
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,345 @@
+week,variant,index,filename,text_source,text,status
+w1,us,1,audio/w1/us/w1_001.mp3,englisch,"Before we move on, one quick point.",generated
+w1,us,2,audio/w1/us/w1_002.mp3,englisch,Could you clarify what you mean by ...?,generated
+w1,us,3,audio/w1/us/w1_003.mp3,englisch,"From my side, the next step is ...",generated
+w1,us,4,audio/w1/us/w1_004.mp3,englisch,Are we good to proceed?,generated
+w1,us,5,audio/w1/us/w1_005.mp3,englisch,Just to make sure we're aligned ...,generated
+w1,us,6,audio/w1/us/w1_006.mp3,englisch,Let me quickly summarize.,generated
+w1,us,7,audio/w1/us/w1_007.mp3,englisch,I'll share a quick summary after the call.,generated
+w1,us,8,audio/w1/us/w1_008.mp3,englisch,Could we take a closer look at ...?,generated
+w1,us,9,audio/w1/us/w1_009.mp3,englisch,Are we on the same page?,generated
+w1,us,10,audio/w1/us/w1_010.mp3,englisch,Let's move on to the next topic.,generated
+w1,us,11,audio/w1/us/w1_011.mp3,englisch,Thanks for the update.,generated
+w1,us,12,audio/w1/us/w1_012.mp3,englisch,So to recap ...,generated
+w1,us,13,audio/w1/us/w1_013.mp3,englisch,From my perspective ...,generated
+w1,us,14,audio/w1/us/w1_014.mp3,englisch,That works for me.,generated
+w1,us,15,audio/w1/us/w1_015.mp3,englisch,Does that sound good to you?,generated
+w1,us,16,audio/w1/us/w1_016.mp3,englisch,Let's align on this later today.,generated
+w1,us,17,audio/w1/us/w1_017.mp3,englisch,I'll follow up tomorrow.,generated
+w1,us,18,audio/w1/us/w1_018.mp3,englisch,Could you send me the latest version?,generated
+w1,us,19,audio/w1/us/w1_019.mp3,englisch,Let's set up a quick call.,generated
+w1,us,20,audio/w1/us/w1_020.mp3,englisch,Just to double-check ...,generated
+w1,us,21,audio/w1/us/w1_021.mp3,englisch,Any objections if we continue?,generated
+w1,us,22,audio/w1/us/w1_022.mp3,englisch,We're slightly behind schedule.,generated
+w1,us,23,audio/w1/us/w1_023.mp3,englisch,We're on track for Friday.,generated
+w1,us,24,audio/w1/us/w1_024.mp3,englisch,Let's keep it short and clear.,generated
+w1,us,25,audio/w1/us/w1_025.mp3,englisch,That's a good point.,generated
+w1,us,26,audio/w1/us/w1_026.mp3,englisch,Let me add something to that.,generated
+w1,us,27,audio/w1/us/w1_027.mp3,englisch,I totally agree.,generated
+w1,us,28,audio/w1/us/w1_028.mp3,englisch,I see what you mean.,generated
+w1,us,29,audio/w1/us/w1_029.mp3,englisch,Could you give a quick example?,generated
+w1,us,30,audio/w1/us/w1_030.mp3,englisch,Let's focus on the key points.,generated
+w1,us,31,audio/w1/us/w1_031.mp3,englisch,That's an interesting idea.,generated
+w1,us,32,audio/w1/us/w1_032.mp3,englisch,Let's schedule the next meeting.,generated
+w1,us,33,audio/w1/us/w1_033.mp3,englisch,We'll finalize the deck by Friday.,generated
+w1,us,34,audio/w1/us/w1_034.mp3,englisch,Please share your screen.,generated
+w1,us,35,audio/w1/us/w1_035.mp3,englisch,Can everyone hear me?,generated
+w1,us,36,audio/w1/us/w1_036.mp3,englisch,"Sorry, you're on mute.",generated
+w1,us,37,audio/w1/us/w1_037.mp3,englisch,Let's start with a quick update.,generated
+w1,us,38,audio/w1/us/w1_038.mp3,englisch,Who wants to start?,generated
+w1,us,39,audio/w1/us/w1_039.mp3,englisch,Let's go around the table.,generated
+w1,us,40,audio/w1/us/w1_040.mp3,englisch,That's clear from my side.,generated
+w1,us,41,audio/w1/us/w1_041.mp3,englisch,Any other comments?,generated
+w1,us,42,audio/w1/us/w1_042.mp3,englisch,Let's wrap up here.,generated
+w1,us,43,audio/w1/us/w1_043.mp3,englisch,The next step is ...,generated
+w1,us,44,audio/w1/us/w1_044.mp3,englisch,"Thanks everyone, good session.",generated
+w1,us,45,audio/w1/us/w1_045.mp3,englisch,Looking forward to the next one.,generated
+w1,uk,1,audio/w1/uk/w1_001.mp3,englisch_uk,"Before we move on, one quick point.",generated
+w1,uk,2,audio/w1/uk/w1_002.mp3,englisch_uk,Could you clarify what you mean by ...?,generated
+w1,uk,3,audio/w1/uk/w1_003.mp3,englisch_uk,"From my side, the next step is ...",generated
+w1,uk,4,audio/w1/uk/w1_004.mp3,englisch_uk,Are we good to proceed?,generated
+w1,uk,5,audio/w1/uk/w1_005.mp3,englisch_uk,Just to make sure we're aligned ...,generated
+w1,uk,6,audio/w1/uk/w1_006.mp3,englisch_uk,Let me quickly summarise.,generated
+w1,uk,7,audio/w1/uk/w1_007.mp3,englisch_uk,I'll share a quick summary after the call.,generated
+w1,uk,8,audio/w1/uk/w1_008.mp3,englisch_uk,Could we take a closer look at ...?,generated
+w1,uk,9,audio/w1/uk/w1_009.mp3,englisch_uk,Are we on the same page?,generated
+w1,uk,10,audio/w1/uk/w1_010.mp3,englisch_uk,Let's move on to the next topic.,generated
+w1,uk,11,audio/w1/uk/w1_011.mp3,englisch_uk,Thanks for the update.,generated
+w1,uk,12,audio/w1/uk/w1_012.mp3,englisch_uk,So to recap ...,generated
+w1,uk,13,audio/w1/uk/w1_013.mp3,englisch_uk,From my perspective ...,generated
+w1,uk,14,audio/w1/uk/w1_014.mp3,englisch_uk,That works for me.,generated
+w1,uk,15,audio/w1/uk/w1_015.mp3,englisch_uk,Does that sound good to you?,generated
+w1,uk,16,audio/w1/uk/w1_016.mp3,englisch_uk,Let's align on this later today.,generated
+w1,uk,17,audio/w1/uk/w1_017.mp3,englisch_uk,I'll follow up tomorrow.,generated
+w1,uk,18,audio/w1/uk/w1_018.mp3,englisch_uk,Could you send me the latest version?,generated
+w1,uk,19,audio/w1/uk/w1_019.mp3,englisch_uk,Let's set up a quick call.,generated
+w1,uk,20,audio/w1/uk/w1_020.mp3,englisch_uk,Just to double-check ...,generated
+w1,uk,21,audio/w1/uk/w1_021.mp3,englisch_uk,Any objections if we continue?,generated
+w1,uk,22,audio/w1/uk/w1_022.mp3,englisch_uk,We're slightly behind schedule.,generated
+w1,uk,23,audio/w1/uk/w1_023.mp3,englisch_uk,We're on track for Friday.,generated
+w1,uk,24,audio/w1/uk/w1_024.mp3,englisch_uk,Let's keep it short and clear.,generated
+w1,uk,25,audio/w1/uk/w1_025.mp3,englisch_uk,That's a good point.,generated
+w1,uk,26,audio/w1/uk/w1_026.mp3,englisch_uk,Let me add something to that.,generated
+w1,uk,27,audio/w1/uk/w1_027.mp3,englisch_uk,I totally agree.,generated
+w1,uk,28,audio/w1/uk/w1_028.mp3,englisch_uk,I see what you mean.,generated
+w1,uk,29,audio/w1/uk/w1_029.mp3,englisch_uk,Could you give a quick example?,generated
+w1,uk,30,audio/w1/uk/w1_030.mp3,englisch_uk,Let's focus on the key points.,generated
+w1,uk,31,audio/w1/uk/w1_031.mp3,englisch_uk,That's an interesting idea.,generated
+w1,uk,32,audio/w1/uk/w1_032.mp3,englisch_uk,Let's schedule the next meeting.,generated
+w1,uk,33,audio/w1/uk/w1_033.mp3,englisch_uk,We'll finalise the deck by Friday.,generated
+w1,uk,34,audio/w1/uk/w1_034.mp3,englisch_uk,Please share your screen.,generated
+w1,uk,35,audio/w1/uk/w1_035.mp3,englisch_uk,Can everyone hear me?,generated
+w1,uk,36,audio/w1/uk/w1_036.mp3,englisch_uk,"Sorry, you're on mute.",generated
+w1,uk,37,audio/w1/uk/w1_037.mp3,englisch_uk,Let's start with a quick update.,generated
+w1,uk,38,audio/w1/uk/w1_038.mp3,englisch_uk,Who wants to start?,generated
+w1,uk,39,audio/w1/uk/w1_039.mp3,englisch_uk,Let's go around the table.,generated
+w1,uk,40,audio/w1/uk/w1_040.mp3,englisch_uk,That's clear from my side.,generated
+w1,uk,41,audio/w1/uk/w1_041.mp3,englisch_uk,Any other comments?,generated
+w1,uk,42,audio/w1/uk/w1_042.mp3,englisch_uk,Let's wrap up here.,generated
+w1,uk,43,audio/w1/uk/w1_043.mp3,englisch_uk,The next step is ...,generated
+w1,uk,44,audio/w1/uk/w1_044.mp3,englisch_uk,"Thanks everyone, good session.",generated
+w1,uk,45,audio/w1/uk/w1_045.mp3,englisch_uk,Looking forward to the next one.,generated
+w2,us,1,audio/w2/us/w2_001.mp3,englisch,Thanks for the update.,generated
+w2,us,2,audio/w2/us/w2_002.mp3,englisch,Could we possibly share the files tomorrow?,generated
+w2,us,3,audio/w2/us/w2_003.mp3,englisch,That would really help us start on Friday.,generated
+w2,us,4,audio/w2/us/w2_004.mp3,englisch,Two quick points and a proposal.,generated
+w2,us,5,audio/w2/us/w2_005.mp3,englisch,"So, just to recap ...",generated
+w2,us,6,audio/w2/us/w2_006.mp3,englisch,Let's park this for later.,generated
+w2,us,7,audio/w2/us/w2_007.mp3,englisch,Would it be feasible to ...?,generated
+w2,us,8,audio/w2/us/w2_008.mp3,englisch,Would you mind sharing your thoughts?,generated
+w2,us,9,audio/w2/us/w2_009.mp3,englisch,That might be tricky.,generated
+w2,us,10,audio/w2/us/w2_010.mp3,englisch,We might want to revisit that.,generated
+w2,us,11,audio/w2/us/w2_011.mp3,englisch,Could we take a step back for a second?,generated
+w2,us,12,audio/w2/us/w2_012.mp3,englisch,I just wanted to double-check ...,generated
+w2,us,13,audio/w2/us/w2_013.mp3,englisch,If I may add something ...,generated
+w2,us,14,audio/w2/us/w2_014.mp3,englisch,Would it make sense to ...?,generated
+w2,us,15,audio/w2/us/w2_015.mp3,englisch,That sounds reasonable to me.,generated
+w2,us,16,audio/w2/us/w2_016.mp3,englisch,I completely see your point.,generated
+w2,us,17,audio/w2/us/w2_017.mp3,englisch,That's a fair point.,generated
+w2,us,18,audio/w2/us/w2_018.mp3,englisch,We're getting slightly off track.,generated
+w2,us,19,audio/w2/us/w2_019.mp3,englisch,Could we come back to that later?,generated
+w2,us,20,audio/w2/us/w2_020.mp3,englisch,Let's move to the next item.,generated
+w2,us,21,audio/w2/us/w2_021.mp3,englisch,Just to clarify ...,generated
+w2,us,22,audio/w2/us/w2_022.mp3,englisch,If I understood you correctly ...,generated
+w2,us,23,audio/w2/us/w2_023.mp3,englisch,It might be worth considering ...,generated
+w2,us,24,audio/w2/us/w2_024.mp3,englisch,That's an interesting perspective.,generated
+w2,us,25,audio/w2/us/w2_025.mp3,englisch,I'll take that on board.,generated
+w2,us,26,audio/w2/us/w2_026.mp3,englisch,Let's agree to disagree.,generated
+w2,us,27,audio/w2/us/w2_027.mp3,englisch,We're aligned on that.,generated
+w2,us,28,audio/w2/us/w2_028.mp3,englisch,I see where you're coming from.,generated
+w2,us,29,audio/w2/us/w2_029.mp3,englisch,Could you elaborate on that?,generated
+w2,us,30,audio/w2/us/w2_030.mp3,englisch,Would you say that's a priority?,generated
+w2,us,31,audio/w2/us/w2_031.mp3,englisch,I'd suggest we keep it short.,generated
+w2,us,32,audio/w2/us/w2_032.mp3,englisch,Let's stick to the main topic.,generated
+w2,us,33,audio/w2/us/w2_033.mp3,englisch,Just to manage expectations ...,generated
+w2,us,34,audio/w2/us/w2_034.mp3,englisch,That's not entirely clear to me.,generated
+w2,us,35,audio/w2/us/w2_035.mp3,englisch,Could you perhaps rephrase that?,generated
+w2,us,36,audio/w2/us/w2_036.mp3,englisch,That might not be ideal right now.,generated
+w2,us,37,audio/w2/us/w2_037.mp3,englisch,Let's take this offline.,generated
+w2,us,38,audio/w2/us/w2_038.mp3,englisch,"Thanks, that's helpful.",generated
+w2,us,39,audio/w2/us/w2_039.mp3,englisch,Let me quickly check my notes.,generated
+w2,us,40,audio/w2/us/w2_040.mp3,englisch,I appreciate your patience.,generated
+w2,us,41,audio/w2/us/w2_041.mp3,englisch,That's very kind of you.,generated
+w2,us,42,audio/w2/us/w2_042.mp3,englisch,I'm afraid that won't work.,generated
+w2,us,43,audio/w2/us/w2_043.mp3,englisch,That's a valid concern.,generated
+w2,us,44,audio/w2/us/w2_044.mp3,englisch,Could we postpone this to next week?,generated
+w2,us,45,audio/w2/us/w2_045.mp3,englisch,Let's see what we can do.,generated
+w2,us,46,audio/w2/us/w2_046.mp3,englisch,I'm not entirely sure about that.,generated
+w2,us,47,audio/w2/us/w2_047.mp3,englisch,That's definitely worth exploring.,generated
+w2,us,48,audio/w2/us/w2_048.mp3,englisch,Let's keep that in mind.,generated
+w2,us,49,audio/w2/us/w2_049.mp3,englisch,We'll come back to that later.,generated
+w2,us,50,audio/w2/us/w2_050.mp3,englisch,That's something we can look into.,generated
+w2,us,51,audio/w2/us/w2_051.mp3,englisch,Does that sound reasonable?,generated
+w2,us,52,audio/w2/us/w2_052.mp3,englisch,Would that work for everyone?,generated
+w2,us,53,audio/w2/us/w2_053.mp3,englisch,I think we're broadly in agreement.,generated
+w2,us,54,audio/w2/us/w2_054.mp3,englisch,That's a constructive suggestion.,generated
+w2,us,55,audio/w2/us/w2_055.mp3,englisch,I'll make a note of that.,generated
+w2,us,56,audio/w2/us/w2_056.mp3,englisch,Could you send me the details afterwards?,generated
+w2,us,57,audio/w2/us/w2_057.mp3,englisch,I'd appreciate your feedback on this.,generated
+w2,us,58,audio/w2/us/w2_058.mp3,englisch,Let's aim to finalize this by Friday.,generated
+w2,uk,1,audio/w2/uk/w2_001.mp3,englisch_uk,Thanks for the update.,generated
+w2,uk,2,audio/w2/uk/w2_002.mp3,englisch_uk,Could we possibly share the files tomorrow?,generated
+w2,uk,3,audio/w2/uk/w2_003.mp3,englisch_uk,That would really help us start on Friday.,generated
+w2,uk,4,audio/w2/uk/w2_004.mp3,englisch_uk,Two quick points and a proposal.,generated
+w2,uk,5,audio/w2/uk/w2_005.mp3,englisch_uk,"So, just to recap ...",generated
+w2,uk,6,audio/w2/uk/w2_006.mp3,englisch_uk,Let's park this for later.,generated
+w2,uk,7,audio/w2/uk/w2_007.mp3,englisch_uk,Would it be feasible to ...?,generated
+w2,uk,8,audio/w2/uk/w2_008.mp3,englisch_uk,Would you mind sharing your thoughts?,generated
+w2,uk,9,audio/w2/uk/w2_009.mp3,englisch_uk,That might be tricky.,generated
+w2,uk,10,audio/w2/uk/w2_010.mp3,englisch_uk,We might want to revisit that.,generated
+w2,uk,11,audio/w2/uk/w2_011.mp3,englisch_uk,Could we take a step back for a second?,generated
+w2,uk,12,audio/w2/uk/w2_012.mp3,englisch_uk,I just wanted to double-check ...,generated
+w2,uk,13,audio/w2/uk/w2_013.mp3,englisch_uk,If I may add something ...,generated
+w2,uk,14,audio/w2/uk/w2_014.mp3,englisch_uk,Would it make sense to ...?,generated
+w2,uk,15,audio/w2/uk/w2_015.mp3,englisch_uk,That sounds reasonable to me.,generated
+w2,uk,16,audio/w2/uk/w2_016.mp3,englisch_uk,I completely see your point.,generated
+w2,uk,17,audio/w2/uk/w2_017.mp3,englisch_uk,That's a fair point.,generated
+w2,uk,18,audio/w2/uk/w2_018.mp3,englisch_uk,We're getting slightly off track.,generated
+w2,uk,19,audio/w2/uk/w2_019.mp3,englisch_uk,Could we come back to that later?,generated
+w2,uk,20,audio/w2/uk/w2_020.mp3,englisch_uk,Let's move to the next item.,generated
+w2,uk,21,audio/w2/uk/w2_021.mp3,englisch_uk,Just to clarify ...,generated
+w2,uk,22,audio/w2/uk/w2_022.mp3,englisch_uk,If I understood you correctly ...,generated
+w2,uk,23,audio/w2/uk/w2_023.mp3,englisch_uk,It might be worth considering ...,generated
+w2,uk,24,audio/w2/uk/w2_024.mp3,englisch_uk,That's an interesting perspective.,generated
+w2,uk,25,audio/w2/uk/w2_025.mp3,englisch_uk,I'll take that on board.,generated
+w2,uk,26,audio/w2/uk/w2_026.mp3,englisch_uk,Let's agree to disagree.,generated
+w2,uk,27,audio/w2/uk/w2_027.mp3,englisch_uk,We're aligned on that.,generated
+w2,uk,28,audio/w2/uk/w2_028.mp3,englisch_uk,I see where you're coming from.,generated
+w2,uk,29,audio/w2/uk/w2_029.mp3,englisch_uk,Could you elaborate on that?,generated
+w2,uk,30,audio/w2/uk/w2_030.mp3,englisch_uk,Would you say that's a priority?,generated
+w2,uk,31,audio/w2/uk/w2_031.mp3,englisch_uk,I'd suggest we keep it short.,generated
+w2,uk,32,audio/w2/uk/w2_032.mp3,englisch_uk,Let's stick to the main topic.,generated
+w2,uk,33,audio/w2/uk/w2_033.mp3,englisch_uk,Just to manage expectations ...,generated
+w2,uk,34,audio/w2/uk/w2_034.mp3,englisch_uk,That's not entirely clear to me.,generated
+w2,uk,35,audio/w2/uk/w2_035.mp3,englisch_uk,Could you perhaps rephrase that?,generated
+w2,uk,36,audio/w2/uk/w2_036.mp3,englisch_uk,That might not be ideal right now.,generated
+w2,uk,37,audio/w2/uk/w2_037.mp3,englisch_uk,Let's take this offline.,generated
+w2,uk,38,audio/w2/uk/w2_038.mp3,englisch_uk,"Thanks, that's helpful.",generated
+w2,uk,39,audio/w2/uk/w2_039.mp3,englisch_uk,Let me quickly check my notes.,generated
+w2,uk,40,audio/w2/uk/w2_040.mp3,englisch_uk,I appreciate your patience.,generated
+w2,uk,41,audio/w2/uk/w2_041.mp3,englisch_uk,That's very kind of you.,generated
+w2,uk,42,audio/w2/uk/w2_042.mp3,englisch_uk,I'm afraid that won't work.,generated
+w2,uk,43,audio/w2/uk/w2_043.mp3,englisch_uk,That's a valid concern.,generated
+w2,uk,44,audio/w2/uk/w2_044.mp3,englisch_uk,Could we postpone this to next week?,generated
+w2,uk,45,audio/w2/uk/w2_045.mp3,englisch_uk,Let's see what we can do.,generated
+w2,uk,46,audio/w2/uk/w2_046.mp3,englisch_uk,I'm not entirely sure about that.,generated
+w2,uk,47,audio/w2/uk/w2_047.mp3,englisch_uk,That's definitely worth exploring.,generated
+w2,uk,48,audio/w2/uk/w2_048.mp3,englisch_uk,Let's keep that in mind.,generated
+w2,uk,49,audio/w2/uk/w2_049.mp3,englisch_uk,We'll come back to that later.,generated
+w2,uk,50,audio/w2/uk/w2_050.mp3,englisch_uk,That's something we can look into.,generated
+w2,uk,51,audio/w2/uk/w2_051.mp3,englisch_uk,Does that sound reasonable?,generated
+w2,uk,52,audio/w2/uk/w2_052.mp3,englisch_uk,Would that work for everyone?,generated
+w2,uk,53,audio/w2/uk/w2_053.mp3,englisch_uk,I think we're broadly in agreement.,generated
+w2,uk,54,audio/w2/uk/w2_054.mp3,englisch_uk,That's a constructive suggestion.,generated
+w2,uk,55,audio/w2/uk/w2_055.mp3,englisch_uk,I'll make a note of that.,generated
+w2,uk,56,audio/w2/uk/w2_056.mp3,englisch_uk,Could you send me the details afterwards?,generated
+w2,uk,57,audio/w2/uk/w2_057.mp3,englisch_uk,I'd appreciate your feedback on this.,generated
+w2,uk,58,audio/w2/uk/w2_058.mp3,englisch_uk,Let's aim to finalise this by Friday.,generated
+w3,us,1,audio/w3/us/w3_001.mp3,englisch,Can we lock this by Friday?,already_exists
+w3,us,2,audio/w3/us/w3_002.mp3,englisch,Let's make it work.,already_exists
+w3,us,3,audio/w3/us/w3_003.mp3,englisch,I'll circle back later today.,already_exists
+w3,us,4,audio/w3/us/w3_004.mp3,englisch,"I see your point, but ...",already_exists
+w3,us,5,audio/w3/us/w3_005.mp3,englisch,Let's take a different angle.,already_exists
+w3,us,6,audio/w3/us/w3_006.mp3,englisch,Good point - here's what I'd add.,already_exists
+w3,us,7,audio/w3/us/w3_007.mp3,englisch,We're making solid progress.,already_exists
+w3,us,8,audio/w3/us/w3_008.mp3,englisch,Let's keep that momentum.,already_exists
+w3,us,9,audio/w3/us/w3_009.mp3,englisch,Let's be real for a second.,already_exists
+w3,us,10,audio/w3/us/w3_010.mp3,englisch,Can we speed this up?,already_exists
+w3,us,11,audio/w3/us/w3_011.mp3,englisch,Let's get straight to the point.,already_exists
+w3,us,12,audio/w3/us/w3_012.mp3,englisch,What's the quickest way to solve this?,already_exists
+w3,us,13,audio/w3/us/w3_013.mp3,englisch,Let's take action.,already_exists
+w3,us,14,audio/w3/us/w3_014.mp3,englisch,Let's move fast on this.,already_exists
+w3,us,15,audio/w3/us/w3_015.mp3,englisch,Can we commit to that?,already_exists
+w3,us,16,audio/w3/us/w3_016.mp3,englisch,Let's get everyone on board.,already_exists
+w3,us,17,audio/w3/us/w3_017.mp3,englisch,Here's what I propose.,already_exists
+w3,us,18,audio/w3/us/w3_018.mp3,englisch,Let's not overthink this.,already_exists
+w3,us,19,audio/w3/us/w3_019.mp3,englisch,What's blocking us?,already_exists
+w3,us,20,audio/w3/us/w3_020.mp3,englisch,Let's fix this today.,already_exists
+w3,us,21,audio/w3/us/w3_021.mp3,englisch,We need a clear decision.,already_exists
+w3,us,22,audio/w3/us/w3_022.mp3,englisch,What's our biggest risk here?,already_exists
+w3,us,23,audio/w3/us/w3_023.mp3,englisch,Let's align quickly.,already_exists
+w3,us,24,audio/w3/us/w3_024.mp3,englisch,I can take ownership of that.,already_exists
+w3,us,25,audio/w3/us/w3_025.mp3,englisch,We need to move this forward.,already_exists
+w3,us,26,audio/w3/us/w3_026.mp3,englisch,Let's break this down.,already_exists
+w3,us,27,audio/w3/us/w3_027.mp3,englisch,Can we get a quick update?,already_exists
+w3,us,28,audio/w3/us/w3_028.mp3,englisch,That's not a dealbreaker.,already_exists
+w3,us,29,audio/w3/us/w3_029.mp3,englisch,Let's stay focused.,already_exists
+w3,us,30,audio/w3/us/w3_030.mp3,englisch,Let's shift gears.,already_exists
+w3,us,31,audio/w3/us/w3_031.mp3,englisch,I'm confident we can do this.,already_exists
+w3,us,32,audio/w3/us/w3_032.mp3,englisch,Where do we stand?,already_exists
+w3,us,33,audio/w3/us/w3_033.mp3,englisch,Let's close this today.,already_exists
+w3,us,34,audio/w3/us/w3_034.mp3,englisch,I like where this is going.,already_exists
+w3,us,35,audio/w3/us/w3_035.mp3,englisch,Let's push this across the finish line.,already_exists
+w3,us,36,audio/w3/us/w3_036.mp3,englisch,Let's move on this.,already_exists
+w3,us,37,audio/w3/us/w3_037.mp3,englisch,We're in a good spot.,already_exists
+w3,us,38,audio/w3/us/w3_038.mp3,englisch,This is high priority.,already_exists
+w3,us,39,audio/w3/us/w3_039.mp3,englisch,Let's clarify next steps.,already_exists
+w3,us,40,audio/w3/us/w3_040.mp3,englisch,Perfect - let's go with that.,already_exists
+w3,us,41,audio/w3/us/w3_041.mp3,englisch,I'm on it.,already_exists
+w3,us,42,audio/w3/us/w3_042.mp3,englisch,Sounds good to me.,already_exists
+w3,us,43,audio/w3/us/w3_043.mp3,englisch,Let's take the lead here.,already_exists
+w3,us,44,audio/w3/us/w3_044.mp3,englisch,What's our timeline?,already_exists
+w3,us,45,audio/w3/us/w3_045.mp3,englisch,We need a quick decision.,already_exists
+w3,us,46,audio/w3/us/w3_046.mp3,englisch,Let's revisit the plan.,already_exists
+w3,us,47,audio/w3/us/w3_047.mp3,englisch,Let's escalate if needed.,already_exists
+w3,us,48,audio/w3/us/w3_048.mp3,englisch,Let's sync later today.,already_exists
+w3,us,49,audio/w3/us/w3_049.mp3,englisch,We need clarity before moving on.,already_exists
+w3,uk,1,audio/w3/uk/w3_001.mp3,englisch_uk,Can we lock this by Friday?,generated
+w3,uk,2,audio/w3/uk/w3_002.mp3,englisch_uk,Let's make it work.,generated
+w3,uk,3,audio/w3/uk/w3_003.mp3,englisch_uk,I'll circle back later today.,generated
+w3,uk,4,audio/w3/uk/w3_004.mp3,englisch_uk,"I see your point, but ...",generated
+w3,uk,5,audio/w3/uk/w3_005.mp3,englisch_uk,Let's take a different angle.,generated
+w3,uk,6,audio/w3/uk/w3_006.mp3,englisch_uk,Good point - here's what I'd add.,generated
+w3,uk,7,audio/w3/uk/w3_007.mp3,englisch_uk,We're making solid progress.,generated
+w3,uk,8,audio/w3/uk/w3_008.mp3,englisch_uk,Let's keep that momentum.,generated
+w3,uk,9,audio/w3/uk/w3_009.mp3,englisch_uk,Let's be real for a second.,generated
+w3,uk,10,audio/w3/uk/w3_010.mp3,englisch_uk,Can we speed this up?,generated
+w3,uk,11,audio/w3/uk/w3_011.mp3,englisch_uk,Let's get straight to the point.,generated
+w3,uk,12,audio/w3/uk/w3_012.mp3,englisch_uk,What's the quickest way to solve this?,generated
+w3,uk,13,audio/w3/uk/w3_013.mp3,englisch_uk,Let's take action.,generated
+w3,uk,14,audio/w3/uk/w3_014.mp3,englisch_uk,Let's move fast on this.,generated
+w3,uk,15,audio/w3/uk/w3_015.mp3,englisch_uk,Can we commit to that?,generated
+w3,uk,16,audio/w3/uk/w3_016.mp3,englisch_uk,Let's get everyone on board.,generated
+w3,uk,17,audio/w3/uk/w3_017.mp3,englisch_uk,Here's what I propose.,generated
+w3,uk,18,audio/w3/uk/w3_018.mp3,englisch_uk,Let's not overthink this.,generated
+w3,uk,19,audio/w3/uk/w3_019.mp3,englisch_uk,What's blocking us?,generated
+w3,uk,20,audio/w3/uk/w3_020.mp3,englisch_uk,Let's fix this today.,generated
+w3,uk,21,audio/w3/uk/w3_021.mp3,englisch_uk,We need a clear decision.,generated
+w3,uk,22,audio/w3/uk/w3_022.mp3,englisch_uk,What's our biggest risk here?,generated
+w3,uk,23,audio/w3/uk/w3_023.mp3,englisch_uk,Let's align quickly.,generated
+w3,uk,24,audio/w3/uk/w3_024.mp3,englisch_uk,I can take ownership of that.,generated
+w3,uk,25,audio/w3/uk/w3_025.mp3,englisch_uk,We need to move this forward.,generated
+w3,uk,26,audio/w3/uk/w3_026.mp3,englisch_uk,Let's break this down.,generated
+w3,uk,27,audio/w3/uk/w3_027.mp3,englisch_uk,Can we get a quick update?,generated
+w3,uk,28,audio/w3/uk/w3_028.mp3,englisch_uk,That's not a dealbreaker.,generated
+w3,uk,29,audio/w3/uk/w3_029.mp3,englisch_uk,Let's stay focused.,generated
+w3,uk,30,audio/w3/uk/w3_030.mp3,englisch_uk,Let's shift gears.,generated
+w3,uk,31,audio/w3/uk/w3_031.mp3,englisch_uk,I'm confident we can do this.,generated
+w3,uk,32,audio/w3/uk/w3_032.mp3,englisch_uk,Where do we stand?,generated
+w3,uk,33,audio/w3/uk/w3_033.mp3,englisch_uk,Let's close this today.,generated
+w3,uk,34,audio/w3/uk/w3_034.mp3,englisch_uk,I like where this is going.,generated
+w3,uk,35,audio/w3/uk/w3_035.mp3,englisch_uk,Let's push this across the finish line.,generated
+w3,uk,36,audio/w3/uk/w3_036.mp3,englisch_uk,Let's move on this.,generated
+w3,uk,37,audio/w3/uk/w3_037.mp3,englisch_uk,We're in a good spot.,generated
+w3,uk,38,audio/w3/uk/w3_038.mp3,englisch_uk,This is high priority.,generated
+w3,uk,39,audio/w3/uk/w3_039.mp3,englisch_uk,Let's clarify next steps.,generated
+w3,uk,40,audio/w3/uk/w3_040.mp3,englisch_uk,Perfect - let's go with that.,generated
+w3,uk,41,audio/w3/uk/w3_041.mp3,englisch_uk,I'm on it.,generated
+w3,uk,42,audio/w3/uk/w3_042.mp3,englisch_uk,Sounds good to me.,generated
+w3,uk,43,audio/w3/uk/w3_043.mp3,englisch_uk,Let's take the lead here.,generated
+w3,uk,44,audio/w3/uk/w3_044.mp3,englisch_uk,What's our timeline?,generated
+w3,uk,45,audio/w3/uk/w3_045.mp3,englisch_uk,We need a quick decision.,generated
+w3,uk,46,audio/w3/uk/w3_046.mp3,englisch_uk,Let's revisit the plan.,generated
+w3,uk,47,audio/w3/uk/w3_047.mp3,englisch_uk,Let's escalate if needed.,generated
+w3,uk,48,audio/w3/uk/w3_048.mp3,englisch_uk,Let's sync later today.,generated
+w3,uk,49,audio/w3/uk/w3_049.mp3,englisch_uk,We need clarity before moving on.,generated
+w4,us,1,audio/w4/us/w4_001.mp3,englisch,Quick note to confirm ...,generated
+w4,us,2,audio/w4/us/w4_002.mp3,englisch,Appreciate your feedback.,generated
+w4,us,3,audio/w4/us/w4_003.mp3,englisch,Looping you in here.,generated
+w4,us,4,audio/w4/us/w4_004.mp3,englisch,Just to make sure we're aligned.,generated
+w4,us,5,audio/w4/us/w4_005.mp3,englisch,Main takeaway is ...,generated
+w4,us,6,audio/w4/us/w4_006.mp3,englisch,Next step from my side ...,generated
+w4,us,7,audio/w4/us/w4_007.mp3,englisch,Looking forward to your thoughts.,generated
+w4,us,8,audio/w4/us/w4_008.mp3,englisch,Thanks again for your time.,generated
+w4,us,9,audio/w4/us/w4_009.mp3,englisch,Here's a quick update on this.,generated
+w4,us,10,audio/w4/us/w4_010.mp3,englisch,Let me clarify one point.,generated
+w4,us,11,audio/w4/us/w4_011.mp3,englisch,Sharing the latest version here.,generated
+w4,us,12,audio/w4/us/w4_012.mp3,englisch,Attaching the file below.,generated
+w4,us,13,audio/w4/us/w4_013.mp3,englisch,Let me know if anything's unclear.,generated
+w4,us,14,audio/w4/us/w4_014.mp3,englisch,Happy to answer any questions.,generated
+w4,us,15,audio/w4/us/w4_015.mp3,englisch,Appreciate the quick turnaround.,generated
+w4,us,16,audio/w4/us/w4_016.mp3,englisch,Here's what stands out to me.,generated
+w4,us,17,audio/w4/us/w4_017.mp3,englisch,Just confirming our plan for Friday.,generated
+w4,us,18,audio/w4/us/w4_018.mp3,englisch,Feel free to add comments.,generated
+w4,us,19,audio/w4/us/w4_019.mp3,englisch,Following up on our call earlier.,generated
+w4,us,20,audio/w4/us/w4_020.mp3,englisch,I'll share more details soon.,generated
+w4,uk,1,audio/w4/uk/w4_001.mp3,englisch_uk,Quick note to confirm ...,generated
+w4,uk,2,audio/w4/uk/w4_002.mp3,englisch_uk,Appreciate your feedback.,generated
+w4,uk,3,audio/w4/uk/w4_003.mp3,englisch_uk,Looping you in here.,generated
+w4,uk,4,audio/w4/uk/w4_004.mp3,englisch_uk,Just to make sure we're aligned.,generated
+w4,uk,5,audio/w4/uk/w4_005.mp3,englisch_uk,Main takeaway is ...,generated
+w4,uk,6,audio/w4/uk/w4_006.mp3,englisch_uk,Next step from my side ...,generated
+w4,uk,7,audio/w4/uk/w4_007.mp3,englisch_uk,Looking forward to your thoughts.,generated
+w4,uk,8,audio/w4/uk/w4_008.mp3,englisch_uk,Thanks again for your time.,generated
+w4,uk,9,audio/w4/uk/w4_009.mp3,englisch_uk,Here's a quick update on this.,generated
+w4,uk,10,audio/w4/uk/w4_010.mp3,englisch_uk,Let me clarify one point.,generated
+w4,uk,11,audio/w4/uk/w4_011.mp3,englisch_uk,Sharing the latest version here.,generated
+w4,uk,12,audio/w4/uk/w4_012.mp3,englisch_uk,Attaching the file below.,generated
+w4,uk,13,audio/w4/uk/w4_013.mp3,englisch_uk,Let me know if anything's unclear.,generated
+w4,uk,14,audio/w4/uk/w4_014.mp3,englisch_uk,Happy to answer any questions.,generated
+w4,uk,15,audio/w4/uk/w4_015.mp3,englisch_uk,Appreciate the quick turnaround.,generated
+w4,uk,16,audio/w4/uk/w4_016.mp3,englisch_uk,Here's what stands out to me.,generated
+w4,uk,17,audio/w4/uk/w4_017.mp3,englisch_uk,Just confirming our plan for Friday.,generated
+w4,uk,18,audio/w4/uk/w4_018.mp3,englisch_uk,Feel free to add comments.,generated
+w4,uk,19,audio/w4/uk/w4_019.mp3,englisch_uk,Following up on our call earlier.,generated
+w4,uk,20,audio/w4/uk/w4_020.mp3,englisch_uk,I'll share more details soon.,generated
