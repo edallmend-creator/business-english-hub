@@ -16,6 +16,45 @@
   <link rel="stylesheet" href="css/weeks.css">
   <link rel="stylesheet" href="css/flashcards.css">
   <link rel="stylesheet" href="css/modals.css">
+<script>
+// Handle URL anchors - load correct week on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const hash = window.location.hash;
+    if (hash) {
+        const weekMatch = hash.match(/week-(\d+|bonus)/);
+        if (weekMatch) {
+            let weekIndex;
+            if (weekMatch[1] === 'bonus') {
+                weekIndex = 4;
+            } else {
+                weekIndex = parseInt(weekMatch[1]) - 1; // Convert 1-based to 0-based
+            }
+            if (weekIndex >= 0 && weekIndex <= 4) {
+                showWeek(weekIndex);
+                setNavActive(document.querySelectorAll('.nav-link')[weekIndex]);
+            }
+        }
+    }
+});
+
+// Also handle hash changes (when user clicks back/forward)
+window.addEventListener('hashchange', function() {
+    const hash = window.location.hash;
+    const weekMatch = hash.match(/week-(\d+|bonus)/);
+    if (weekMatch) {
+        let weekIndex;
+        if (weekMatch[1] === 'bonus') {
+            weekIndex = 4;
+        } else {
+            weekIndex = parseInt(weekMatch[1]) - 1; // Convert 1-based to 0-based
+        }
+        if (weekIndex >= 0 && weekIndex <= 4) {
+            showWeek(weekIndex);
+            setNavActive(document.querySelectorAll('.nav-link')[weekIndex]);
+        }
+    }
+});
+</script>
 </head>
 
 <body>

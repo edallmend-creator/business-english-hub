@@ -2,7 +2,7 @@
 // AUTH – Passwort / Login
 // Passwort hier ändern:
 // ================================================================
-const PASSWORD = "english2025";
+const PASSWORD = "CHAMPION";
 const STORAGE_KEY = "be4w_v2_unlocked";
 
 function togglePw() {

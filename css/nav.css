@@ -24,7 +24,7 @@
   75% { transform: rotate(10deg) scale(1.15); }
 }
 .nav-brand {
-  font-family: var(--font-display); font-size: 15px; font-weight: 800;
+  font-family: var(--font-display); font-size: 18px; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.06em; color: #fff;
   margin-right: 24px; white-space: nowrap;
 }
@@ -36,8 +36,8 @@
 .nav-links::-webkit-scrollbar { display: none; }
 .nav-link {
   background: none; border: none; color: rgba(255,255,255,0.6);
-  font-family: var(--font-body); font-size: 14px; font-weight: 500;
-  padding: 6px 13px; border-radius: 8px; cursor: pointer;
+  font-family: var(--font-body); font-size: 17px; font-weight: 500;
+  7px 13px; border-radius: 8px; cursor: pointer;
   white-space: nowrap; transition: color 0.2s, background 0.2s;
 }
 .nav-link:hover { color: #fff; background: rgba(255,255,255,0.1); }
