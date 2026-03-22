@@ -1,0 +1,56 @@
+/* ================================================================
+   HERO
+   ================================================================ */
+.hero {
+  padding-bottom: 60px;
+  background: linear-gradient(135deg, var(--primary) 0%, #0052A3 100%);
+  70px 24px 80px;
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ""; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 40px; background: var(--bg);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+.hero-inner {
+  max-width: 1100px; margin: 0 auto; display: flex;
+  align-items: center; gap: 64px; flex-wrap: wrap;
+}
+.hero-text { flex: 1; min-width: 280px; }
+.hero-badge {
+  display: inline-block; background: rgba(255,149,0,0.15);
+  border: 1px solid rgba(255,149,0,0.3); color: var(--accent);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; 7px 14px; border-radius: 6px; margin-bottom: 20px;
+}
+.hero-title {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-display); font-size: clamp(42px, 7vw, 72px);
+  font-weight: 700; line-height: 1.1;
+  margin-bottom: 20px; color: #fff;
+}
+.hero-title span { color: var(--accent); }
+.hero-sub {
+  max-width: 800px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  color: white;
+  
+  
+  
+  max-width: 600px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.95); 
+  font-size: 18px; color: rgba(255,255,255,0.85); 
+  max-width: 520px; line-height: 1.6;
+}
+.hero-duck-wrap { 
+  flex-shrink: 0; width: 280px; text-align: center; 
+}
+.hero-duck {
+  width: 100%; height: auto; max-width: 280px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.2));
+}
+

@@ -1,0 +1,20 @@
+🔴 COACH KAPUTT - SCHNELLE LÖSUNG:
+
+Das letzte FUNKTIONIERENDE Build war:
+- be4w-hub-MODAL-RESTRUCTURED.zip
+
+Das hat FUNKTIONIERT:
+✅ Coach startet
+✅ Timer oben sichtbar
+✅ Settings funktioniert
+✅ Alles lädt korrekt
+
+DAS PROBLEM (aktuell):
+- Zu viele Timer-Funktionen entfernt
+- toggleSetting() ist kaputt
+- Initialization bricht ab
+
+LÖSUNG:
+Nutze be4w-hub-MODAL-RESTRUCTURED.zip - das funktioniert!
+
+Dann können wir DEN Timer SAUBER reparieren wenn du willst.

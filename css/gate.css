@@ -1,0 +1,61 @@
+/* ================================================================
+   GATE / LOGIN
+   ================================================================ */
+#gate {
+  position: fixed; inset: 0; 
+  background: linear-gradient(135deg, var(--primary) 0%, #0052A3 100%);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+.gate-box {
+  padding: 40px 36px;
+  background: #fff; 
+  border-radius: 16px; 
+  max-width: 440px; 
+  width: 100%; 
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+.gate-duck {
+  width: 120px; height: auto; object-fit: contain; margin-bottom: 24px;
+  filter: drop-shadow(0 4px 16px rgba(255,149,0,0.2));
+}
+.gate-title {
+  font-family: var(--font-display); font-size: 32px; font-weight: 700;
+  line-height: 1.2; margin-bottom: 8px; color: var(--primary);
+}
+.gate-title span { color: var(--accent); }
+.gate-sub { 
+  font-size: 15px; color: var(--muted); margin-bottom: 32px; 
+  line-height: 1.5;
+}
+.gate-input {
+  width: 100%; background: var(--bg); border: 2px solid var(--border);
+  border-radius: 8px; padding: 15px 18px; font-size: 16px;
+  font-family: var(--font-body); color: var(--text); text-align: center;
+  letter-spacing: 0.08em; outline: none; transition: all 0.2s; margin-bottom: 16px;
+}
+.gate-input:focus { 
+  border-color: var(--primary); 
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(0,102,204,0.1);
+}
+.gate-input::placeholder { color: var(--muted); letter-spacing: 0; }
+.gate-btn {
+  width: 100%; background: var(--primary); color: #fff; border: none;
+  border-radius: 8px; padding: 16px; font-size: 16px; font-weight: 700;
+  font-family: var(--font-display); letter-spacing: 0.04em; text-transform: uppercase;
+  cursor: pointer; transition: all 0.2s;
+}
+.gate-btn:hover { 
+  background: #0052A3; 
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,102,204,0.4);
+}
+.gate-btn:active { transform: translateY(0); }
+.gate-error { 
+  margin-top: 12px; font-size: 14px; color: var(--red); 
+  min-height: 20px; font-weight: 500;
+}
+
+#app { display: none; }
