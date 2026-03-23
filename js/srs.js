@@ -91,12 +91,25 @@ function getDueCards() {
 function updateSRSBadge() {
   const due   = getDueCards();
   const badge = document.getElementById("srsBadge");
-  if (!badge) return;
-  if (due.length > 0) {
-    badge.textContent  = due.length;
-    badge.style.display = "inline-flex";
-  } else {
-    badge.style.display = "none";
+  const badgeMobile = document.getElementById("srsBadgeMobile");
+  
+  if (badge) {
+    if (due.length > 0) {
+      badge.textContent  = due.length;
+      badge.style.display = "inline-flex";
+    } else {
+      badge.style.display = "none";
+    }
+  }
+  
+  // Also update mobile badge
+  if (badgeMobile) {
+    if (due.length > 0) {
+      badgeMobile.textContent = due.length;
+      badgeMobile.style.display = "inline-block";
+    } else {
+      badgeMobile.style.display = "none";
+    }
   }
 }
 

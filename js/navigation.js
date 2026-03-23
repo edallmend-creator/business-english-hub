@@ -29,7 +29,9 @@ function handleDeepLink() {
       setTimeout(() => {
         showWeek(idx);
         const navLinks = document.querySelectorAll(".nav-link");
+        const mobileTabLinks = document.querySelectorAll(".nav-tab-link");
         if (navLinks[idx]) setNavActive(navLinks[idx]);
+        if (mobileTabLinks[idx]) mobileTabLinks[idx].classList.add("active");
         document.getElementById("weeks")?.scrollIntoView({ behavior: "smooth" });
       }, 300);
       return;
@@ -46,7 +48,9 @@ function handleDeepLink() {
     setTimeout(() => {
       showWeek(idx);
       const navLinks = document.querySelectorAll(".nav-link");
+      const mobileTabLinks = document.querySelectorAll(".nav-tab-link");
       if (navLinks[idx]) setNavActive(navLinks[idx]);
+      if (mobileTabLinks[idx]) mobileTabLinks[idx].classList.add("active");
       document.getElementById("weeks")?.scrollIntoView({ behavior: "smooth" });
     }, 300);
   }
@@ -64,6 +68,27 @@ function showWeek(i) {
 function setNavActive(el) {
   document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
   el.classList.add("active");
+  
+  // Also sync mobile tabs if visible
+  const navLinks = document.querySelectorAll(".nav-link");
+  const mobileTabLinks = document.querySelectorAll(".nav-tab-link");
+  const idx = Array.from(navLinks).indexOf(el);
+  if (idx >= 0 && mobileTabLinks[idx]) {
+    mobileTabLinks[idx].classList.add("active");
+  }
+}
+
+function setMobileTabActive(el) {
+  document.querySelectorAll(".nav-tab-link").forEach(l => l.classList.remove("active"));
+  el.classList.add("active");
+  
+  // Also sync desktop nav if visible
+  const mobileTabLinks = document.querySelectorAll(".nav-tab-link");
+  const navLinks = document.querySelectorAll(".nav-link");
+  const idx = Array.from(mobileTabLinks).indexOf(el);
+  if (idx >= 0 && navLinks[idx]) {
+    navLinks[idx].classList.add("active");
+  }
 }
 
 // ================================================================

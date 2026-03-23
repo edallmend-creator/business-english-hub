@@ -80,29 +80,49 @@
 <div id="app">
   <nav class="nav">
     <div class="nav-inner">
-  <div class="nav-brand">BE <span>4W</span></div>
-      <div class="nav-links">
-        <button class="nav-link" onclick="showWeek(0);setNavActive(this)">Woche 1</button>
-        <button class="nav-link" onclick="showWeek(1);setNavActive(this)">Woche 2</button>
-        <button class="nav-link" onclick="showWeek(2);setNavActive(this)">Woche 3</button>
-        <button class="nav-link" onclick="showWeek(3);setNavActive(this)">Woche 4</button>
-        <button class="nav-link" onclick="showWeek(4);setNavActive(this)">Bonus</button>
+      <!-- ROW 1: Brand + Week Links (stays on one line on mobile via flexbox) -->
+      <div class="nav-row-1">
+        <div class="nav-brand">BE <span>4W</span></div>
+        <!-- Week Links: Hidden on Mobile, Visible on Desktop/Tablet -->
+        <div class="nav-links nav-links-desktop">
+          <button class="nav-link" onclick="showWeek(0);setNavActive(this)">Woche 1</button>
+          <button class="nav-link" onclick="showWeek(1);setNavActive(this)">Woche 2</button>
+          <button class="nav-link" onclick="showWeek(2);setNavActive(this)">Woche 3</button>
+          <button class="nav-link" onclick="showWeek(3);setNavActive(this)">Woche 4</button>
+          <button class="nav-link" onclick="showWeek(4);setNavActive(this)">Bonus</button>
+        </div>
       </div>
-      <!-- Streak + SRS Badge -->
-      <button onclick="openSRSQueue()" title="Heute fällige Wiederholungen"
-        style="display:flex;align-items:center;gap:5px;background:rgba(232,146,10,0.15);border:1px solid rgba(232,146,10,0.3);border-radius:8px;padding:5px 10px;cursor:pointer;flex-shrink:0;position:relative;">
-        <span style="font-size:13px;color:var(--gold);font-weight:700;">Wiederholen</span>
-        <span id="srsBadge" style="display:none;background:var(--red);color:#fff;border-radius:10px;padding:1px 7px;font-size:11px;font-weight:700;min-width:20px;text-align:center;">0</span>
-      </button>
-      <span id="streakDisplay" title="Streak" style="font-size:13px;font-weight:700;color:#fb923c;flex-shrink:0;min-width:30px;text-align:center;"></span>
-      <button onclick="openCodeModal()" id="syncTip" title="Fortschritt & Code"
-        style="display:flex;align-items:center;gap:7px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:5px 11px;cursor:pointer;flex-shrink:0;">
-        <span id="syncDot" style="width:8px;height:8px;border-radius:50%;background:#fbbf24;flex-shrink:0;"></span>
-        <span style="font-size:12px;color:rgba(255,255,255,0.7);font-family:var(--font-body);" id="userCodeDisplay">–</span>
-        <span id="syncStatus" style="font-size:11px;color:#4ade80;opacity:0;transition:opacity 0.5s;"></span>
-      </button>
+
+      <!-- ROW 2: Tools (Wiederholen + Streak + Code) -->
+      <div class="nav-row-2">
+        <!-- Streak + SRS Badge -->
+        <button onclick="openSRSQueue()" title="Heute fällige Wiederholungen" class="nav-srs-btn"
+          style="display:flex;align-items:center;gap:5px;background:rgba(232,146,10,0.15);border:1px solid rgba(232,146,10,0.3);border-radius:8px;padding:5px 10px;cursor:pointer;flex-shrink:0;position:relative;">
+          <span style="font-size:13px;color:var(--gold);font-weight:700;">Wiederholen</span>
+          <span id="srsBadge" style="display:none;background:var(--red);color:#fff;border-radius:10px;padding:1px 7px;font-size:11px;font-weight:700;min-width:20px;text-align:center;">0</span>
+        </button>
+        <span id="streakDisplay" title="Streak" style="font-size:13px;font-weight:700;color:#fb923c;flex-shrink:0;min-width:30px;text-align:center;"></span>
+        <button onclick="openCodeModal()" id="syncTip" title="Fortschritt & Code"
+          style="display:flex;align-items:center;gap:7px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:5px 11px;cursor:pointer;flex-shrink:0;">
+          <span id="syncDot" style="width:8px;height:8px;border-radius:50%;background:#fbbf24;flex-shrink:0;"></span>
+          <span style="font-size:12px;color:rgba(255,255,255,0.7);font-family:var(--font-body);" id="userCodeDisplay">–</span>
+          <span id="syncStatus" style="font-size:11px;color:#4ade80;opacity:0;transition:opacity 0.5s;"></span>
+        </button>
+      </div>
     </div>
   </nav>
+
+  <!-- MOBILE TAB-BAR (only visible on mobile) -->
+  <div class="nav-mobile-tabs" id="navMobileTabs">
+    <button class="nav-tab-link" onclick="showWeek(0);setMobileTabActive(this)">Woche 1</button>
+    <button class="nav-tab-link" onclick="showWeek(1);setMobileTabActive(this)">Woche 2</button>
+    <button class="nav-tab-link" onclick="showWeek(2);setMobileTabActive(this)">Woche 3</button>
+    <button class="nav-tab-link" onclick="showWeek(3);setMobileTabActive(this)">Woche 4</button>
+    <button class="nav-tab-link" onclick="showWeek(4);setMobileTabActive(this)" style="position:relative;">
+      Bonus
+      <span id="srsBadgeMobile" style="display:none;position:absolute;top:-4px;right:-4px;background:var(--red);color:#fff;border-radius:50%;padding:2px 5px;font-size:10px;font-weight:700;min-width:16px;text-align:center;height:16px;line-height:10px;">0</span>
+    </button>
+  </div>
 
   <section class="hero">
     <div class="hero-inner">

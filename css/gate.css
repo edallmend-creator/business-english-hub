@@ -6,6 +6,7 @@
   background: linear-gradient(135deg, var(--primary) 0%, #0052A3 100%);
   display: flex; align-items: center; justify-content: center;
   z-index: 1000;
+  padding: 20px;
 }
 .gate-box {
   padding: 40px 36px;
@@ -45,7 +46,7 @@
   width: 100%; background: var(--primary); color: #fff; border: none;
   border-radius: 8px; padding: 16px; font-size: 16px; font-weight: 700;
   font-family: var(--font-display); letter-spacing: 0.04em; text-transform: uppercase;
-  cursor: pointer; transition: all 0.2s;
+  cursor: pointer; transition: all 0.2s; min-height: 48px;
 }
 .gate-btn:hover { 
   background: #0052A3; 
@@ -59,3 +60,69 @@
 }
 
 #app { display: none; }
+
+/* ================================================================
+   MOBILE OPTIMIZATION - GATE
+   ================================================================ */
+
+/* Tablet: 600px - 900px */
+@media (max-width: 900px) and (min-width: 601px) {
+  #gate {
+    padding: 16px;
+  }
+  .gate-box {
+    padding: 32px 24px;
+    border-radius: 12px;
+  }
+  .gate-duck {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  .gate-title {
+    font-size: 26px;
+    margin-bottom: 6px;
+  }
+  .gate-sub {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Mobile: unter 600px */
+@media (max-width: 600px) {
+  #gate {
+    padding: 12px;
+  }
+  .gate-box {
+    padding: 24px 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+  .gate-duck {
+    width: 80px;
+    margin-bottom: 16px;
+  }
+  .gate-title {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+  .gate-sub {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .gate-input {
+    padding: 12px 14px;
+    font-size: 16px; /* Verhindert Zoom */
+    margin-bottom: 12px;
+    border-radius: 6px;
+  }
+  .gate-btn {
+    padding: 14px;
+    font-size: 15px;
+    min-height: 50px;
+    border-radius: 6px;
+  }
+  .gate-error {
+    font-size: 13px;
+  }
+}

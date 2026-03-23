@@ -9,6 +9,22 @@
   max-width: 1100px; margin: 0 auto; display: flex;
   align-items: center; height: 58px; gap: 0;
 }
+
+/* Row wrappers (for mobile layout) */
+.nav-row-1 {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+}
+
+.nav-row-2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
 .nav-duck {
   width: 38px; height: 38px; object-fit: contain; margin-right: 10px;
   flex-shrink: 0; cursor: pointer; transition: transform 0.3s ease;
@@ -29,17 +45,216 @@
   margin-right: 24px; white-space: nowrap;
 }
 .nav-brand span { color: var(--accent); }
-.nav-links {
-  gap: 20px;
+
+/* Desktop Week Links */
+.nav-links-desktop {
   display: flex; gap: 20px; overflow-x: auto;
   scrollbar-width: none; flex: 1;
 }
-.nav-links::-webkit-scrollbar { display: none; }
+.nav-links-desktop::-webkit-scrollbar { display: none; }
+
 .nav-link {
   background: none; border: none; color: rgba(255,255,255,0.6);
   font-family: var(--font-body); font-size: 14px; font-weight: 500;
-  7px 13px; border-radius: 8px; cursor: pointer;
+  padding: 7px 13px; border-radius: 8px; cursor: pointer;
   white-space: nowrap; transition: color 0.2s, background 0.2s;
 }
 .nav-link:hover { color: #fff; background: rgba(255,255,255,0.1); }
 .nav-link.active { color: var(--accent); background: rgba(255,149,0,0.15); }
+
+/* SRS button styling */
+.nav-srs-btn {
+  color: var(--gold);
+}
+
+/* ================================================================
+   MOBILE TAB BAR (Bottom Navigation) - DISABLED
+   ================================================================ */
+
+.nav-mobile-tabs {
+  display: none !important;
+}
+
+.nav-tab-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  height: 56px;
+  padding: 0 12px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.nav-tab-link:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
+.nav-tab-link.active {
+  color: var(--accent);
+  background: rgba(255,149,0,0.12);
+  border-bottom: 3px solid var(--accent);
+}
+
+/* ================================================================
+   RESPONSIVE ADJUSTMENTS
+   ================================================================ */
+
+/* Tablet: 600px - 900px - KEEP DESKTOP LAYOUT */
+@media (max-width: 900px) and (min-width: 601px) {
+  .nav {
+    padding: 0 16px;
+  }
+  .nav-inner {
+    height: 54px;
+  }
+
+  .nav-row-1 {
+    flex: 1;
+  }
+
+  .nav-row-2 {
+    gap: 10px;
+  }
+
+  .nav-duck {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+  }
+  .nav-brand {
+    font-size: 13px;
+    margin-right: 16px;
+  }
+  .nav-links-desktop {
+    gap: 12px;
+  }
+  .nav-link {
+    font-size: 13px;
+    padding: 6px 11px;
+  }
+  .nav-srs-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  #streakDisplay {
+    font-size: 12px;
+  }
+  #syncTip {
+    padding: 4px 8px;
+  }
+}
+
+/* Mobile: unter 600px - 2-ROW ELEGANT LAYOUT */
+@media (max-width: 600px) {
+  body {
+    padding-bottom: 0;
+  }
+
+  .nav {
+    padding: 12px 12px;
+  }
+  
+  .nav-inner {
+    height: auto;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  /* ROW 1: Brand + Week Links */
+  .nav-row-1 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    flex-wrap: nowrap;
+  }
+
+  .nav-brand {
+    font-size: 12px;
+    margin-right: 8px;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .nav-links-desktop {
+    display: flex !important;
+    gap: 5px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .nav-link {
+    font-size: 11px;
+    padding: 5px 8px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  /* ROW 2: Tools (Wiederholen + Streak + Code) */
+  .nav-row-2 {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 6px;
+  }
+
+  .nav-srs-btn {
+    display: flex !important;
+    flex: 1;
+    padding: 7px 6px;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+  }
+
+  .nav-srs-btn span:first-of-type {
+    font-size: 11px;
+  }
+
+  #streakDisplay {
+    font-size: 11px;
+    min-width: 30px;
+    text-align: center;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #syncTip {
+    display: flex !important;
+    flex: 1;
+    padding: 7px 6px;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+  }
+  
+  #syncTip span {
+    font-size: 10px !important;
+  }
+
+  .nav-mobile-tabs {
+    display: none !important;
+  }
+}

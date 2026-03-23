@@ -8,12 +8,32 @@
 }
 .modal-overlay.open { display: flex; }
 .modal {
-  padding: 36px;
+  display: flex;
+  flex-direction: column;
   background: var(--surface); border: 1px solid var(--border); border-radius: 20px;
-  width: 100%; max-width: 800px; max-height: 90vh; overflow-y: auto;
-  overflow-x: hidden;
+  width: 100%; max-width: 800px; max-height: 90vh;
+  overflow: hidden;
   position: relative; box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+  box-sizing: border-box;
 }
+
+/* Modal Content scrolliert, Footer NICHT */
+#modalContent {
+  flex: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 36px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Buttons/Action Area bleibt UNTEN sichtbar (scrollt NICHT mit!) */
+#modalContent ~ div,
+.btn-group,
+.nav-buttons {
+  flex-shrink: 0;
+  padding: 0 36px 36px;
+}
+
 .modal-close {
   position: absolute; 
   top: 16px; 
@@ -51,8 +71,54 @@
 }
 .modal-subtitle { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
 
-@media (max-width: 600px) {
+/* Tablet: 600px - 900px */
+@media (max-width: 900px) and (min-width: 601px) {
+  #modalContent {
+    padding: 28px 20px;
+  }
+  #modalContent ~ div,
+  .btn-group,
+  .nav-buttons {
+    padding: 0 20px 28px;
+  }
   .modal {
-    padding: 26px 16px;
+    max-height: 85vh;
+  }
+  .modal-title {
+    font-size: 22px;
+  }
+}
+
+/* Mobile: unter 600px */
+@media (max-width: 600px) {
+  #modalContent {
+    padding: 20px 12px;
+    max-height: calc(100vh - 180px); /* Account for tab-bar + close button */
+  }
+  #modalContent ~ div,
+  .btn-group,
+  .nav-buttons {
+    padding: 0 12px 20px;
+  }
+  .modal {
+    /* Much smaller max-height on mobile to prevent overflow */
+    max-height: calc(100vh - 80px);
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    border-radius: 12px;
+  }
+  .modal-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .modal-subtitle {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+  .modal-close {
+    width: 32px;
+    height: 32px;
+    top: 12px;
+    right: 12px;
   }
 }
