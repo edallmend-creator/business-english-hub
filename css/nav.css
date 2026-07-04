@@ -42,9 +42,12 @@
 .nav-brand {
   font-family: var(--font-display); font-size: 15px; font-weight: 800;
   text-transform: uppercase; letter-spacing: 0.06em; color: #fff;
-  margin-right: 24px; white-space: nowrap;
+  margin-right: 24px; white-space: nowrap; text-decoration: none;
+  display: inline-flex; align-items: center;
 }
 .nav-brand span { color: var(--accent); }
+
+.nav-brand:hover { color: #fff; }
 
 /* Desktop Week Links */
 .nav-links-desktop {
@@ -276,6 +279,27 @@
 
 .simple-nav {
   justify-content: space-between;
+}
+
+.page-nav-action button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 5px 11px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  color: rgba(255,255,255,0.78);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.page-nav-action button:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.12);
 }
 
 .nav-brand {
