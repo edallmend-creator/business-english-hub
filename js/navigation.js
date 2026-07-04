@@ -18,6 +18,7 @@ function handleDeepLink() {
   const hash = window.location.hash.slice(1); // Entferne das #
   if (hash) {
     const hashMap = { 
+      "week-0": 0,
       "week-1": 0, 
       "week-2": 1, 
       "week-3": 2, 

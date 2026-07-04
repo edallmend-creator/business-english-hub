@@ -2460,7 +2460,7 @@ function init() {
 function exitCoach() {
     // Get source parameter from URL (which week started the coach)
     const urlParams = new URLSearchParams(window.location.search);
-    const source = urlParams.get('source') || 'week-0'; // Default to Week 1
+    const source = urlParams.get('source') || 'week-1'; // Default to Week 1
     
     // Navigate back to hub with anchor
     window.location.href = `index.html#${source}`;
