@@ -103,6 +103,59 @@
   filter: drop-shadow(0 8px 24px rgba(0,0,0,0.2));
 }
 
+.course-overview {
+  max-width: 1160px;
+  margin: -44px auto 0;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  gap: 18px;
+}
+
+.overview-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 210px;
+  padding: 26px;
+  background: rgba(255,255,255,0.94);
+  border: 1px solid rgba(222,226,230,0.9);
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(18, 38, 63, 0.11);
+  backdrop-filter: blur(10px);
+}
+
+.overview-card span {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.overview-card strong {
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.overview-card p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.overview-card-primary {
+  background: linear-gradient(135deg, #ffffff, #fff7eb);
+  border-color: rgba(255,149,0,0.28);
+}
+
 /* ================================================================
    MOBILE OPTIMIZATION - HERO
    ================================================================ */
@@ -183,5 +236,16 @@
   }
   .hero-duck {
     max-width: 160px;
+  }
+  .course-overview {
+    grid-template-columns: 1fr;
+    margin-top: -26px;
+    padding: 0 14px;
+    gap: 12px;
+  }
+  .overview-card {
+    min-height: 0;
+    padding: 22px;
+    border-radius: 20px;
   }
 }

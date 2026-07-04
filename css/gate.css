@@ -126,3 +126,96 @@
     font-size: 13px;
   }
 }
+
+/* ================================================================
+   PREMIUM LOGIN POLISH
+   ================================================================ */
+
+#gate {
+  background:
+    radial-gradient(circle at 25% 18%, rgba(255,149,0,0.28), transparent 26%),
+    radial-gradient(circle at 80% 76%, rgba(255,255,255,0.12), transparent 28%),
+    linear-gradient(135deg, #071d36 0%, #073f78 54%, var(--primary) 100%);
+}
+
+#gate::before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 32px;
+  pointer-events: none;
+}
+
+.gate-box {
+  position: relative;
+  max-width: 470px;
+  padding: 44px 40px 38px;
+  border: 1px solid rgba(255,255,255,0.72);
+  border-radius: 28px;
+  box-shadow: 0 28px 90px rgba(0,0,0,0.32);
+}
+
+.gate-box::before {
+  content: "Kursbereich";
+  display: inline-flex;
+  margin-bottom: 20px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.gate-duck {
+  width: 104px;
+  margin-bottom: 18px;
+}
+
+.gate-title {
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.gate-sub {
+  max-width: 330px;
+  margin: 14px auto 30px;
+}
+
+.gate-input {
+  border-radius: 14px;
+  background: #f6f8fb;
+}
+
+.gate-btn {
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary), #004f9f);
+  box-shadow: 0 12px 28px rgba(0,102,204,0.24);
+}
+
+.gate-btn:hover {
+  background: linear-gradient(135deg, var(--accent), #f6b546);
+  color: #111827;
+}
+
+@media (max-width: 600px) {
+  #gate::before {
+    inset: 10px;
+    border-radius: 22px;
+  }
+
+  .gate-box {
+    padding: 30px 20px 26px;
+    border-radius: 22px;
+  }
+
+  .gate-title {
+    font-size: 32px;
+  }
+}

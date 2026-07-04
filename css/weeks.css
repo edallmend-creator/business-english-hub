@@ -280,6 +280,7 @@
 .download-item a[href="#"] {
   opacity: 0.55;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .download-item a[href="#"]::after {
@@ -288,6 +289,22 @@
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
+}
+
+.download-list::before {
+  content: "Hinweis: CSV-Downloads sind über die Bibliothek verfügbar. PDF-Dateien werden ergänzt, sobald die finalen Druckversionen bereit sind.";
+  display: block;
+  padding: 16px 18px;
+  background: #fff7ed;
+  border: 1px solid rgba(255,149,0,0.25);
+  border-radius: 16px;
+  color: #8a4b00;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.modal-overlay.open .btn-secondary {
+  justify-content: flex-start;
 }
 
 @media (max-width: 600px) {

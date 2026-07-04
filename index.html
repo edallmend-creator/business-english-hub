@@ -65,7 +65,7 @@
   <div class="gate-box">
     <img class="gate-duck" src="images/NoraJonas2.png" alt="Business Duck">
     <div class="gate-title">Business English<br><span>in 4 Wochen</span></div>
-    <div class="gate-sub">Online-Kurs · Bitte Passwort eingeben</div>
+    <div class="gate-sub">Exklusiver Kursbereich · Fortschritt, Coach und Materialien an einem Ort</div>
     <div style="position:relative;margin-bottom:12px;">
       <input type="password" id="pwInput" class="gate-input" placeholder="Passwort" autocomplete="current-password" style="margin-bottom:0;padding-right:48px;">
       <button onclick="togglePw()" id="pwEye" type="button"
@@ -143,6 +143,25 @@
       <div class="hero-duck-wrap">
         <img class="hero-duck" src="images/NoraJonas2.png" alt="Business English">
       </div>
+    </div>
+  </section>
+
+  <section class="course-overview" aria-label="Kursübersicht">
+    <div class="overview-card overview-card-primary">
+      <span>Heute starten</span>
+      <strong>7 Minuten reichen</strong>
+      <p>Kurze Sessions, klare Phrasen und automatische Wiederholung statt endloser Theorie.</p>
+      <button class="btn-primary" onclick="window.location.href='coach.html?deck=w1_core&source=week-0'">Zum Coach</button>
+    </div>
+    <div class="overview-card">
+      <span>Der Pfad</span>
+      <strong>4 Wochen Struktur</strong>
+      <p>Von sicheren Grundlagen über Ton und Feinschliff bis zur Anwendung in Meetings.</p>
+    </div>
+    <div class="overview-card">
+      <span>Für den Beruf</span>
+      <strong>Branchen-Decks</strong>
+      <p>Finance, HR, Tech, Sales, E-Mail, Präsentationen und weitere Praxisbereiche.</p>
     </div>
   </section>
 
@@ -367,6 +386,7 @@
       <p style="color:var(--muted);font-size:14px;margin-bottom:20px;max-width:700px;">
         Alle Materialien zum Ausdrucken und Offline-Üben. CSVs für eigene Tools, PDFs für unterwegs.
       </p>
+      <button class="btn-primary" onclick="openDownloadsModal()" style="margin-bottom:22px;">CSV-Bibliothek öffnen</button>
       
       <div class="download-list">
         <!-- Woche 1 -->
