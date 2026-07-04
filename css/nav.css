@@ -274,6 +274,10 @@
   max-width: 1160px;
 }
 
+.simple-nav {
+  justify-content: space-between;
+}
+
 .nav-brand {
   font-size: 17px;
   letter-spacing: 0.08em;

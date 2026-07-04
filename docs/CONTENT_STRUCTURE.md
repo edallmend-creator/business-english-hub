@@ -4,15 +4,18 @@ Diese Datei erklärt die wichtigsten Produktbereiche, damit Inhalte später leic
 
 ## Hauptseiten
 
-- `index.html`: Login-geschützter Kurs-Hub mit Hero, Kursübersicht, Wochenplan, FAQ, Feedback und Footer.
+- `index.html`: Login-geschützter Kurs-Hub mit Hero, Kursübersicht, Wochenplan, Bonusbereich und Footer.
 - `coach.html`: Eigene Coach-Seite für Spaced-Repetition-Training.
+- `faq.html`: Eigene FAQ-Seite mit ausführlicheren Fragen und Antworten.
+- `feedback.html`: Eigene Feedback-/Verlagsunterstützungsseite.
+- `downloads.html`: Eigene Materialbibliothek mit CSV-Downloads.
 - `impressum.html`: Platzhalter für rechtlich zu prüfende Anbieterangaben.
 - `datenschutz.html`: Platzhalter für rechtlich zu prüfende Datenschutzhinweise.
 
 ## Wichtige CSS-Dateien
 
 - `css/hero.css`: Hero, Kursübersicht und frühere Methodik-Komponenten.
-- `css/weeks.css`: Wochenmodule, FAQ, Feedback-Bereich, Downloads und Legal-Seiten.
+- `css/weeks.css`: Wochenmodule, Inhaltsseiten, FAQ, Feedback-Bereich, Downloads und Legal-Seiten.
 - `css/coach.css`: Coach-Startseite, Lernkarte, US/UK-Umschalter und mobile Coach-Optimierung.
 - `css/nav.css`: Navigation im Hub und Coach.
 - `css/gate.css`: Login-Gate.
@@ -31,7 +34,7 @@ Wenn eine neue Übung ergänzt wird, sollte sie als `.section-card` in der passe
 
 ## FAQ erweitern
 
-Die FAQ steht in `index.html` im Abschnitt `<section class="faq-section" id="faq">`.
+Die FAQ steht in `faq.html`.
 
 Neue Fragen werden als `<details>` ergänzt:
 
@@ -44,7 +47,7 @@ Neue Fragen werden als `<details>` ergänzt:
 
 ## Feedback-Assistent
 
-Der Bereich `Unterstütze den Verlag` steht in `index.html` im Abschnitt `<section class="support-section" id="support">`.
+Der Bereich `Unterstütze den Verlag` steht in `feedback.html`.
 
 Die Klick-Logik liegt in `js/navigation.js` in `showFeedbackResult(type)`.
 
@@ -66,9 +69,9 @@ So wirkt der Bereich wie ein Feedback-Assistent und nicht wie ein offensichtlich
 
 ## Navigation
 
-Die Hauptnavigation in `index.html` enthält Wochenlinks sowie sekundäre Reiter für `FAQ` und `Feedback`.
+Die Hauptnavigation in `index.html` enthält Wochenlinks sowie sekundäre Links auf `downloads.html`, `faq.html` und `feedback.html`.
 
-Die sekundären Reiter nutzen `scrollToSection(id)` in `js/navigation.js`.
+Auf Inhaltsseiten wird eine einfache Navigation mit direkten Seitenlinks verwendet.
 
 ## Coach anpassen
 

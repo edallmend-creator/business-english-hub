@@ -185,7 +185,7 @@
 }
 
 .week-title {
-  font-size: clamp(34px, 5vw, 56px);
+  font-size: clamp(34px, 4.4vw, 50px);
   line-height: 0.95;
   letter-spacing: var(--tracking-tight);
 }
@@ -271,7 +271,7 @@
 
 .section-card-title,
 .bonus-title {
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.02;
   letter-spacing: var(--tracking-tight);
 }
@@ -497,6 +497,102 @@
   box-shadow: 0 18px 50px rgba(18,38,63,0.1);
 }
 
+.content-page {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 54px 24px 72px;
+}
+
+.content-hero {
+  margin-bottom: 24px;
+  padding: 34px;
+  background: radial-gradient(circle at top right, rgba(255,149,0,0.14), transparent 30%), #fff;
+  border: 1px solid rgba(222,226,230,0.9);
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(18,38,63,0.1);
+}
+
+.content-hero span,
+.download-library h2,
+.content-grid-two h2 {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.content-hero h1,
+.feedback-page-card h1 {
+  margin-top: 10px;
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8vw, 86px);
+  font-weight: 900;
+  letter-spacing: var(--tracking-tight);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.content-hero p {
+  max-width: 760px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.faq-grid-wide {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.feedback-page-card {
+  margin-bottom: 22px;
+}
+
+.content-grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.content-grid-two article,
+.download-library {
+  padding: 26px;
+  background: #fff;
+  border: 1px solid rgba(222,226,230,0.9);
+  border-radius: 22px;
+  box-shadow: 0 12px 34px rgba(18,38,63,0.06);
+}
+
+.content-grid-two h2,
+.download-library h2 {
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: var(--tracking-tight);
+}
+
+.content-grid-two p {
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.download-library {
+  margin-top: 18px;
+}
+
+.page-download-list::before {
+  display: none;
+}
+
+.compact-download-grid a.section-card {
+  color: inherit;
+  text-decoration: none;
+}
+
 .legal-page h1 {
   margin-top: 26px;
   color: var(--primary);
@@ -596,5 +692,21 @@
     margin: 18px 12px;
     padding: 24px 18px;
     border-radius: 20px;
+  }
+
+  .content-page {
+    padding: 28px 14px 44px;
+  }
+
+  .content-hero,
+  .content-grid-two article,
+  .download-library {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .faq-grid-wide,
+  .content-grid-two {
+    grid-template-columns: 1fr;
   }
 }

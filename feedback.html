@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Feedback · Business English in 4 Wochen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/weeks.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner simple-nav">
+      <div class="nav-brand">BE <span>4W</span></div>
+      <div class="nav-links nav-links-desktop">
+        <button class="nav-link" onclick="window.location.href='index.html#week-1'">Kurs</button>
+        <button class="nav-link" onclick="window.location.href='coach.html'">Coach</button>
+        <button class="nav-link" onclick="window.location.href='downloads.html'">Downloads</button>
+        <button class="nav-link" onclick="window.location.href='faq.html'">FAQ</button>
+        <button class="nav-link active">Feedback</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content-page">
+    <section class="support-card feedback-page-card">
+      <div>
+        <span>Unterstütze den Verlag</span>
+        <h1>Gemeinsam besser machen</h1>
+        <p>Deine Rückmeldung hilft uns, Buch und Web-App weiterzuentwickeln. Wähle einfach, was gerade am besten passt. Wenn der Hub dir geholfen hat, kannst du anderen Leserinnen und Lesern außerdem die Entscheidung erleichtern.</p>
+      </div>
+      <div class="feedback-actions">
+        <button onclick="showFeedbackResult('share')"><strong>Erfahrung teilen</strong><span>Wenn dir Buch oder Hub geholfen haben</span></button>
+        <button onclick="showFeedbackResult('idea')"><strong>Verbesserung vorschlagen</strong><span>Wenn dir etwas gefehlt hat</span></button>
+        <button onclick="showFeedbackResult('help')"><strong>Problem melden</strong><span>Wenn etwas nicht funktioniert</span></button>
+      </div>
+      <div id="feedbackResult" class="feedback-result" aria-live="polite"></div>
+    </section>
+
+    <section class="content-grid-two">
+      <article>
+        <h2>Warum Feedback so wichtig ist</h2>
+        <p>Das Buch und der Hub sind für echte Arbeitssituationen gebaut: Meetings, E-Mails, Präsentationen und internationale Teams. Rückmeldungen zeigen, welche Phrasen wirklich helfen und welche Stellen noch klarer werden müssen.</p>
+      </article>
+      <article>
+        <h2>Was eine Rezension bewirkt</h2>
+        <p>Eine ehrliche Rezension hilft anderen, einzuschätzen, ob der 4-Wochen-Ansatz zu ihnen passt. Sie unterstützt außerdem unabhängige Lernmaterialien jenseits großer Plattformkurse.</p>
+      </article>
+    </section>
+  </main>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

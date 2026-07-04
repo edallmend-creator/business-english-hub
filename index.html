@@ -90,8 +90,9 @@
           <button class="nav-link" onclick="showWeek(2);setNavActive(this)">Woche 3</button>
           <button class="nav-link" onclick="showWeek(3);setNavActive(this)">Woche 4</button>
           <button class="nav-link" onclick="showWeek(4);setNavActive(this)">Bonus</button>
-          <button class="nav-link nav-link-secondary" onclick="scrollToSection('faq')">FAQ</button>
-          <button class="nav-link nav-link-secondary" onclick="scrollToSection('support')">Feedback</button>
+          <button class="nav-link nav-link-secondary" onclick="window.location.href='downloads.html'">Downloads</button>
+          <button class="nav-link nav-link-secondary" onclick="window.location.href='faq.html'">FAQ</button>
+          <button class="nav-link nav-link-secondary" onclick="window.location.href='feedback.html'">Feedback</button>
         </div>
       </div>
 
@@ -408,7 +409,7 @@
       <p style="color:var(--muted);font-size:14px;margin-bottom:20px;max-width:700px;">
         Alle Materialien zum Ausdrucken und Offline-Üben. CSVs für eigene Tools, PDFs für unterwegs.
       </p>
-      <button class="btn-primary" onclick="openDownloadsModal()" style="margin-bottom:22px;">CSV-Bibliothek öffnen</button>
+      <button class="btn-primary" onclick="window.location.href='downloads.html'" style="margin-bottom:22px;">CSV-Bibliothek öffnen</button>
       
       <div class="download-list">
         <!-- Woche 1 -->
@@ -506,48 +507,6 @@
           <a class="btn-secondary" href="#" download>↓ Download</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="faq-section" id="faq">
-    <div class="faq-header">
-      <span>FAQ</span>
-      <h2>Häufige Fragen</h2>
-      <p>Kurz erklärt, damit du schneller ins Training kommst.</p>
-    </div>
-    <div class="faq-grid">
-      <details open>
-        <summary>Wie oft sollte ich üben?</summary>
-        <p>Ideal sind 5 bis 10 Minuten pro Tag. Der Coach ist bewusst für kurze Sessions gebaut.</p>
-      </details>
-      <details>
-        <summary>Was speichert mein Fortschritts-Code?</summary>
-        <p>Übungsfortschritt, Wiederholungen, Einstellungen und Dual-Coding-Anker. Kein Name und keine E-Mail.</p>
-      </details>
-      <details>
-        <summary>Warum gibt es American und British English?</summary>
-        <p>Viele Business-Situationen funktionieren mit beiden Varianten. Der Umschalter hilft dir, konsistent bei einer Variante zu bleiben.</p>
-      </details>
-      <details>
-        <summary>Brauche ich das Buch?</summary>
-        <p>Der Hub ist als digitaler Begleiter gedacht. Das Buch erklärt die Methode und gibt Kontext, der Coach macht daraus tägliches Training.</p>
-      </details>
-    </div>
-  </section>
-
-  <section class="support-section" id="support">
-    <div class="support-card">
-      <div>
-        <span>Unterstütze den Verlag</span>
-        <h2>Gemeinsam besser machen</h2>
-        <p>Deine Rückmeldung hilft uns, Buch und Web-App weiterzuentwickeln. Wähle einfach, was gerade am besten passt.</p>
-      </div>
-      <div class="feedback-actions">
-        <button onclick="showFeedbackResult('share')"><strong>Erfahrung teilen</strong><span>Wenn dir der Kurs geholfen hat</span></button>
-        <button onclick="showFeedbackResult('idea')"><strong>Verbesserung vorschlagen</strong><span>Wenn dir etwas gefehlt hat</span></button>
-        <button onclick="showFeedbackResult('help')"><strong>Problem melden</strong><span>Wenn etwas nicht funktioniert</span></button>
-      </div>
-      <div id="feedbackResult" class="feedback-result" aria-live="polite"></div>
     </div>
   </section>
 
