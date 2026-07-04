@@ -92,6 +92,13 @@ function setMobileTabActive(el) {
   }
 }
 
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  document.querySelectorAll(".nav-link").forEach(link => link.classList.remove("active"));
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function showFeedbackResult(type) {
   const result = document.getElementById("feedbackResult");
   if (!result) return;
@@ -101,14 +108,14 @@ function showFeedbackResult(type) {
   const amazonUrl = "https://www.amazon.de/";
 
   const variants = {
-    good: {
-      title: "Das freut uns sehr.",
-      text: "Wenn du deine ehrliche Erfahrung teilen möchtest, hilft eine Rezension anderen Leserinnen und Lesern bei der Entscheidung.",
+    share: {
+      title: "Danke, dass du deine Erfahrung teilen möchtest.",
+      text: "Eine ehrliche Rezension hilft anderen Leserinnen und Lesern einzuschätzen, ob Buch und Web-App zu ihnen passen.",
       actions: `<a class="btn-primary" href="${amazonUrl}" target="_blank" rel="noopener">Amazon-Rezension öffnen</a><a class="btn-secondary" href="${supportMail}">Direktes Feedback senden</a>`
     },
-    medium: {
-      title: "Danke für deine ehrliche Rückmeldung.",
-      text: "Was hätte dir gefehlt oder was war unklar? Schreib uns kurz, damit wir Buch und Hub verbessern können.",
+    idea: {
+      title: "Danke, das hilft bei der Weiterentwicklung.",
+      text: "Schreib uns kurz, was dir gefehlt hat, was unklar war oder welche Ergänzung du dir wünschen würdest.",
       actions: `<a class="btn-primary" href="${supportMail}">Feedback an den Verlag senden</a>`
     },
     help: {
@@ -118,7 +125,7 @@ function showFeedbackResult(type) {
     }
   };
 
-  const current = variants[type] || variants.medium;
+  const current = variants[type] || variants.idea;
   result.innerHTML = `
     <strong>${current.title}</strong>
     <p>${current.text}</p>

@@ -90,6 +90,8 @@
           <button class="nav-link" onclick="showWeek(2);setNavActive(this)">Woche 3</button>
           <button class="nav-link" onclick="showWeek(3);setNavActive(this)">Woche 4</button>
           <button class="nav-link" onclick="showWeek(4);setNavActive(this)">Bonus</button>
+          <button class="nav-link nav-link-secondary" onclick="scrollToSection('faq')">FAQ</button>
+          <button class="nav-link nav-link-secondary" onclick="scrollToSection('support')">Feedback</button>
         </div>
       </div>
 
@@ -537,13 +539,13 @@
     <div class="support-card">
       <div>
         <span>Unterstütze den Verlag</span>
-        <h2>Wie hat dir Buch und Web-App geholfen?</h2>
-        <p>Dein ehrliches Feedback hilft uns, die Materialien besser zu machen. Wenn dir der Hub geholfen hat, unterstützt eine Rezension auch andere Leserinnen und Leser bei der Entscheidung.</p>
+        <h2>Gemeinsam besser machen</h2>
+        <p>Deine Rückmeldung hilft uns, Buch und Web-App weiterzuentwickeln. Wähle einfach, was gerade am besten passt.</p>
       </div>
       <div class="feedback-actions">
-        <button onclick="showFeedbackResult('good')">Sehr hilfreich</button>
-        <button onclick="showFeedbackResult('medium')">Okay</button>
-        <button onclick="showFeedbackResult('help')">Ich brauche Hilfe</button>
+        <button onclick="showFeedbackResult('share')"><strong>Erfahrung teilen</strong><span>Wenn dir der Kurs geholfen hat</span></button>
+        <button onclick="showFeedbackResult('idea')"><strong>Verbesserung vorschlagen</strong><span>Wenn dir etwas gefehlt hat</span></button>
+        <button onclick="showFeedbackResult('help')"><strong>Problem melden</strong><span>Wenn etwas nicht funktioniert</span></button>
       </div>
       <div id="feedbackResult" class="feedback-result" aria-live="polite"></div>
     </div>

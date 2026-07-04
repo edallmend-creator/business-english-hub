@@ -50,11 +50,25 @@ Die Klick-Logik liegt in `js/navigation.js` in `showFeedbackResult(type)`.
 
 Aktuelle Typen:
 
-- `good`: zeigt Amazon-Rezension prominent plus direktes Feedback.
-- `medium`: öffnet Feedback-Mail.
+- `share`: zeigt Amazon-Rezension prominent plus direktes Feedback.
+- `idea`: öffnet Feedback-Mail.
 - `help`: öffnet Support-Mail.
 
 Wichtig: Der Amazon-Link ist aktuell ein Platzhalter (`https://www.amazon.de/`). Wenn die finale Produktseite bekannt ist, dort die konkrete Review-/Produkt-URL eintragen.
+
+Die sichtbaren Button-Texte sind bewusst neutral formuliert:
+
+- `Erfahrung teilen`
+- `Verbesserung vorschlagen`
+- `Problem melden`
+
+So wirkt der Bereich wie ein Feedback-Assistent und nicht wie ein offensichtlicher Bewertungsfilter.
+
+## Navigation
+
+Die Hauptnavigation in `index.html` enthält Wochenlinks sowie sekundäre Reiter für `FAQ` und `Feedback`.
+
+Die sekundären Reiter nutzen `scrollToSection(id)` in `js/navigation.js`.
 
 ## Coach anpassen
 

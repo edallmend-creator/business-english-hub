@@ -19,6 +19,8 @@
   
   --font-display: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-body:    "Barlow", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --tracking-tight: -0.025em;
+  --tracking-wide: 0.08em;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
