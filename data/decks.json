@@ -1,0 +1,225 @@
+{
+  "decks": [
+    {
+      "id": "w1_core",
+      "name": "Woche 1: Core",
+      "description": "Grundlagen - Höflichkeit & Klarheit",
+      "csvPath": "data/week1-core.csv",
+      "category": "core",
+      "week": 1,
+      "enabled": true,
+      "color": "#DC3545"
+    },
+    {
+      "id": "w2_core",
+      "name": "Woche 2: Core",
+      "description": "Vertiefung - Nuancen & Professionalität",
+      "csvPath": "data/week2-core.csv",
+      "category": "core",
+      "week": 2,
+      "enabled": true,
+      "color": "#FF9500"
+    },
+    {
+      "id": "w3_core",
+      "name": "Woche 3: Core",
+      "description": "Fortschritt - Komplexe Situationen",
+      "csvPath": "data/week3-core.csv",
+      "category": "core",
+      "week": 3,
+      "enabled": true,
+      "color": "#FFC107"
+    },
+    {
+      "id": "w4_core",
+      "name": "Woche 4: Core",
+      "description": "Meisterschaft - Feinheiten & Eloquenz",
+      "csvPath": "data/week4-core.csv",
+      "category": "core",
+      "week": 4,
+      "enabled": true,
+      "color": "#28A745"
+    },
+    {
+      "id": "false_friends",
+      "name": "False Friends",
+      "description": "Gefährliche Verwechslungen vermeiden",
+      "csvPath": "data/false-friends.csv",
+      "category": "special",
+      "week": 1,
+      "enabled": true,
+      "color": "#DC3545"
+    },
+    {
+      "id": "grundwortschatz",
+      "name": "Grundwortschatz",
+      "description": "Basis-Vokabeln für den Alltag",
+      "csvPath": "data/grundwortschatz.csv",
+      "category": "foundation",
+      "enabled": true,
+      "color": "#6C757D"
+    },
+    {
+      "id": "bonus_communication",
+      "name": "Bonus: Kommunikation",
+      "description": "Effektive Gesprächsführung",
+      "csvPath": "data/bonus-communication.csv",
+      "category": "bonus",
+      "enabled": true,
+      "color": "#0066CC"
+    },
+    {
+      "id": "bonus_favorites",
+      "name": "Bonus: Favoriten",
+      "description": "Die wichtigsten Phrasen",
+      "csvPath": "data/bonus-favorites.csv",
+      "category": "bonus",
+      "enabled": true,
+      "color": "#0066CC"
+    },
+    {
+      "id": "bonus_hidden",
+      "name": "Bonus: Hidden Gems",
+      "description": "Unterschätzte Power-Phrasen",
+      "csvPath": "data/bonus-hidden.csv",
+      "category": "bonus",
+      "enabled": true,
+      "color": "#0066CC"
+    },
+    {
+      "id": "bonus_motivation",
+      "name": "Bonus: Motivation",
+      "description": "Motivierende Formulierungen",
+      "csvPath": "data/bonus-motivation.csv",
+      "category": "bonus",
+      "enabled": true,
+      "color": "#0066CC"
+    },
+    {
+      "id": "bonus_politeness",
+      "name": "Bonus: Höflichkeit",
+      "description": "Extra-höfliche Formulierungen",
+      "csvPath": "data/bonus-politeness.csv",
+      "category": "bonus",
+      "enabled": true,
+      "color": "#0066CC"
+    },
+    {
+      "id": "bonus_positive",
+      "name": "Bonus: Positivity",
+      "description": "Positive & konstruktive Sprache",
+      "csvPath": "data/bonus-positive.csv",
+      "category": "bonus",
+      "enabled": true,
+      "color": "#0066CC"
+    },
+    {
+      "id": "bonus_us_business",
+      "name": "Bonus: US Business",
+      "description": "Amerikanische Business-Kultur",
+      "csvPath": "data/bonus-us-business.csv",
+      "category": "bonus",
+      "enabled": true,
+      "color": "#0066CC"
+    },
+    {
+      "id": "niche_customer",
+      "name": "Niche: Customer Service",
+      "description": "Kundenbetreuung & Support",
+      "csvPath": "data/niche-customer.csv",
+      "category": "niche",
+      "enabled": true,
+      "color": "#FF6B6B"
+    },
+    {
+      "id": "niche_email",
+      "name": "Niche: Email",
+      "description": "Professionelle E-Mail-Kommunikation",
+      "csvPath": "data/niche-email.csv",
+      "category": "niche",
+      "enabled": true,
+      "color": "#4ECDC4"
+    },
+    {
+      "id": "niche_finance",
+      "name": "Niche: Finance",
+      "description": "Finanz- & Rechnungswesen",
+      "csvPath": "data/niche-finance.csv",
+      "category": "niche",
+      "enabled": true,
+      "color": "#95E1D3"
+    },
+    {
+      "id": "niche_healthcare",
+      "name": "Niche: Healthcare",
+      "description": "Gesundheitswesen & Medizin",
+      "csvPath": "data/niche-healthcare.csv",
+      "category": "niche",
+      "enabled": true,
+      "color": "#F38181"
+    },
+    {
+      "id": "niche_hr",
+      "name": "Niche: HR",
+      "description": "Personalwesen & Recruiting",
+      "csvPath": "data/niche-hr.csv",
+      "category": "niche",
+      "enabled": true,
+      "color": "#AA96DA"
+    },
+    {
+      "id": "niche_legal",
+      "name": "Niche: Legal",
+      "description": "Rechtswesen & Verträge",
+      "csvPath": "data/niche-legal.csv",
+      "category": "niche",
+      "enabled": true,
+      "color": "#FCBAD3"
+    },
+    {
+      "id": "niche_manufacturing",
+      "name": "Niche: Manufacturing",
+      "description": "Produktion & Fertigung",
+      "csvPath": "data/niche-manufacturing.csv",
+      "category": "niche",
+      "enabled": true,
+      "color": "#FFFFD2"
+    },
+    {
+      "id": "niche_presentation",
+      "name": "Niche: Presentations",
+      "description": "Präsentationen & Meetings",
+      "csvPath": "data/niche-presentation.csv",
+      "category": "niche",
+      "enabled": true,
+      "color": "#A8D8EA"
+    },
+    {
+      "id": "niche_sales",
+      "name": "Niche: Sales",
+      "description": "Vertrieb & Verkauf",
+      "csvPath": "data/niche-sales.csv",
+      "category": "niche",
+      "enabled": true,
+      "color": "#FFD93D"
+    },
+    {
+      "id": "niche_startup",
+      "name": "Niche: Startup",
+      "description": "Startup & Innovation",
+      "csvPath": "data/niche-startup.csv",
+      "category": "niche",
+      "enabled": true,
+      "color": "#6BCB77"
+    },
+    {
+      "id": "niche_tech",
+      "name": "Niche: Tech",
+      "description": "IT & Technologie",
+      "csvPath": "data/niche-tech.csv",
+      "category": "niche",
+      "enabled": true,
+      "color": "#4D96FF"
+    }
+  ]
+}

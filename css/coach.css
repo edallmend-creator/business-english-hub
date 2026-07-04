@@ -1,0 +1,1189 @@
+/* ================================================================
+   COACH STYLES - im Hub-Design
+   ================================================================ */
+
+/* Coach Wrapper */
+.coach-wrapper {
+  max-width: 1180px;
+  margin: 34px auto 80px;
+  padding: 0 24px;
+}
+
+.coach-session {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(222, 226, 230, 0.9);
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: 0 24px 70px rgba(18, 38, 63, 0.12);
+}
+
+.coach-session::before {
+  content: "";
+  display: block;
+  height: 5px;
+  margin: -34px -34px 28px;
+  border-radius: 28px 28px 0 0;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.coach-session .settings-bar {
+  background: linear-gradient(135deg, #ffffff, #f6f8fb);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 22px;
+}
+
+.settings-toggles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.settings-toggles label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+  border: 1px solid rgba(0, 102, 204, 0.14);
+  border-radius: 24px;
+  padding: 34px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 12px 34px rgba(0, 102, 204, 0.08);
+}
+
+.phrase-de {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4.2vw, 54px);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+}
+
+.phrase-en {
+  margin-top: 18px;
+  padding: 18px 20px;
+  background: #ecfdf3;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 18px;
+  color: #15803d;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 800;
+  line-height: 1.18;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Dashboard Container */
+.dashboard {
+  margin-bottom: 40px;
+}
+
+.dashboard-header {
+  background: var(--primary);
+  color: white;
+  padding: 24px 32px;
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0;
+}
+
+.dashboard-header h1 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.dashboard-header .version {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.dashboard-body {
+  background: var(--surface);
+  padding: 32px;
+  border-radius: 0 0 16px 16px;
+  border: 1px solid var(--border);
+  border-top: none;
+}
+
+/* Dashboard Stats */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--primary);
+  font-family: var(--font-display);
+}
+
+.stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* Deck Grid */
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.deck-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.deck-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.deck-category {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.deck-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--primary);
+  line-height: 1.15;
+}
+
+.deck-progress {
+  margin: 8px 0;
+}
+
+.progress-bar {
+  background: var(--surface2);
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s;
+}
+
+.progress-text {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Coach Card (beim Lernen) */
+.coach-card {
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 28px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.coach-question {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--primary);
+  text-align: center;
+}
+
+.coach-answer {
+  font-size: 18px;
+  color: var(--muted);
+  text-align: center;
+  display: none;
+}
+
+.coach-answer.revealed {
+  display: block;
+}
+
+.coach-example {
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+  border-left: 3px solid var(--accent);
+  padding-left: 12px;
+  display: none;
+}
+
+.coach-example.revealed {
+  display: block;
+}
+
+/* Input Field */
+.coach-input {
+  width: 100%;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 16px;
+  color: var(--text);
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.coach-input:focus {
+  border-color: var(--primary);
+}
+
+.coach-input.correct {
+  border-color: #34C759;
+  background: #f0fdf4;
+}
+
+.coach-input.wrong {
+  border-color: var(--red);
+  background: #fef2f2;
+}
+
+/* Emoji Display */
+.emoji-display {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  font-size: 36px;
+  margin: 12px 0;
+}
+
+/* Emoji Picker */
+.emoji-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+  gap: 4px;
+  justify-content: center;
+  margin-top: 12px;
+  max-height: 180px;
+  overflow-y: auto;
+  padding: 8px 4px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+.emoji-picker::-webkit-scrollbar {
+  width: 6px;
+}
+
+.emoji-picker::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.emoji-picker::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.emoji-picker::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+.emoji-picker button {
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 36px;
+  min-height: 36px;
+}
+
+.emoji-picker button:hover:not(:disabled) {
+  transform: scale(1.15);
+  border-color: var(--primary);
+  background: var(--accent-light, rgba(255,149,0,0.1));
+}
+
+.emoji-picker button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.emoji-picker button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Mobile emoji-picker optimization */
+@media (max-width: 600px) {
+  .emoji-picker {
+    grid-template-columns: repeat(auto-fill, minmax(32px, 1fr));
+    gap: 3px;
+    max-height: 160px;
+    padding: 6px 3px;
+  }
+  
+  .emoji-picker button {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    min-width: 32px;
+    min-height: 32px;
+  }
+}
+
+/* ================================================================
+   PREMIUM COACH HOME
+   ================================================================ */
+
+.coach-home {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.coach-home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: stretch;
+  background: radial-gradient(circle at top left, rgba(255,149,0,0.22), transparent 34%), linear-gradient(135deg, #0f376a, var(--primary));
+  color: #fff;
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: 0 24px 70px rgba(0, 68, 135, 0.22);
+  overflow: hidden;
+}
+
+.coach-kicker,
+.coach-today-label {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.coach-home-hero h1 {
+  margin: 10px 0 12px;
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.coach-home-hero p {
+  max-width: 620px;
+  color: rgba(255,255,255,0.84);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.coach-home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.coach-today-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 240px;
+  padding: 24px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 22px;
+  backdrop-filter: blur(10px);
+}
+
+.coach-today-title {
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.coach-today-desc {
+  margin-top: 12px;
+  color: rgba(255,255,255,0.76);
+  font-size: 14px;
+}
+
+.coach-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.coach-metrics div {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(18, 38, 63, 0.06);
+}
+
+.coach-metrics strong {
+  display: block;
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.coach-metrics span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.coach-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.coach-section-heading span {
+  font-family: var(--font-display);
+  color: var(--primary);
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.coach-section-heading small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.coach-deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.coach-deck-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 260px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--deck-color, var(--primary));
+  border-radius: 22px;
+  box-shadow: 0 12px 34px rgba(18, 38, 63, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.coach-deck-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--deck-color, var(--primary)) 40%, var(--border));
+  box-shadow: 0 20px 50px rgba(18, 38, 63, 0.12);
+}
+
+.coach-deck-meta {
+  color: var(--deck-color, var(--accent));
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.coach-deck-card h2 {
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.02;
+  text-transform: uppercase;
+}
+
+.coach-deck-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.coach-deck-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.coach-deck-stats span {
+  padding: 6px 10px;
+  background: var(--surface2);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.coach-deck-stats .is-due {
+  background: #fef2f2;
+  color: var(--red);
+}
+
+.coach-deck-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.coach-home .btn,
+.coach-session .btn {
+  justify-content: center;
+  min-height: 48px;
+}
+
+@media (max-width: 760px) {
+  .coach-home-hero {
+    grid-template-columns: 1fr;
+    padding: 26px 20px;
+    border-radius: 22px;
+  }
+
+  .coach-today-card {
+    min-height: 170px;
+  }
+
+  .coach-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .coach-home {
+    gap: 18px;
+  }
+
+  .coach-home-hero h1 {
+    font-size: clamp(38px, 13vw, 54px);
+  }
+
+  .coach-home-hero p {
+    font-size: 16px;
+  }
+
+  .coach-home-actions,
+  .coach-deck-actions {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .coach-deck-card {
+    min-height: 0;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .coach-deck-card h2 {
+    font-size: 25px;
+  }
+
+  .coach-session > div[style*="margin-top: 16px"]:has(.btn-primary) {
+    position: sticky;
+    bottom: 10px;
+    z-index: 20;
+    padding: 10px;
+    background: rgba(255,255,255,0.94);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 12px 34px rgba(18, 38, 63, 0.18);
+    backdrop-filter: blur(8px);
+  }
+}
+
+/* Controls */
+.coach-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  margin-bottom: 12px; /* Damit nicht zu nah am Modal-Ende */
+}
+
+.nav-buttons button {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid var(--border);
+  background: white;
+  color: var(--muted);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  min-height: 44px; /* Mobile touch target */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-buttons button:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.nav-buttons button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Mobile optimizations für Buttons */
+@media (max-width: 600px) {
+  .nav-buttons {
+    gap: 8px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .nav-buttons button {
+    padding: 14px 8px;
+    min-height: 48px; /* Größer für Mobile Touch */
+    font-size: 13px;
+  }
+}
+
+.coach-controls-left {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.coach-pill {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Rate Buttons */
+.rate-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.rate-btn {
+  padding: 12px 24px;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.rate-btn:hover {
+  border-color: var(--primary);
+  background: #f0f7ff;
+}
+
+.rate-btn.rate-wrong {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.rate-btn.rate-wrong:hover {
+  background: #fef2f2;
+  border-color: var(--red);
+}
+
+.rate-btn.rate-correct {
+  border-color: #34C759;
+  color: #34C759;
+}
+
+.rate-btn.rate-correct:hover {
+  background: #f0fdf4;
+  border-color: #34C759;
+}
+
+/* Settings Toggle */
+.settings-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.setting-label {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--border);
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--muted);
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background: var(--primary);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+  transform: translate(20px, -50%);
+  background: var(--accent);
+}
+
+/* Modal Overrides for Coach */
+.modal h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.modal h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.modal p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+/* Section Labels */
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+  margin-top: 32px;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .coach-wrapper {
+    padding: 0 16px;
+  }
+  
+  .dashboard h1 {
+    font-size: 28px;
+  }
+  
+  .coach-question {
+    font-size: 20px;
+  }
+  
+  .deck-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .rate-buttons {
+    flex-direction: column;
+  }
+  
+  .rate-btn {
+    width: 100%;
+  }
+}
+
+/* X-Button - Inline in Header */
+.coach-exit-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.08);
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  font-weight: 700;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.coach-exit-btn:hover {
+  background: rgba(0, 0, 0, 0.15);
+  transform: scale(1.08);
+}
+
+.coach-exit-btn:active {
+  transform: scale(0.92);
+}
+
+
+/* ================================================================
+   TIMER SLIDER - EINZIGE & FINALE VERSION
+   ================================================================ */
+
+/* Timer Slider Container */
+#timerSliderContainer {
+  position: relative;
+  z-index: 510 !important;
+  pointer-events: auto !important;
+  background: white;
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: visible;
+}
+
+/* Range Slider */
+#timerSliderContainer input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+  accent-color: var(--primary);
+  -webkit-appearance: slider-horizontal;
+  appearance: slider-horizontal;
+  pointer-events: auto !important;
+  margin: 8px 0;
+  display: block;
+}
+
+/* Slider Thumb (webkit) */
+#timerSliderContainer input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto !important;
+}
+
+/* Slider Thumb (firefox) */
+#timerSliderContainer input[type="range"]::-moz-range-thumb {
+  pointer-events: auto !important;
+}
+
+/* Modal Z-Index Setup (damit Timer drüber ist!) */
+.modal-overlay {
+  z-index: 500;
+  position: fixed;
+}
+
+.modal {
+  z-index: 501;
+  position: relative;
+}
+
+/* ================================================================
+   TIMER SLIDER FOOTER - EINZIGE ECHTE TIMER
+   ================================================================ */
+
+#timerSliderFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 2px solid var(--gold);
+  padding: 16px 20px;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+}
+
+.timer-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+  min-width: 150px;
+}
+
+#timerSliderFooter input[type="range"] {
+  flex: 1;
+  max-width: 300px;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.timer-hints {
+  display: flex;
+  gap: 12px;
+  font-size: 10px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Body padding damit Footer nicht überlappt */
+body { padding-bottom: 0; }
+/* ================================================================
+   MODAL RESTRUCTURING - Timer (fixed) + Content (scrollable)
+   ================================================================ */
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+  max-height: 90vh !important;
+  overflow: hidden !important;
+}
+
+/* Timer Section - FIXED OBEN (nicht scrollbar!) */
+.modal-timer-section {
+  position: relative;
+  z-index: 502;
+  pointer-events: auto;
+  background: white;
+  border-bottom: 2px solid var(--gold);
+  padding: 16px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.timer-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.timer-hints {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* Scrollable Content Section */
+.modal-scrollable {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 36px;
+}
+
+/* Wichtig: Körper nicht padden wenn Modal offen */
+body.modal-open {
+  padding-bottom: 0 !important;
+}
+
+/* Mobile Bottom Scrolling Fix - Mehr Padding am Ende */
+@media (max-width: 600px) {
+  .coach-wrapper {
+    margin: 14px auto 36px;
+    padding: 0 10px;
+  }
+
+  .coach-session {
+    width: 100%;
+    border-radius: 18px;
+    padding: 18px 12px 22px;
+    box-shadow: 0 12px 34px rgba(18, 38, 63, 0.12);
+  }
+
+  .coach-session::before {
+    margin: -18px -12px 18px;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .coach-session .settings-bar {
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+
+  .settings-toggles {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    border-radius: 18px;
+    padding: 22px 16px;
+  }
+
+  .phrase-de {
+    font-size: clamp(28px, 11vw, 42px);
+  }
+
+  .phrase-en {
+    font-size: clamp(21px, 7vw, 30px);
+    padding: 15px;
+  }
+
+  /* Settings und Hilfe-Divs */
+  div[style*="margin-top: 12px"],
+  div[style*="margin-top: 14px"],
+  div[style*="margin-top: 16px"],
+  div[style*="margin-top: 20px"] {
+    margin-bottom: 8px !important;
+  }
+  
+  /* Alle Buttons größer machen */
+  button {
+    min-height: 44px;
+    font-size: 14px;
+  }
+  
+  /* Input Felder auch größer */
+  input[type="text"],
+  input[type="range"],
+  textarea {
+    min-height: 44px;
+    font-size: 16px; /* Verhindert zoom auf Mobile */
+  }
+}

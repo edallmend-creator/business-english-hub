@@ -1,0 +1,12 @@
+{
+  "drive_folder_id": "1l-gqIWNtN4EOVv0Bnf1NcfAdoR9W9gKx",
+  "base_url": "https://drive.google.com/uc?export=download&id=",
+  "test_file_id": "11HnnIIArn63YVq2OXe72dUY70Hp-oE7t",
+  "structure": {
+    "w1": { "us": "w1/us", "uk": "w1/uk" },
+    "w2": { "us": "w2/us", "uk": "w2/uk" },
+    "w3": { "us": "w3/us", "uk": "w3/uk" },
+    "w4": { "us": "w4/us", "uk": "w4/uk" }
+  },
+  "note": "File IDs werden dynamisch geladen oder gecached"
+}
