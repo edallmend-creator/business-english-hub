@@ -99,40 +99,6 @@ function scrollToSection(id) {
   el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function showFeedbackResult(type) {
-  const result = document.getElementById("feedbackResult");
-  if (!result) return;
-
-  const supportMail = "mailto:info@shortcutenglish.de?subject=Feedback%20Business%20English%20Hub&body=Hallo%20Wort%20Wach%20Verlag%2C%0A%0Amein%20Feedback%20zum%20Buch%20und%20zur%20Web-App%3A%0A%0A";
-  const helpMail = "mailto:info@shortcutenglish.de?subject=Support%20Business%20English%20Hub&body=Hallo%20Wort%20Wach%20Verlag%2C%0A%0Aich%20brauche%20Hilfe%20mit%3A%0A%0A";
-  const amazonUrl = "https://www.amazon.de/";
-
-  const variants = {
-    share: {
-      title: "Danke, dass du deine Erfahrung teilen möchtest.",
-      text: "Eine ehrliche Rezension hilft anderen Leserinnen und Lesern einzuschätzen, ob Buch und Web-App zu ihnen passen.",
-      actions: `<a class="btn-primary" href="${amazonUrl}" target="_blank" rel="noopener">Amazon-Rezension öffnen</a><a class="btn-secondary" href="${supportMail}">Direktes Feedback senden</a>`
-    },
-    idea: {
-      title: "Danke, das hilft bei der Weiterentwicklung.",
-      text: "Schreib uns kurz, was dir gefehlt hat, was unklar war oder welche Ergänzung du dir wünschen würdest.",
-      actions: `<a class="btn-primary" href="${supportMail}">Feedback an den Verlag senden</a>`
-    },
-    help: {
-      title: "Tut uns leid, dass etwas nicht gepasst hat.",
-      text: "Schreib uns kurz, was passiert ist. Dann können wir helfen oder nachbessern.",
-      actions: `<a class="btn-primary" href="${helpMail}">Support kontaktieren</a>`
-    }
-  };
-
-  const current = variants[type] || variants.idea;
-  result.innerHTML = `
-    <strong>${current.title}</strong>
-    <p>${current.text}</p>
-    <div class="feedback-result-actions">${current.actions}</div>
-  `;
-}
-
 // ================================================================
 // DOWNLOADS MODAL
 // ================================================================

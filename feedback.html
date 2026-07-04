@@ -34,31 +34,35 @@
   </nav>
 
   <main class="content-page">
-    <section class="support-card feedback-page-card">
-      <div>
-        <span>Unterstütze den Verlag</span>
-        <h1>Gemeinsam besser machen</h1>
-        <p>Deine Rückmeldung hilft uns, Buch und Web-App weiterzuentwickeln. Wähle einfach, was gerade am besten passt. Wenn der Hub dir geholfen hat, kannst du anderen Leserinnen und Lesern außerdem die Entscheidung erleichtern.</p>
+    <section class="opinion-section" aria-labelledby="opinionTitle">
+      <div class="opinion-header">
+        <span>Feedback</span>
+        <h1 id="opinionTitle">Deine Meinung hilft</h1>
+        <p>Danke, dass du dir Zeit nimmst. Eine ehrliche Rückmeldung hilft mir, das Buch weiter zu verbessern — und sie hilft anderen Lesern bei der Entscheidung.</p>
       </div>
-      <div class="feedback-actions">
-        <button onclick="showFeedbackResult('share')"><strong>Erfahrung teilen</strong><span>Wenn dir Buch oder Hub geholfen haben</span></button>
-        <button onclick="showFeedbackResult('idea')"><strong>Verbesserung vorschlagen</strong><span>Wenn dir etwas gefehlt hat</span></button>
-        <button onclick="showFeedbackResult('help')"><strong>Problem melden</strong><span>Wenn etwas nicht funktioniert</span></button>
-      </div>
-      <div id="feedbackResult" class="feedback-result" aria-live="polite"></div>
-    </section>
 
-    <section class="content-grid-two">
-      <article>
-        <h2>Warum Feedback so wichtig ist</h2>
-        <p>Das Buch und der Hub sind für echte Arbeitssituationen gebaut: Meetings, E-Mails, Präsentationen und internationale Teams. Rückmeldungen zeigen, welche Phrasen wirklich helfen und welche Stellen noch klarer werden müssen.</p>
-      </article>
-      <article>
-        <h2>Was eine Rezension bewirkt</h2>
-        <p>Eine ehrliche Rezension hilft anderen, einzuschätzen, ob der 4-Wochen-Ansatz zu ihnen passt. Sie unterstützt außerdem unabhängige Lernmaterialien jenseits großer Plattformkurse.</p>
-      </article>
+      <div class="opinion-grid" aria-label="Feedback-Optionen">
+        <article class="opinion-card">
+          <div>
+            <h2>Rezension auf Amazon schreiben</h2>
+            <p>Ehrlich, freiwillig und in deinen eigenen Worten.</p>
+          </div>
+          <a id="amazonReviewLink" class="btn-primary opinion-link" href="#" target="_blank" rel="noopener">Rezension schreiben</a>
+        </article>
+
+        <article class="opinion-card">
+          <div>
+            <h2>Feedback oder Problem melden</h2>
+            <p>Ist dir ein Fehler aufgefallen, hat etwas nicht funktioniert oder möchtest du mir direkt etwas sagen?</p>
+          </div>
+          <a id="feedbackMailLink" class="btn-secondary opinion-link" href="#">Feedback senden</a>
+        </article>
+      </div>
+
+      <p class="opinion-note">Bitte schreibe nur eine Rezension, wenn du das Buch wirklich gelesen hast. Es geht nicht um eine bestimmte Sternebewertung, sondern um deine ehrliche Einschätzung.</p>
     </section>
   </main>
-  <script src="js/navigation.js"></script>
+  <script src="js/site-config.js"></script>
+  <script src="js/feedback.js"></script>
 </body>
 </html>

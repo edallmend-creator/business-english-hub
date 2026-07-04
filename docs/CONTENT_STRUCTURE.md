@@ -45,27 +45,26 @@ Neue Fragen werden als `<details>` ergänzt:
 </details>
 ```
 
-## Feedback-Assistent
+## Feedback und Rezensionen
 
-Der Bereich `Unterstütze den Verlag` steht in `feedback.html`.
+Der Bereich steht in `feedback.html`.
 
-Die Klick-Logik liegt in `js/navigation.js` in `showFeedbackResult(type)`.
+Die Links werden zentral aus `js/site-config.js` gelesen und in `js/feedback.js` in die Seite eingesetzt.
 
-Aktuelle Typen:
+Aktuelle Konfigurationsfelder pro Kampagne:
 
-- `share`: zeigt Amazon-Rezension prominent plus direktes Feedback.
-- `idea`: öffnet Feedback-Mail.
-- `help`: öffnet Support-Mail.
+- `bookTitle`
+- `amazonReviewUrl`
+- `feedbackEmail`
 
-Wichtig: Der Amazon-Link ist aktuell ein Platzhalter (`https://www.amazon.de/`). Wenn die finale Produktseite bekannt ist, dort die konkrete Review-/Produkt-URL eintragen.
+Wichtig: Der Amazon-Link ist aktuell ein Platzhalter in `js/site-config.js`. Wenn die finale Produktseite bekannt ist, dort die konkrete Review-URL ohne Sterne-Vorauswahl eintragen.
 
-Die sichtbaren Button-Texte sind bewusst neutral formuliert:
+Die sichtbaren Optionen sind bewusst neutral und gleichwertig formuliert:
 
-- `Erfahrung teilen`
-- `Verbesserung vorschlagen`
-- `Problem melden`
+- `Rezension auf Amazon schreiben`
+- `Feedback oder Problem melden`
 
-So wirkt der Bereich wie ein Feedback-Assistent und nicht wie ein offensichtlicher Bewertungsfilter.
+Es gibt keine Stimmungsabfrage und keine Bewertungsverzweigung. Beide Optionen sind immer sichtbar.
 
 ## Navigation
 

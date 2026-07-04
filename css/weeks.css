@@ -487,6 +487,110 @@
   margin-top: 14px;
 }
 
+.opinion-section {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid rgba(222,226,230,0.9);
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(18,38,63,0.1);
+}
+
+.opinion-header {
+  max-width: 780px;
+}
+
+.opinion-header span {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.opinion-header h1 {
+  margin-top: 10px;
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: clamp(44px, 7vw, 76px);
+  font-weight: 900;
+  letter-spacing: var(--tracking-tight);
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+.opinion-header p,
+.opinion-note {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.opinion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.opinion-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  min-height: 250px;
+  padding: 24px;
+  background: linear-gradient(180deg, #ffffff, #f9fbff);
+  border: 1px solid rgba(222,226,230,0.95);
+  border-radius: 22px;
+  box-shadow: 0 12px 34px rgba(18,38,63,0.06);
+}
+
+.opinion-card h2 {
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: clamp(27px, 4vw, 38px);
+  font-weight: 900;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.opinion-card p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.opinion-link {
+  width: 100%;
+  text-decoration: none;
+}
+
+.opinion-card .btn-secondary {
+  border-color: rgba(0,102,204,0.35);
+  color: var(--primary);
+  background: #fff;
+}
+
+.opinion-card .btn-secondary:hover {
+  border-color: var(--primary);
+  background: #f0f7ff;
+  color: var(--primary);
+}
+
+.opinion-link[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.opinion-note {
+  max-width: 780px;
+  padding-top: 4px;
+  font-size: 14px;
+}
+
 .legal-page {
   max-width: 860px;
   margin: 52px auto;
@@ -686,6 +790,19 @@
 
   .feedback-result-actions {
     display: grid;
+  }
+
+  .opinion-section {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .opinion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .opinion-card {
+    min-height: 0;
   }
 
   .legal-page {
