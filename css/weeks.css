@@ -196,6 +196,37 @@
   line-height: 1.65;
 }
 
+.week-module-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.week-module-strip div {
+  padding: 16px;
+  background: #f7f9fc;
+  border: 1px solid rgba(222,226,230,0.95);
+  border-radius: 16px;
+}
+
+.week-module-strip span {
+  display: block;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.week-module-strip strong {
+  display: block;
+  color: var(--primary);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
 .section-label {
   margin-top: 34px;
   color: var(--primary);
@@ -307,6 +338,181 @@
   justify-content: flex-start;
 }
 
+.faq-section,
+.support-section {
+  max-width: 1160px;
+  margin: 34px auto 0;
+  padding: 0 24px;
+}
+
+.faq-header,
+.support-card {
+  background: #fff;
+  border: 1px solid rgba(222,226,230,0.9);
+  border-radius: 24px;
+  box-shadow: 0 14px 40px rgba(18, 38, 63, 0.07);
+}
+
+.faq-header {
+  padding: 28px;
+  margin-bottom: 16px;
+}
+
+.faq-header span,
+.support-card span {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.faq-header h2,
+.support-card h2 {
+  margin-top: 8px;
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 54px);
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.faq-header p,
+.support-card p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.faq-grid details {
+  background: #fff;
+  border: 1px solid rgba(222,226,230,0.9);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 10px 30px rgba(18, 38, 63, 0.05);
+}
+
+.faq-grid summary {
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.faq-grid details p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.support-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 26px;
+  padding: 30px;
+  background: radial-gradient(circle at top right, rgba(255,149,0,0.12), transparent 28%), #fff;
+}
+
+.feedback-actions {
+  display: grid;
+  gap: 10px;
+  align-content: center;
+}
+
+.feedback-actions button {
+  min-height: 52px;
+  padding: 12px 16px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 800;
+  text-align: left;
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.feedback-actions button:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(18,38,63,0.08);
+  transform: translateY(-1px);
+}
+
+.feedback-result {
+  grid-column: 1 / -1;
+  display: none;
+  padding: 18px;
+  background: #f7f9fc;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.feedback-result:not(:empty) {
+  display: block;
+}
+
+.feedback-result strong {
+  color: var(--primary);
+  font-size: 18px;
+}
+
+.feedback-result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.legal-page {
+  max-width: 860px;
+  margin: 52px auto;
+  padding: 34px;
+  background: #fff;
+  border: 1px solid rgba(222,226,230,0.9);
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(18,38,63,0.1);
+}
+
+.legal-page h1 {
+  margin-top: 26px;
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: clamp(42px, 7vw, 72px);
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.legal-page h2 {
+  margin-top: 28px;
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.legal-page p {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.legal-note {
+  padding: 14px 16px;
+  background: #fff7ed;
+  border: 1px solid rgba(255,149,0,0.25);
+  border-radius: 14px;
+  color: #8a4b00 !important;
+}
+
 @media (max-width: 600px) {
   .weeks-section {
     padding: 36px 14px 24px;
@@ -347,5 +553,32 @@
 
   .download-item .btn-secondary {
     width: 100%;
+  }
+
+  .week-module-strip,
+  .faq-grid,
+  .support-card {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-section,
+  .support-section {
+    padding: 0 14px;
+  }
+
+  .faq-header,
+  .support-card {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .feedback-result-actions {
+    display: grid;
+  }
+
+  .legal-page {
+    margin: 18px 12px;
+    padding: 24px 18px;
+    border-radius: 20px;
   }
 }

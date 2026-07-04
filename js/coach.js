@@ -1106,25 +1106,32 @@ function renderCard() {
     
     // Build HTML
     const html = `
+        <div class="coach-session-brand">
+            <img src="images/NoraJonas2.png" alt="Business English Coach">
+            <div>
+                <strong>Coach Session</strong>
+                <span>Kurze aktive Wiederholung</span>
+            </div>
+        </div>
+
         <!-- Accent Toggle (für Core Decks mit Audio) - IMMER SICHTBAR! -->
         ${App.currentDeck?.meta?.id && (App.currentDeck.meta.id.includes('w1') || App.currentDeck.meta.id.includes('w2') || App.currentDeck.meta.id.includes('w3') || App.currentDeck.meta.id.includes('w4')) && App.currentDeck.meta.id.includes('core') ? `
-            <div style="margin: 0 0 16px 0; padding: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);">
-                <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;">
-                    <div style="font-size: 13px; font-weight: 700; color: white;">
-                        🎙️ Accent:
-                    </div>
-                    <div style="display: flex; gap: 8px;">
+            <div class="accent-panel ${App.currentAccent === 'uk' ? 'is-uk' : 'is-us'}">
+                <div class="accent-panel-label">
+                    <span>${App.currentAccent === 'us' ? 'American English' : 'British English'}</span>
+                    <small>${App.currentAccent === 'us' ? 'US variant active' : 'UK variant active'}</small>
+                </div>
+                <div class="accent-switch">
                         <button onclick="if(App.currentAccent !== 'us') toggleAccent()" 
                                 class="accent-btn ${App.currentAccent === 'us' ? 'active' : ''}"
-                                style="padding: 8px 16px; border: 2px solid ${App.currentAccent === 'us' ? 'white' : 'rgba(255,255,255,0.3)'}; background: ${App.currentAccent === 'us' ? 'white' : 'transparent'}; color: ${App.currentAccent === 'us' ? '#667eea' : 'white'}; border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                aria-label="American English anzeigen">
                             🇺🇸 American
                         </button>
                         <button onclick="if(App.currentAccent !== 'uk') toggleAccent()" 
                                 class="accent-btn ${App.currentAccent === 'uk' ? 'active' : ''}"
-                                style="padding: 8px 16px; border: 2px solid ${App.currentAccent === 'uk' ? 'white' : 'rgba(255,255,255,0.3)'}; background: ${App.currentAccent === 'uk' ? 'white' : 'transparent'}; color: ${App.currentAccent === 'uk' ? '#667eea' : 'white'}; border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                aria-label="British English anzeigen">
                             🇬🇧 British
                         </button>
-                    </div>
                 </div>
             </div>
         ` : ''}

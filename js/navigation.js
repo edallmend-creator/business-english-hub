@@ -92,6 +92,40 @@ function setMobileTabActive(el) {
   }
 }
 
+function showFeedbackResult(type) {
+  const result = document.getElementById("feedbackResult");
+  if (!result) return;
+
+  const supportMail = "mailto:info@shortcutenglish.de?subject=Feedback%20Business%20English%20Hub&body=Hallo%20Wort%20Wach%20Verlag%2C%0A%0Amein%20Feedback%20zum%20Buch%20und%20zur%20Web-App%3A%0A%0A";
+  const helpMail = "mailto:info@shortcutenglish.de?subject=Support%20Business%20English%20Hub&body=Hallo%20Wort%20Wach%20Verlag%2C%0A%0Aich%20brauche%20Hilfe%20mit%3A%0A%0A";
+  const amazonUrl = "https://www.amazon.de/";
+
+  const variants = {
+    good: {
+      title: "Das freut uns sehr.",
+      text: "Wenn du deine ehrliche Erfahrung teilen möchtest, hilft eine Rezension anderen Leserinnen und Lesern bei der Entscheidung.",
+      actions: `<a class="btn-primary" href="${amazonUrl}" target="_blank" rel="noopener">Amazon-Rezension öffnen</a><a class="btn-secondary" href="${supportMail}">Direktes Feedback senden</a>`
+    },
+    medium: {
+      title: "Danke für deine ehrliche Rückmeldung.",
+      text: "Was hätte dir gefehlt oder was war unklar? Schreib uns kurz, damit wir Buch und Hub verbessern können.",
+      actions: `<a class="btn-primary" href="${supportMail}">Feedback an den Verlag senden</a>`
+    },
+    help: {
+      title: "Tut uns leid, dass etwas nicht gepasst hat.",
+      text: "Schreib uns kurz, was passiert ist. Dann können wir helfen oder nachbessern.",
+      actions: `<a class="btn-primary" href="${helpMail}">Support kontaktieren</a>`
+    }
+  };
+
+  const current = variants[type] || variants.medium;
+  result.innerHTML = `
+    <strong>${current.title}</strong>
+    <p>${current.text}</p>
+    <div class="feedback-result-actions">${current.actions}</div>
+  `;
+}
+
 // ================================================================
 // DOWNLOADS MODAL
 // ================================================================
