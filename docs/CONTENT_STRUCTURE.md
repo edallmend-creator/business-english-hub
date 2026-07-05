@@ -4,6 +4,7 @@ Diese Datei erklärt die wichtigsten Produktbereiche, damit Inhalte später leic
 
 ## Hauptseiten
 
+- `start.html`: Startseite/Landing innerhalb des Webteils mit Einstieg in Kurs und Coach.
 - `index.html`: Login-geschützter Kurs-Hub mit Hero, Kursübersicht, Wochenplan, Bonusbereich und Footer.
 - `coach.html`: Eigene Coach-Seite für Spaced-Repetition-Training.
 - `faq.html`: Eigene FAQ-Seite mit ausführlicheren Fragen und Antworten.
@@ -31,6 +32,12 @@ Pro Woche gibt es drei Ebenen:
 - `section-grid`: konkrete Trainingskarten mit Buttons.
 
 Wenn eine neue Übung ergänzt wird, sollte sie als `.section-card` in der passenden Woche stehen. Der Button kann entweder eine Coach-Seite öffnen oder eine Funktion wie `openExercise(...)` starten.
+
+## Bonus-Decks und Wortschatz
+
+Die Nischen-/Branchen-Decks bestehen aktuell überwiegend aus Fachbegriffen und typischen Business-Wörtern, nicht aus vollständigen Phrasen. Deshalb werden sie im Hub als `Begriffe` bzw. `Wortschatz` bezeichnet.
+
+Wenn später echte Satzlisten ergänzt werden, können die Karten wieder als `Phrasen` bezeichnet werden. Dann sollten auch die CSV-Inhalte entsprechend vollständige Formulierungen enthalten.
 
 ## FAQ erweitern
 

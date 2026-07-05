@@ -5,26 +5,26 @@
 /* Coach Wrapper */
 .coach-wrapper {
   max-width: 1180px;
-  margin: 34px auto 80px;
+  margin: 28px auto 80px;
   padding: 0 24px;
 }
 
 .coach-session {
-  width: min(100%, 980px);
+  width: min(100%, 880px);
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(222, 226, 230, 0.9);
-  border-radius: 28px;
-  padding: 34px;
-  box-shadow: 0 24px 70px rgba(18, 38, 63, 0.12);
+  border-radius: 30px;
+  padding: 26px;
+  box-shadow: 0 24px 70px rgba(18, 38, 63, 0.10);
 }
 
 .coach-session::before {
   content: "";
   display: block;
   height: 5px;
-  margin: -34px -34px 28px;
-  border-radius: 28px 28px 0 0;
+  margin: -26px -26px 24px;
+  border-radius: 30px 30px 0 0;
   background: linear-gradient(90deg, var(--primary), var(--accent));
 }
 
@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   color: var(--primary);
 }
 
@@ -127,11 +127,11 @@
 }
 
 .coach-session .settings-bar {
-  background: linear-gradient(135deg, #ffffff, #f6f8fb);
+  background: #f7f9fc;
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 16px;
-  margin-bottom: 22px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
 }
 
 .coach-session .settings-bar {
@@ -162,13 +162,13 @@
   background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
   border: 1px solid rgba(0, 102, 204, 0.14);
   border-radius: 24px;
-  padding: 34px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 12px 34px rgba(0, 102, 204, 0.08);
+  padding: 26px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 10px 28px rgba(0, 102, 204, 0.07);
 }
 
 .phrase-de {
   font-family: var(--font-display);
-  font-size: clamp(30px, 4.2vw, 54px);
+  font-size: clamp(27px, 3.2vw, 40px);
   font-weight: 900;
   line-height: 1.02;
   letter-spacing: var(--tracking-tight);
@@ -182,7 +182,7 @@
   border: 1px solid rgba(34, 197, 94, 0.25);
   border-radius: 18px;
   color: #15803d;
-  font-size: clamp(22px, 3vw, 34px);
+  font-size: clamp(20px, 2.3vw, 28px);
   font-weight: 800;
   line-height: 1.18;
 }
