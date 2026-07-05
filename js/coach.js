@@ -1252,30 +1252,31 @@ function renderCard() {
         
         <!-- Card -->
         <div class="card">
-            <div style="font-size: 10px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; letter-spacing: 0.1em; font-weight: 700;">
+            <div class="coach-card-label">
                 🇩🇪 Deutsch → Englisch ${App.settings.typing ? 'tippen' : 'sprechen'}
+            </div>
+            <div class="coach-card-instruction">
+                Formuliere die englische Phrase aktiv aus dem Kopf. Erst danach Lösung anzeigen und bewerten.
             </div>
             
             <div class="phrase-de">${card.a}</div>
             
             <!-- Audio Player (nur für Core Decks) -->
             ${App.currentDeck?.meta?.id && (App.currentDeck.meta.id.includes('w1') || App.currentDeck.meta.id.includes('w2') || App.currentDeck.meta.id.includes('w3') || App.currentDeck.meta.id.includes('w4')) && App.currentDeck.meta.id.includes('core') ? `
-                <div style="margin-top: 16px; padding: 12px; background: var(--surface); border-radius: 8px; border: 1px solid var(--border);">
-                    <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="coach-audio-panel">
+                    <div class="coach-audio-row">
                         <button onclick="toggleAudio()" class="audio-play-btn"
-                                style="width: 48px; height: 48px; border-radius: 50%; background: var(--primary); color: white; border: none; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
-                                onmouseover="this.style.transform='scale(1.1)'" 
-                                onmouseout="this.style.transform='scale(1)'">
+                                aria-label="Phrase anhören und nachsprechen">
                             🔊
                         </button>
-                        <div style="flex: 1;">
-                            <div style="font-size: 11px; color: var(--muted); margin-bottom: 4px;">
-                                Audio: ${App.currentAccent === 'us' ? '🇺🇸 American' : '🇬🇧 British'}
+                        <div class="coach-audio-meta">
+                            <div class="coach-audio-label">
+                                Anhören & nachsprechen · ${App.currentAccent === 'us' ? '🇺🇸 American' : '🇬🇧 British'}
                             </div>
-                            <div style="display: flex; gap: 4px; align-items: center;">
+                            <div class="coach-speed-options">
                                 ${CONFIG.audio.speedOptions.map(opt => `
                                     <button onclick="changeAudioSpeed(${opt.value})" 
-                                            style="padding: 4px 12px; border: 1px solid ${App.audioSpeed === opt.value ? 'var(--primary)' : 'var(--border)'}; background: ${App.audioSpeed === opt.value ? 'var(--primary)' : 'transparent'}; color: ${App.audioSpeed === opt.value ? 'white' : 'var(--muted)'}; border-radius: 4px; font-size: 11px; cursor: pointer; transition: all 0.2s;">
+                                            class="coach-speed-btn ${App.audioSpeed === opt.value ? 'active' : ''}">
                                         ${opt.label}
                                     </button>
                                 `).join('')}
@@ -2266,6 +2267,24 @@ function showDeckSelection() {
                     <div class="coach-today-title">${recommended.deck.name}</div>
                     <div class="coach-today-desc">${recommended.deck.description || 'Kurze, fokussierte Session starten.'}</div>
                 </div>
+            </section>
+
+            <section class="coach-how-it-works" aria-label="So funktioniert der Coach">
+                <article>
+                    <span>1</span>
+                    <strong>Deutsch sehen</strong>
+                    <p>Du bekommst eine realistische deutsche Aufgabe statt einer isolierten Vokabel.</p>
+                </article>
+                <article>
+                    <span>2</span>
+                    <strong>Englisch abrufen</strong>
+                    <p>Du formulierst die Phrase aktiv aus dem Kopf, gesprochen oder getippt.</p>
+                </article>
+                <article>
+                    <span>3</span>
+                    <strong>Bewerten</strong>
+                    <p>Schwierige Karten kommen gezielt wieder. Leichte Karten verschwinden länger.</p>
+                </article>
             </section>
 
             <section class="coach-metrics">

@@ -2,8 +2,9 @@
    NAVIGATION
    ================================================================ */
 .nav {
-  position: sticky; top: 0; z-index: 100; background: var(--primary);
-  padding: 0 24px; box-shadow: 0 2px 12px rgba(0,102,204,0.15);
+  position: sticky; top: 0; z-index: 100;
+  background: linear-gradient(135deg, #0b2545 0%, #0066cc 100%);
+  padding: 0 24px; box-shadow: 0 2px 12px rgba(7,29,54,0.18);
 }
 .nav-inner {
   max-width: 1100px; margin: 0 auto; display: flex;
@@ -68,6 +69,99 @@
 /* SRS button styling */
 .nav-srs-btn {
   color: var(--gold);
+}
+
+.nav-review-btn,
+.nav-code-btn {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-review-btn {
+  gap: 5px;
+  padding: 5px 10px;
+  background: rgba(232,146,10,0.15);
+  border: 1px solid rgba(232,146,10,0.3);
+  position: relative;
+}
+
+.nav-review-label {
+  font-size: 13px;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.nav-badge {
+  display: none;
+  background: var(--red);
+  color: #fff;
+  border-radius: 10px;
+  padding: 1px 7px;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 20px;
+  text-align: center;
+}
+
+.nav-streak-display {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fb923c;
+  flex-shrink: 0;
+  min-width: 30px;
+  text-align: center;
+}
+
+.nav-code-btn {
+  gap: 7px;
+  padding: 5px 11px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.nav-sync-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fbbf24;
+  flex-shrink: 0;
+}
+
+.nav-code-display {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  font-family: var(--font-body);
+}
+
+.nav-sync-status {
+  font-size: 11px;
+  color: #4ade80;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.nav-tab-with-badge {
+  position: relative;
+}
+
+.nav-mobile-badge {
+  display: none;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--red);
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 16px;
+  text-align: center;
+  height: 16px;
+  line-height: 10px;
 }
 
 /* ================================================================

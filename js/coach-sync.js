@@ -1,7 +1,7 @@
 /**
  * COACH SYNC & STORAGE MODULE
  * Verantwortung: Daten-Persistierung
- * - Supabase Sync
+ * - localStorage Sync
  * - localStorage Fallback
  * - User Code Management
  */
@@ -18,7 +18,7 @@ function saveSetting(key, value) {
         App.settings[key] = value;
         localStorage.setItem(`coachSettings_${App.userCode}`, JSON.stringify(App.settings));
         
-        // Zu Supabase falls vorhanden
+        // Coach sessions persist locally; global hub progress uses js/sync.js.
         if (App.userCode && App.supabaseUrl) {
             syncSettingsToSupabase();
         }
@@ -63,10 +63,7 @@ function syncSRSToSupabase() {
             last_sync: new Date().toISOString()
         };
         
-        // TODO: Hier würde der echte Supabase Call gehen
-        // fetch(`${App.supabaseUrl}/update-progress`, {...})
-        
-        console.log('✅ SRS zu Supabase gesynct');
+        console.info('ℹ️ Coach Supabase sync ist nicht aktiv; lokale Speicherung bleibt erhalten.');
         
     } catch (error) {
         console.error('❌ Supabase Sync Error:', error);
@@ -89,9 +86,7 @@ function syncSettingsToSupabase() {
             timer: App.settings.timer
         };
         
-        // TODO: Echter Supabase Call
-        
-        console.log('✅ Settings zu Supabase gesynct');
+        console.info('ℹ️ Coach Settings werden lokal gespeichert.');
         
     } catch (error) {
         console.error('❌ Settings Sync Error:', error);
@@ -105,9 +100,7 @@ function syncStatsToSupabase() {
     try {
         if (!App.userCode || !App.supabaseUrl) return;
         
-        // TODO: Echter Supabase Call
-        
-        console.log('✅ Stats zu Supabase gesynct');
+        console.info('ℹ️ Coach Stats werden lokal gespeichert.');
         
     } catch (error) {
         console.error('❌ Stats Sync Error:', error);
@@ -133,7 +126,7 @@ function loadUserData(userCode) {
         
         console.log('✅ User Daten geladen');
         
-        // Optional: Aus Supabase synchen
+        // Optional hook; currently localStorage is the source of truth for coach sessions.
         syncUserDataFromSupabase(userCode);
         
     } catch (error) {
@@ -151,9 +144,7 @@ function syncUserDataFromSupabase(userCode) {
     try {
         if (!App.supabaseUrl) return;
         
-        // TODO: Echter Supabase Fetch
-        
-        console.log('✅ Daten von Supabase geladen');
+        console.info('ℹ️ Coach lädt keine separaten Supabase-Daten.');
         
     } catch (error) {
         console.error('⚠️ Supabase Sync fehlgeschlagen, verwende localStorage:', error);

@@ -1,31 +1,31 @@
 englisch,deutsch,beispiel,notizen
-subject line,Betreffzeile,"Wenn man den Titel einer E-Mail beschreibt, der den Inhalt knapp zusammenfasst.",
-attachment,Anhang,"Wenn man Dateien mitschickt oder erklärt, dass etwas beigelegt ist.",
-draft,Entwurf,"Wenn ein Text, eine E-Mail oder ein Dokument noch nicht final ist.",
-approval,Genehmigung,Wenn man eine offizielle Freigabe braucht.,
-confirmation,Bestätigung,"Wenn man sicherstellen möchte, dass eine Information verstanden oder akzeptiert wurde.",
-reminder,Erinnerung,Wenn man jemanden an eine Aufgabe oder Frist erinnert.,
-inquiry,Anfrage,"Wenn man Informationen, Angebote oder Details erfragt.",
-reply,Antwort,Wenn man auf eine E-Mail direkt reagiert.,
-response,Reaktion,Wenn eine inhaltliche oder formale Rückmeldung gemeint ist.,
-feedback,Rückmeldung,"Wenn konstruktive Hinweise, Bewertungen oder Verbesserungen gefragt sind.",
-deadline,Frist,Wenn etwas bis zu einem bestimmten Zeitpunkt erledigt sein muss.,
-update,Neues,Wenn es neue Informationen oder Fortschritte gibt.,
-request,Bitte,"Wenn man etwas benötigt oder jemanden bittet, etwas zu tun.",
-follow-up,Nachfassen,"Wenn man nach einer E-Mail, einem Meeting oder Anruf nochmal nachhakt.",
-signature,Signatur,Wenn man den automatisch eingefügten Abschluss einer E-Mail meint.,
-recipient,Empfänger,"Wenn man beschreibt, wer die Nachricht bekommt.",
-sender,Absender,"Wenn man erklärt, wer die Nachricht verschickt hat.",
-template,Vorlage,Wenn man eine vorgefertigte E-Mail- oder Dokumentstruktur verwendet.,
-tone,Schreibstil,"Wenn man darauf achtet, wie eine Nachricht wirkt (freundlich, neutral, direkt).",
-clarity,Klarheit,"Wenn man sicherstellen möchte, dass die Botschaft eindeutig verstanden wird.",
-overview,Überblick,Wenn man eine kurze Zusammenfassung der wichtigsten Punkte gibt.,
-summary,Zusammenfassung,"Wenn man Inhalte kompakt darstellt, z. B. nach einem Meeting.",
-appendix,Anlage,Wenn zusätzliche Materialien am Ende eines Dokuments beigelegt sind.,
-bullet points,Stichpunkte,"Wenn man Informationen strukturiert, ohne ganzen Sätze zu schreiben.",
-paragraph,Absatz,Wenn man Textblöcke logisch voneinander trennt.,
-call to action,Handlungsaufforderung,Wenn man den Leser zu einer konkreten Handlung auffordert.,
-header,Kopfzeile,Wenn man den oberen Bereich eines Dokuments beschreibt.,
-footer,Fußzeile,"Wenn man den unteren Bereich eines Dokuments meint, z. B. mit Seitenzahlen.",
-outbox,Postausgang,"Wenn eine E-Mail gesendet wird, aber noch aussteht.",
-inbox,Posteingang,Wenn neue E-Mails eintreffen oder organisiert werden müssen.,
+The subject line should clearly state the purpose of the email.,Die Betreffzeile sollte den Zweck der E-Mail klar nennen.,The subject line should clearly state the purpose of the email.,Fokus: subject line
+Please find the report attached to this email.,Den Bericht finden Sie im Anhang dieser E-Mail.,Please find the report attached to this email.,Fokus: attachment
+I saved the message as a draft before sending it.,Ich habe die Nachricht vor dem Senden als Entwurf gespeichert.,I saved the message as a draft before sending it.,Fokus: draft
+We need approval before we can send the offer.,Wir brauchen eine Genehmigung bevor wir das Angebot senden können.,We need approval before we can send the offer.,Fokus: approval
+Could you please send me a confirmation by Friday?,Könnten Sie mir bitte bis Freitag eine Bestätigung schicken?,Could you please send me a confirmation by Friday?,Fokus: confirmation
+This is a friendly reminder about tomorrow's deadline.,Dies ist eine freundliche Erinnerung an die Frist morgen.,This is a friendly reminder about tomorrow's deadline.,Fokus: reminder
+Thank you for your inquiry. I will get back to you shortly.,Vielen Dank für Ihre Anfrage. Ich melde mich in Kürze bei Ihnen.,Thank you for your inquiry. I will get back to you shortly.,Fokus: inquiry
+I will reply to your email later today.,Ich werde Ihre E-Mail im Laufe des Tages beantworten.,I will reply to your email later today.,Fokus: reply
+We are still waiting for a response from the client.,Wir warten noch auf eine Antwort des Kunden.,We are still waiting for a response from the client.,Fokus: response
+Could you give me feedback on the attached draft?,Könnten Sie mir eine Rückmeldung zum angehängten Entwurf geben?,Could you give me feedback on the attached draft?,Fokus: feedback
+Please send the documents before the deadline.,Bitte senden Sie die Unterlagen vor Ablauf der Frist.,Please send the documents before the deadline.,Fokus: deadline
+Here is a quick update on the current project status.,Hier ist eine kurze Aktualisierung zum aktuellen Projektstatus.,Here is a quick update on the current project status.,Fokus: update
+I have a small request regarding the meeting agenda.,Ich habe eine kleine Bitte zur Meeting-Agenda.,I have a small request regarding the meeting agenda.,Fokus: request
+I am writing to follow up on my previous email.,Ich schreibe um wegen meiner vorherigen E-Mail nachzufassen.,I am writing to follow up on my previous email.,Fokus: follow-up
+Please add your phone number to your email signature.,Bitte fügen Sie Ihre Telefonnummer Ihrer E-Mail-Signatur hinzu.,Please add your phone number to your email signature.,Fokus: signature
+Make sure the correct recipient is in the To field.,Stellen Sie sicher dass der richtige Empfänger im An-Feld steht.,Make sure the correct recipient is in the To field.,Fokus: recipient
+The sender forgot to include their contact details.,Der Absender hat vergessen seine Kontaktdaten anzugeben.,The sender forgot to include their contact details.,Fokus: sender
+We use a template for recurring customer emails.,Wir verwenden eine Vorlage für wiederkehrende Kunden-E-Mails.,We use a template for recurring customer emails.,Fokus: template
+The tone should be friendly but still professional.,Der Ton sollte freundlich aber trotzdem professionell sein.,The tone should be friendly but still professional.,Fokus: tone
+Please rewrite this paragraph for better clarity.,Bitte formulieren Sie diesen Absatz für mehr Klarheit um.,Please rewrite this paragraph for better clarity.,Fokus: clarity
+Could you give me a brief overview of the next steps?,Könnten Sie mir einen kurzen Überblick über die nächsten Schritte geben?,Could you give me a brief overview of the next steps?,Fokus: overview
+I included a short summary at the top of the email.,Ich habe oben in der E-Mail eine kurze Zusammenfassung eingefügt.,I included a short summary at the top of the email.,Fokus: summary
+You will find the additional details in the appendix.,Die zusätzlichen Details finden Sie in der Anlage.,You will find the additional details in the appendix.,Fokus: appendix
+Use bullet points to make the message easier to scan.,Nutzen Sie Stichpunkte damit die Nachricht leichter zu überfliegen ist.,Use bullet points to make the message easier to scan.,Fokus: bullet points
+This paragraph should focus on one main idea.,Dieser Absatz sollte sich auf einen Hauptgedanken konzentrieren.,This paragraph should focus on one main idea.,Fokus: paragraph
+The email ends with a clear call to action.,Die E-Mail endet mit einer klaren Handlungsaufforderung.,The email ends with a clear call to action.,Fokus: call to action
+The header contains the company logo and contact details.,Die Kopfzeile enthält das Firmenlogo und die Kontaktdaten.,The header contains the company logo and contact details.,Fokus: header
+The footer includes legal information and page numbers.,Die Fußzeile enthält rechtliche Informationen und Seitenzahlen.,The footer includes legal information and page numbers.,Fokus: footer
+The message is still in the outbox and has not been sent.,Die Nachricht ist noch im Postausgang und wurde nicht gesendet.,The message is still in the outbox and has not been sent.,Fokus: outbox
+My inbox is full of unread messages this morning.,Mein Posteingang ist heute Morgen voller ungelesener Nachrichten.,My inbox is full of unread messages this morning.,Fokus: inbox

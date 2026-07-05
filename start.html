@@ -6,11 +6,20 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <title>Start · Business English in 4 Wochen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/hero.css">
   <link rel="stylesheet" href="css/weeks.css">
+  <script>
+    (function redirectWeekLinksToCourseHub() {
+      const weekHashes = new Set(["#week-1", "#week-2", "#week-3", "#week-4", "#week-bonus"]);
+      if (weekHashes.has(window.location.hash)) {
+        window.location.replace(`index.html${window.location.hash}`);
+      }
+    })();
+  </script>
 </head>
 <body>
   <nav class="nav">
@@ -19,15 +28,12 @@
         <a class="nav-brand" href="start.html">BE <span>4W</span></a>
         <div class="nav-links nav-links-desktop">
           <button class="nav-link active">Start</button>
-          <button class="nav-link" onclick="window.location.href='index.html#week-1'">Kurs</button>
+          <button class="nav-link" onclick="window.location.href='index.html#week-1'">Wochenplan</button>
           <button class="nav-link" onclick="window.location.href='coach.html'">Coach</button>
           <button class="nav-link nav-link-secondary" onclick="window.location.href='downloads.html'">Downloads</button>
           <button class="nav-link nav-link-secondary" onclick="window.location.href='faq.html'">FAQ</button>
           <button class="nav-link nav-link-secondary" onclick="window.location.href='feedback.html'">Feedback</button>
         </div>
-      </div>
-      <div class="nav-row-2 page-nav-action">
-        <button onclick="window.location.href='index.html#week-1'">Zum Kurs</button>
       </div>
     </div>
   </nav>
@@ -37,10 +43,10 @@
       <div>
         <span>Digitaler Begleiter zum Buch</span>
         <h1>Business English, das im Meeting abrufbar ist.</h1>
-        <p>Der Hub übersetzt die Methode aus dem Buch in kurze Trainingseinheiten: Phrasen abrufen, gezielt wiederholen und in echten Business-Situationen anwenden.</p>
+        <p>Trainiere nicht nur Wörter, sondern einsatzbereite Satzbausteine. Der Hub macht aus der Buchmethode kurze Sessions für Meetings, E-Mails, Präsentationen und berufliche Fachsituationen.</p>
         <div class="hero-actions">
-          <button class="btn-primary" onclick="window.location.href='index.html#week-1'">4-Wochen-Plan öffnen</button>
-          <button class="btn-ghost" onclick="window.location.href='coach.html?deck=w1_core&source=week-1'">Coach starten</button>
+          <button class="btn-primary" onclick="document.getElementById('start-steps').scrollIntoView({behavior:'smooth'});">So funktioniert der Hub</button>
+          <button class="btn-ghost" onclick="window.location.href='coach.html?deck=w1_core&source=week-1'">Coach ausprobieren</button>
         </div>
       </div>
       <img src="images/NoraJonas2.png" alt="Business English Coach">
@@ -50,7 +56,7 @@
       <article>
         <span>Heute</span>
         <h2>7 Minuten reichen</h2>
-        <p>Eine kurze Session ist besser als ein großer Vorsatz. Der Coach bringt die richtigen Karten wieder, bevor sie verschwinden.</p>
+        <p>Eine kurze Session ist besser als ein großer Vorsatz. Der Coach bringt Karten wieder, bevor sie aus dem Gedächtnis verschwinden.</p>
       </article>
       <article>
         <span>Methode</span>
@@ -60,7 +66,25 @@
       <article>
         <span>Transfer</span>
         <h2>Für echte Arbeitssituationen</h2>
-        <p>Meetings, E-Mails, Präsentationen und Branchenwortschatz sind getrennt trainierbar.</p>
+        <p>Meetings, E-Mails, Präsentationen und Branchen-Phrasen sind getrennt trainierbar.</p>
+      </article>
+    </section>
+
+    <section class="start-grid start-steps" id="start-steps" aria-label="So nutzt du den Hub">
+      <article>
+        <span>Schritt 1</span>
+        <h2>Coach öffnen</h2>
+        <p>Starte mit Woche 1 oder wähle direkt ein Branchen-Deck, das zu deinem Arbeitsalltag passt.</p>
+      </article>
+      <article>
+        <span>Schritt 2</span>
+        <h2>Deutsch sehen</h2>
+        <p>Formuliere die englische Phrase aktiv aus dem Kopf. Erst danach vergleichst du mit der Lösung.</p>
+      </article>
+      <article>
+        <span>Schritt 3</span>
+        <h2>Kurz wiederholen</h2>
+        <p>Markiere, was leicht oder schwer war. So entsteht ein persönlicher Wiederholrhythmus.</p>
       </article>
     </section>
   </main>

@@ -1,26 +1,26 @@
 englisch,deutsch,beispiel,notizen
-supply chain,Lieferkette,We need better visibility across the entire supply chain.,
-shipment,Warensendung,The shipment will arrive on Thursday.,
-inventory,Lagerbestand,Our inventory is running low on several items.,
-quality control,Qualitätskontrolle,Quality control identified a defect in the latest batch.,
-warehouse,Lagerhaus,The goods are stored in our main warehouse.,
-logistics,Logistik,Our logistics team is coordinating the delivery schedule.,
-distribution,Verteilung,Distribution will begin early next week.,
-procurement,Beschaffung,Procurement is reviewing new supplier offers.,
-order fulfillment,Auftragserfüllung,Order fulfillment takes place within twenty-four hours.,
-production line,Produktionslinie,The production line is operating at full capacity today.,
-manufacturing,Herstellung,Manufacturing delays are affecting delivery times.,
-batch,Lieferlos,We received a new batch of components this morning.,
-lead time,Durchlaufzeit,The lead time has increased due to transport issues.,
-capacity,Kapazität,We are currently working at ninety percent capacity.,
-packaging,Verpackung,The packaging needs to be more durable for overseas shipping.,
-freight,Fracht,The freight costs have gone up significantly.,
-carrier,Transportdienstleister,The carrier confirmed pickup for this afternoon.,
-customs,Zoll,The shipment is still waiting for customs clearance.,
-tracking,Nachverfolgung,You can check the status through the tracking link.,
-dispatch,Versandabteilung,Dispatch will send out all orders by noon.,
-storage,Einlagerung,We need more storage space for incoming goods.,
-stockout,Bestandsausfall,A stockout occurred due to unexpected demand.,
-incoming goods,Wareneingang,Incoming goods must be inspected immediately.,
-outgoing goods,Warenausgang,Outgoing goods are prepared for shipment every morning.,
-return shipment,Rücksendung,The return shipment has been processed successfully.,
+We need better visibility across the entire supply chain.,Wir brauchen bessere Transparenz über die gesamte Lieferkette.,We need better visibility across the entire supply chain.,Fokus: supply chain
+The shipment will arrive on Thursday.,Die Warensendung kommt am Donnerstag an.,The shipment will arrive on Thursday.,Fokus: shipment
+Our inventory is running low on several items.,Unser Lagerbestand wird bei mehreren Artikeln knapp.,Our inventory is running low on several items.,Fokus: inventory
+Quality control identified a defect in the latest batch.,Die Qualitätskontrolle hat in der letzten Charge einen Fehler entdeckt.,Quality control identified a defect in the latest batch.,Fokus: quality control
+The goods are stored in our main warehouse.,Die Waren werden in unserem Hauptlager gelagert.,The goods are stored in our main warehouse.,Fokus: warehouse
+Our logistics team is coordinating the delivery schedule.,Unser Logistikteam koordiniert den Lieferplan.,Our logistics team is coordinating the delivery schedule.,Fokus: logistics
+Distribution will begin early next week.,Die Verteilung beginnt Anfang nächster Woche.,Distribution will begin early next week.,Fokus: distribution
+Procurement is reviewing new supplier offers.,Die Beschaffung prüft neue Lieferantenangebote.,Procurement is reviewing new supplier offers.,Fokus: procurement
+Order fulfillment takes place within twenty-four hours.,Die Auftragserfüllung erfolgt innerhalb von vierundzwanzig Stunden.,Order fulfillment takes place within twenty-four hours.,Fokus: order fulfillment
+The production line is operating at full capacity today.,Die Produktionslinie läuft heute mit voller Kapazität.,The production line is operating at full capacity today.,Fokus: production line
+Manufacturing delays are affecting delivery times.,Verzögerungen in der Herstellung beeinflussen die Lieferzeiten.,Manufacturing delays are affecting delivery times.,Fokus: manufacturing
+We received a new batch of components this morning.,Wir haben heute Morgen eine neue Charge Komponenten erhalten.,We received a new batch of components this morning.,Fokus: batch
+The lead time has increased due to transport issues.,Die Durchlaufzeit hat sich wegen Transportproblemen verlängert.,The lead time has increased due to transport issues.,Fokus: lead time
+We are currently working at ninety percent capacity.,Wir arbeiten derzeit mit neunzig Prozent Kapazität.,We are currently working at ninety percent capacity.,Fokus: capacity
+The packaging needs to be more durable for overseas shipping.,Die Verpackung muss für den Überseeversand robuster sein.,The packaging needs to be more durable for overseas shipping.,Fokus: packaging
+The freight costs have gone up significantly.,Die Frachtkosten sind deutlich gestiegen.,The freight costs have gone up significantly.,Fokus: freight
+The carrier confirmed pickup for this afternoon.,Der Transportdienstleister bestätigte die Abholung für heute Nachmittag.,The carrier confirmed pickup for this afternoon.,Fokus: carrier
+The shipment is still waiting for customs clearance.,Die Sendung wartet noch auf die Zollabfertigung.,The shipment is still waiting for customs clearance.,Fokus: customs
+You can check the status through the tracking link.,Sie können den Status über den Link zur Sendungsverfolgung prüfen.,You can check the status through the tracking link.,Fokus: tracking
+Dispatch will send out all orders by noon.,Die Versandabteilung verschickt alle Bestellungen bis Mittag.,Dispatch will send out all orders by noon.,Fokus: dispatch
+We need more storage space for incoming goods.,Wir brauchen mehr Lagerfläche für eingehende Waren.,We need more storage space for incoming goods.,Fokus: storage
+A stockout occurred due to unexpected demand.,Aufgrund unerwarteter Nachfrage kam es zu einem Bestandsausfall.,A stockout occurred due to unexpected demand.,Fokus: stockout
+Incoming goods must be inspected immediately.,Eingehende Waren müssen sofort geprüft werden.,Incoming goods must be inspected immediately.,Fokus: incoming goods
+Outgoing goods are prepared for shipment every morning.,Ausgehende Waren werden jeden Morgen für den Versand vorbereitet.,Outgoing goods are prepared for shipment every morning.,Fokus: outgoing goods
+The return shipment has been processed successfully.,Die Rücksendung wurde erfolgreich bearbeitet.,The return shipment has been processed successfully.,Fokus: return shipment

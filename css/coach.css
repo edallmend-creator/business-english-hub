@@ -168,23 +168,110 @@
 
 .phrase-de {
   font-family: var(--font-display);
-  font-size: clamp(27px, 3.2vw, 40px);
+  font-size: clamp(25px, 3vw, 36px);
   font-weight: 900;
-  line-height: 1.02;
+  line-height: 1.08;
   letter-spacing: var(--tracking-tight);
-  color: var(--primary);
+  color: #17324d;
 }
 
 .phrase-en {
   margin-top: 18px;
   padding: 18px 20px;
-  background: #ecfdf3;
+  background: #eefbf3;
   border: 1px solid rgba(34, 197, 94, 0.25);
   border-radius: 18px;
-  color: #15803d;
+  color: #166534;
   font-size: clamp(20px, 2.3vw, 28px);
   font-weight: 800;
-  line-height: 1.18;
+  line-height: 1.24;
+}
+
+.coach-card-label {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.coach-card-instruction {
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.coach-audio-panel {
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.coach-audio-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.audio-play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  font-size: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.audio-play-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 16px rgba(0,102,204,0.2);
+}
+
+.coach-audio-meta {
+  flex: 1;
+}
+
+.coach-audio-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.coach-speed-options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.coach-speed-btn {
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.coach-speed-btn.active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
 }
 
 .stats {
@@ -585,6 +672,50 @@
   font-size: 14px;
 }
 
+.coach-how-it-works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.coach-how-it-works article {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid rgba(222,226,230,0.95);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(18, 38, 63, 0.05);
+}
+
+.coach-how-it-works span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 12px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+.coach-how-it-works strong {
+  display: block;
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.coach-how-it-works p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .coach-metrics {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -733,6 +864,10 @@
   }
 
   .coach-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-how-it-works {
     grid-template-columns: 1fr;
   }
 

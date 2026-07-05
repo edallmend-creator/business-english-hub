@@ -9,9 +9,9 @@ Diese Datei erklärt die wichtigsten Produktbereiche, damit Inhalte später leic
 - `coach.html`: Eigene Coach-Seite für Spaced-Repetition-Training.
 - `faq.html`: Eigene FAQ-Seite mit ausführlicheren Fragen und Antworten.
 - `feedback.html`: Eigene Feedback-/Verlagsunterstützungsseite.
-- `downloads.html`: Eigene Materialbibliothek mit CSV-Downloads.
-- `impressum.html`: Platzhalter für rechtlich zu prüfende Anbieterangaben.
-- `datenschutz.html`: Platzhalter für rechtlich zu prüfende Datenschutzhinweise.
+- `downloads.html`: Eigene Materialbibliothek mit CSV- und PDF-Downloads.
+- `impressum.html`: Anbieterkennzeichnung mit Kontakt, Verantwortlichkeit, Urheberrecht und Haftungshinweisen.
+- `datenschutz.html`: Datenschutzerklärung zu Hosting, localStorage, Synchronisierung, Supabase, Google Fonts, jsDelivr, Feedback und externen Links.
 
 ## Wichtige CSS-Dateien
 
@@ -33,11 +33,11 @@ Pro Woche gibt es drei Ebenen:
 
 Wenn eine neue Übung ergänzt wird, sollte sie als `.section-card` in der passenden Woche stehen. Der Button kann entweder eine Coach-Seite öffnen oder eine Funktion wie `openExercise(...)` starten.
 
-## Bonus-Decks und Wortschatz
+## Bonus-Decks und Branchen-Phrasen
 
-Die Nischen-/Branchen-Decks bestehen aktuell überwiegend aus Fachbegriffen und typischen Business-Wörtern, nicht aus vollständigen Phrasen. Deshalb werden sie im Hub als `Begriffe` bzw. `Wortschatz` bezeichnet.
+Die Nischen-/Branchen-Decks bestehen aus vollständigen Satzbausteinen. Das englische Feld enthält die Trainingsphrase, das deutsche Feld die Abruf-Aufgabe und `notizen` enthält den Fokusbegriff.
 
-Wenn später echte Satzlisten ergänzt werden, können die Karten wieder als `Phrasen` bezeichnet werden. Dann sollten auch die CSV-Inhalte entsprechend vollständige Formulierungen enthalten.
+Die Download-Kopien unter `data/phrases/niche-*.csv` sollten mit den Coach-Dateien unter `data/niche-*.csv` synchron bleiben.
 
 ## FAQ erweitern
 
@@ -64,7 +64,7 @@ Aktuelle Konfigurationsfelder pro Kampagne:
 - `amazonReviewUrl`
 - `feedbackEmail`
 
-Wichtig: Der Amazon-Link ist aktuell ein Platzhalter in `js/site-config.js`. Wenn die finale Produktseite bekannt ist, dort die konkrete Review-URL ohne Sterne-Vorauswahl eintragen.
+Der Amazon-Rezensionslink ist zentral in `js/site-config.js` hinterlegt. Wichtig: keine Sterne-Vorauswahl und keine positive Bewertungslogik einbauen.
 
 Die sichtbaren Optionen sind bewusst neutral und gleichwertig formuliert:
 
@@ -94,7 +94,7 @@ Design-Anpassungen dazu liegen in `css/coach.css`.
 
 ## Rechtliches
 
-`impressum.html` und `datenschutz.html` sind bewusst Platzhalter. Vor öffentlichem Hosting müssen sie final geprüft und vervollständigt werden.
+`impressum.html` und `datenschutz.html` sind inhaltlich ausgearbeitet und nicht mehr als Platzhalter formuliert. Vor öffentlichem Hosting sollte dennoch eine rechtliche Finalprüfung erfolgen.
 
 Besonders prüfen:
 
@@ -105,10 +105,20 @@ Besonders prüfen:
 - Google Fonts
 - jsDelivr/CDN-Nutzung
 - localStorage-Hinweise
+- Amazon-/Feedback-Linkziele
+
+## PDF-Materialien
+
+LaTeX-Quellen liegen unter `materials/pdf-src/`. Fertige PDFs liegen unter `data/pdfs/` und sind im Hub sowie auf `downloads.html` verlinkt. Das Core-Phrasen-Workbook nutzt bewusst Karten statt enger Tabellen: Deutsch lesen, Englisch abdecken, aktiv abrufen, Lösung prüfen. Branchen-Phrasen bleiben als CSV-Spezialmaterial, damit Nutzer nur relevante Bereiche laden und editieren können.
+
+Aktuelle PDF-Dateien:
+
+- `phrase-bank-overview.pdf`
+- `bonus-workbook.pdf` als PDF-exklusives Arbeitsmaterial für Meeting-Vorbereitung, schwierige Gesprächsmomente, Quick-Fix-Karten und UK/US-Phrase-Varianten
 
 ## Vor GitHub-Veröffentlichung
 
-- Supabase Row-Level Security prüfen.
-- Amazon-Link final eintragen.
-- Impressum und Datenschutz finalisieren.
-- PDF-Download-Platzhalter ersetzen oder bewusst ausgeblendet lassen.
+- Supabase Row-Level Security und Tabellen anhand von `docs/SUPABASE_LAUNCH_CHECKLIST.md` prüfen.
+- Amazon-Link und Feedback-Adresse final prüfen.
+- Impressum und Datenschutz rechtlich final prüfen.
+- PDF-Downloads nach Inhalt und Branding final gegenlesen.

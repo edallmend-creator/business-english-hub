@@ -1,25 +1,25 @@
 englisch,deutsch,beispiel,notizen
-trial,klinische Studie,The clinical trial is entering its final phase.,
-dosage,Dosierung,Please follow the recommended dosage on the label.,
-treatment,Behandlung,The treatment has shown positive results.,
-compliance,Therapietreue,Patient compliance is crucial for long-term success.,
-patient,Patient,The patient is responding well to the medication.,
-data security,Datensicherheit,Data security is essential when handling medical records.,
-diagnosis,Diagnose,The diagnosis was confirmed by additional tests.,
-symptom,Symptom,He reported symptoms of fatigue and dizziness.,
-therapy,Therapie,The therapy will continue for another six weeks.,
-prescription,Rezept,You will receive a prescription at the end of the appointment.,
-medication,Medikament,This medication should be taken with food.,
-side effect,Nebenwirkung,Common side effects include headaches and nausea.,
-monitoring,Überwachung,Continuous monitoring is required for high-risk patients.,
-clinical data,klinische Daten,The clinical data supports the effectiveness of the treatment.,
-medical record,medizinische Akte,All changes are documented in the medical record.,
-follow-up,Nachkontrolle,A follow-up appointment is scheduled for next month.,
-procedure,medizinischer Eingriff,The procedure takes about thirty minutes.,
-screening,Vorsorgeuntersuchung,The screening showed no signs of abnormalities.,
-lab results,Laborergebnisse,The lab results will be available tomorrow.,
-vital signs,lebenswichtige Werte,Her vital signs remain stable.,
-treatment plan,Behandlungsplan,The doctor updated the treatment plan today.,
-care team,Behandlungsteam,The care team will meet to discuss the patient’s progress.,
-infection control,Infektionsschutz,Infection control protocols must be followed strictly.,
-healthcare provider,Leistungserbringer im Gesundheitswesen,Your healthcare provider will explain the next steps.,
+The clinical trial is entering its final phase.,Die klinische Studie tritt in ihre letzte Phase ein.,The clinical trial is entering its final phase.,Fokus: trial
+Please follow the recommended dosage on the label.,Bitte halten Sie sich an die empfohlene Dosierung auf dem Etikett.,Please follow the recommended dosage on the label.,Fokus: dosage
+The treatment has shown positive results.,Die Behandlung hat positive Ergebnisse gezeigt.,The treatment has shown positive results.,Fokus: treatment
+Patient compliance is crucial for long-term success.,Therapietreue ist entscheidend für langfristigen Erfolg.,Patient compliance is crucial for long-term success.,Fokus: compliance
+The patient is responding well to the medication.,Die behandelte Person spricht gut auf das Medikament an.,The patient is responding well to the medication.,Fokus: patient
+Data security is essential when handling medical records.,Datensicherheit ist beim Umgang mit medizinischen Akten unerlässlich.,Data security is essential when handling medical records.,Fokus: data security
+The diagnosis was confirmed by additional tests.,Die Diagnose wurde durch zusätzliche Tests bestätigt.,The diagnosis was confirmed by additional tests.,Fokus: diagnosis
+He reported symptoms of fatigue and dizziness.,Er berichtete über Beschwerden wie Müdigkeit und Schwindel.,He reported symptoms of fatigue and dizziness.,Fokus: symptom
+The therapy will continue for another six weeks.,Die Therapie wird weitere sechs Wochen fortgesetzt.,The therapy will continue for another six weeks.,Fokus: therapy
+You will receive a prescription at the end of the appointment.,Sie erhalten am Ende des Termins ein Rezept.,You will receive a prescription at the end of the appointment.,Fokus: prescription
+This medication should be taken with food.,Dieses Medikament sollte mit Nahrung eingenommen werden.,This medication should be taken with food.,Fokus: medication
+Common side effects include headaches and nausea.,Häufige Nebenwirkungen sind Kopfschmerzen und Übelkeit.,Common side effects include headaches and nausea.,Fokus: side effect
+Continuous monitoring is required for high-risk patients.,Bei Hochrisikopatienten ist eine kontinuierliche Überwachung erforderlich.,Continuous monitoring is required for high-risk patients.,Fokus: monitoring
+The clinical data supports the effectiveness of the treatment.,Die klinischen Daten belegen die Wirksamkeit der Behandlung.,The clinical data supports the effectiveness of the treatment.,Fokus: clinical data
+All changes are documented in the medical record.,Alle Änderungen werden in der medizinischen Akte dokumentiert.,All changes are documented in the medical record.,Fokus: medical record
+A follow-up appointment is scheduled for next month.,Ein Nachsorgetermin ist für nächsten Monat geplant.,A follow-up appointment is scheduled for next month.,Fokus: follow-up
+The procedure takes about thirty minutes.,Der medizinische Eingriff dauert etwa dreißig Minuten.,The procedure takes about thirty minutes.,Fokus: procedure
+The screening showed no signs of abnormalities.,Die Vorsorgeuntersuchung zeigte keine Anzeichen von Auffälligkeiten.,The screening showed no signs of abnormalities.,Fokus: screening
+The lab results will be available tomorrow.,Die Ergebnisse aus dem Labor werden morgen verfügbar sein.,The lab results will be available tomorrow.,Fokus: lab results
+Her vital signs remain stable.,Ihre lebenswichtigen Werte bleiben stabil.,Her vital signs remain stable.,Fokus: vital signs
+The doctor updated the treatment plan today.,Der Arzt hat die weitere Behandlung heute neu festgelegt.,The doctor updated the treatment plan today.,Fokus: treatment plan
+The care team will meet to discuss the patient's progress.,Das Betreuungsteam trifft sich um den Fortschritt der behandelten Person zu besprechen.,The care team will meet to discuss the patient's progress.,Fokus: care team
+Infection control protocols must be followed strictly.,Infektionsschutzprotokolle müssen strikt eingehalten werden.,Infection control protocols must be followed strictly.,Fokus: infection control
+Your healthcare provider will explain the next steps.,Ihr Gesundheitsdienstleister erklärt Ihnen die nächsten Schritte.,Your healthcare provider will explain the next steps.,Fokus: healthcare provider

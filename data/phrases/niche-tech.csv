@@ -1,26 +1,26 @@
 englisch,deutsch,beispiel,notizen
-backend,Backend,The backend handles all the data processing behind the scenes.,
-deployment,Ausrollen einer Anwendung,We’re planning the next deployment for Friday night.,
-bug,Fehler im Code,We need to fix this bug before the release.,
-feature,Funktion,This feature will make the workflow much easier for users.,
-release,Veröffentlichung einer neuen Version,The release is scheduled for next week.,
-update,Aktualisierung,The system will be unavailable during the update.,
-server,Server,The server needs to be restarted after the patch.,
-database,Datenbank,The database query is slowing down the entire app.,
-frontend,Frontend,The frontend team is working on the new dashboard design.,
-API,Schnittstelle für Datenzugriffe,Our app pulls all product data through this API.,
-framework,technisches Gerüst für Entwicklung,This framework speeds up development significantly.,
-repository,Codeablage,The repository contains all version history and documentation.,
-commit,Änderung speichern,Make sure to commit your changes before pulling new updates.,
-merge,Zusammenführen von Code,We need to merge both branches before testing.,
-rollback,Zurücksetzen einer Version,We performed a rollback after the update caused issues.,
-patch,Korrekturupdate,The patch fixes a security vulnerability.,
-latency,Verzögerung,High latency is causing slow response times.,
-load balancing,Lastverteilung,Load balancing helps distribute traffic across multiple servers.,
-encryption,Verschlüsselung,All sensitive data must be protected through encryption.,
-cloud environment,Cloudumgebung,The app runs completely in a cloud environment.,
-container,abgeschlossene Softwareeinheit,Each service is deployed as a separate container.,
-microservice,kleiner unabhängiger Dienst,We’re migrating our system to a microservice architecture.,
-uptime,Betriebszeit,We guarantee a ninety-nine point nine percent uptime.,
-downtime,Ausfallzeit,The downtime lasted only five minutes during the update.,
-scalability,Skalierbarkeit,Scalability is crucial because traffic increases every month.,
+The backend handles all the data processing behind the scenes.,Der technische Teil im Hintergrund verarbeitet alle Daten.,The backend handles all the data processing behind the scenes.,Fokus: backend
+We are planning the next deployment for Friday night.,Wir planen die nächste Veröffentlichung der neuen Version für Freitagabend.,We are planning the next deployment for Friday night.,Fokus: deployment
+We need to fix this bug before the release.,Wir müssen diesen Programmfehler vor der Veröffentlichung beheben.,We need to fix this bug before the release.,Fokus: bug
+This feature will make the workflow much easier for users.,Diese neue Funktion wird den Arbeitsablauf für Nutzer deutlich erleichtern.,This feature will make the workflow much easier for users.,Fokus: feature
+The release is scheduled for next week.,Die Veröffentlichung der neuen Version ist für nächste Woche geplant.,The release is scheduled for next week.,Fokus: release
+The system will be unavailable during the update.,Das System wird während der Aktualisierung nicht verfügbar sein.,The system will be unavailable during the update.,Fokus: update
+The server needs to be restarted after the patch.,Der Rechnerdienst muss nach der Fehlerkorrektur neu gestartet werden.,The server needs to be restarted after the patch.,Fokus: server
+The database query is slowing down the entire app.,Die Datenbankabfrage verlangsamt die gesamte App.,The database query is slowing down the entire app.,Fokus: database
+The frontend team is working on the new dashboard design.,Das Team für die sichtbare Benutzeroberfläche arbeitet am neuen Dashboard-Design.,The frontend team is working on the new dashboard design.,Fokus: frontend
+Our app pulls all product data through this API.,Unsere App ruft alle Produktdaten über diese Schnittstelle ab.,Our app pulls all product data through this API.,Fokus: API
+This framework speeds up development significantly.,Dieses technische Grundgerüst beschleunigt die Entwicklung erheblich.,This framework speeds up development significantly.,Fokus: framework
+The repository contains all version history and documentation.,Die zentrale Code-Ablage enthält die gesamte Versionshistorie und Dokumentation.,The repository contains all version history and documentation.,Fokus: repository
+Make sure to commit your changes before pulling new updates.,Achte darauf deine Änderungen zu speichern bevor du neue Aktualisierungen ziehst.,Make sure to commit your changes before pulling new updates.,Fokus: commit
+We need to merge both branches before testing.,Wir müssen beide Entwicklungszweige vor dem Testen zusammenführen.,We need to merge both branches before testing.,Fokus: merge
+We performed a rollback after the update caused issues.,Wir sind zur vorherigen Version zurückgekehrt nachdem die Aktualisierung Probleme verursacht hatte.,We performed a rollback after the update caused issues.,Fokus: rollback
+The patch fixes a security vulnerability.,Die Korrektur behebt eine Sicherheitslücke.,The patch fixes a security vulnerability.,Fokus: patch
+High latency is causing slow response times.,Hohe Latenz verursacht langsame Antwortzeiten.,High latency is causing slow response times.,Fokus: latency
+Load balancing helps distribute traffic across multiple servers.,Die Lastverteilung verteilt Anfragen auf mehrere Rechnerdienste.,Load balancing helps distribute traffic across multiple servers.,Fokus: load balancing
+All sensitive data must be protected through encryption.,Alle sensiblen Daten müssen durch Verschlüsselung geschützt werden.,All sensitive data must be protected through encryption.,Fokus: encryption
+The app runs completely in a cloud environment.,Die App läuft vollständig in einer extern betriebenen Online-Infrastruktur.,The app runs completely in a cloud environment.,Fokus: cloud environment
+Each service is deployed as a separate container.,Jeder Dienst wird in einer isolierten Laufzeitumgebung bereitgestellt.,Each service is deployed as a separate container.,Fokus: container
+We are migrating our system to a microservice architecture.,Wir stellen unser System auf eine Architektur mit kleinen getrennten Diensten um.,We are migrating our system to a microservice architecture.,Fokus: microservice
+We guarantee a ninety-nine point nine percent uptime.,Wir garantieren eine Verfügbarkeit von neunundneunzig Komma neun Prozent.,We guarantee a ninety-nine point nine percent uptime.,Fokus: uptime
+The downtime lasted only five minutes during the update.,Die Ausfallzeit dauerte während der Aktualisierung nur fünf Minuten.,The downtime lasted only five minutes during the update.,Fokus: downtime
+Scalability is crucial because traffic increases every month.,Die Fähigkeit mitzuwachsen ist entscheidend weil die Nutzung jeden Monat steigt.,Scalability is crucial because traffic increases every month.,Fokus: scalability

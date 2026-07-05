@@ -1788,6 +1788,7 @@ function renderSoftenerTrainer(cards) {
   
   function draw() {
     const card = cards[idx];
+    let answered = false;
     
     document.getElementById("modalContent").innerHTML = `
       <div class="modal-title">SOFTENER-TRAINER</div>
@@ -1816,7 +1817,7 @@ function renderSoftenerTrainer(cards) {
             🙏 DANK
           </button>
           <button onclick="showSoftener('bitte')" class="softener-btn" style="padding: 14px; border: 2px solid var(--border); background: white; border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.2s;">
-            🙏🏻 BITTE
+            🤝 BITTE
           </button>
           <button onclick="showSoftener('frage')" class="softener-btn" style="padding: 14px; border: 2px solid var(--border); background: white; border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.2s;">
             ❓ FRAGE
@@ -1830,9 +1831,13 @@ function renderSoftenerTrainer(cards) {
       <div id="softenerResult" style="display: none;"></div>
       
       <div id="softenerNav" style="display: none; margin-top: 20px;">
-        <button class="btn btn-primary" style="width: 100%;" onclick="nextSoftener()">
-          ${idx < cards.length - 1 ? 'Weiter →' : '✓ Fertig'}
-        </button>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn-secondary" style="flex:1;justify-content:center;" onclick="backToSoftenerChoices()">← Technik ändern</button>
+          ${idx > 0 ? '<button class="btn-secondary" style="flex:1;justify-content:center;" onclick="prevSoftener()">← Vorherige Karte</button>' : ''}
+          <button class="btn-primary" style="flex:1;justify-content:center;" onclick="nextSoftener()">
+            ${idx < cards.length - 1 ? 'Weiter →' : '✓ Fertig'}
+          </button>
+        </div>
       </div>
     `;
     
@@ -1859,7 +1864,7 @@ function renderSoftenerTrainer(cards) {
       
       const icons = {
         'dank': '🙏',
-        'bitte': '🙏🏻',
+        'bitte': '🤝',
         'frage': '❓',
         'perspektive': '👁️'
       };
@@ -1888,7 +1893,7 @@ function renderSoftenerTrainer(cards) {
               <div style="font-size: 13px;">"${card.dank}"</div>
             </div>
             <div style="padding: 8px; background: white; border-radius: 6px;">
-              <div style="font-size: 10px; color: var(--muted); font-weight: 600;">🙏🏻 BITTE</div>
+              <div style="font-size: 10px; color: var(--muted); font-weight: 600;">🤝 BITTE</div>
               <div style="font-size: 13px;">"${card.bitte}"</div>
             </div>
             <div style="padding: 8px; background: white; border-radius: 6px;">
@@ -1903,7 +1908,23 @@ function renderSoftenerTrainer(cards) {
         </details>
       `;
       
-      stats.total++;
+      if (!answered) {
+        stats.total++;
+        answered = true;
+      }
+    };
+
+    window.backToSoftenerChoices = () => {
+      document.getElementById('softenerChoices').style.display = 'block';
+      document.getElementById('softenerResult').style.display = 'none';
+      document.getElementById('softenerNav').style.display = 'none';
+    };
+
+    window.prevSoftener = () => {
+      if (idx > 0) {
+        idx--;
+        draw();
+      }
     };
     
     window.nextSoftener = () => {

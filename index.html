@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <title>Business English in 4 Wochen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- CSS -->
@@ -17,45 +18,6 @@
   <link rel="stylesheet" href="css/flashcards.css">
   <link rel="stylesheet" href="css/modals.css">
 
-<style>
-/* Modal Close Button - Top Right */
-.modal-close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 32px;
-  height: 32px;
-  border: none;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  color: var(--navy);
-  z-index: 10;
-}
-
-.modal-close-btn:hover {
-  background: rgba(0, 0, 0, 0.1);
-  transform: scale(1.1);
-}
-
-.modal-close-btn:active {
-  transform: scale(0.95);
-}
-
-@media (max-width: 640px) {
-  .modal-close-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 22px;
-  }
-}
-</style>
-
 </head>
 
 <body>
@@ -66,10 +28,10 @@
     <img class="gate-duck" src="images/NoraJonas2.png" alt="Business Duck">
     <div class="gate-title">Business English<br><span>in 4 Wochen</span></div>
     <div class="gate-sub">Exklusiver Kursbereich · Fortschritt, Coach und Materialien an einem Ort</div>
-    <div style="position:relative;margin-bottom:12px;">
-      <input type="password" id="pwInput" class="gate-input" placeholder="Passwort" autocomplete="current-password" style="margin-bottom:0;padding-right:48px;">
+    <div class="gate-password-wrap">
+      <input type="password" id="pwInput" class="gate-input" placeholder="Passwort" autocomplete="current-password">
       <button onclick="togglePw()" id="pwEye" type="button"
-        style="position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:18px;color:var(--muted);padding:0;line-height:1;">👁</button>
+        class="gate-password-toggle">👁</button>
     </div>
     <button class="gate-btn" id="pwBtn">Einloggen →</button>
     <div class="gate-error" id="pwError"></div>
@@ -99,17 +61,15 @@
       <!-- ROW 2: Tools (Wiederholen + Streak + Code) -->
       <div class="nav-row-2">
         <!-- Streak + SRS Badge -->
-        <button onclick="openSRSQueue()" title="Heute fällige Wiederholungen" class="nav-srs-btn"
-          style="display:flex;align-items:center;gap:5px;background:rgba(232,146,10,0.15);border:1px solid rgba(232,146,10,0.3);border-radius:8px;padding:5px 10px;cursor:pointer;flex-shrink:0;position:relative;">
-          <span style="font-size:13px;color:var(--gold);font-weight:700;">Wiederholen</span>
-          <span id="srsBadge" style="display:none;background:var(--red);color:#fff;border-radius:10px;padding:1px 7px;font-size:11px;font-weight:700;min-width:20px;text-align:center;">0</span>
+        <button onclick="openSRSQueue()" title="Heute fällige Wiederholungen" class="nav-srs-btn nav-review-btn">
+          <span class="nav-review-label">Wiederholen</span>
+          <span id="srsBadge" class="nav-badge">0</span>
         </button>
-        <span id="streakDisplay" title="Streak" style="font-size:13px;font-weight:700;color:#fb923c;flex-shrink:0;min-width:30px;text-align:center;"></span>
-        <button onclick="openCodeModal()" id="syncTip" title="Fortschritt & Code"
-          style="display:flex;align-items:center;gap:7px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:5px 11px;cursor:pointer;flex-shrink:0;">
-          <span id="syncDot" style="width:8px;height:8px;border-radius:50%;background:#fbbf24;flex-shrink:0;"></span>
-          <span style="font-size:12px;color:rgba(255,255,255,0.7);font-family:var(--font-body);" id="userCodeDisplay">–</span>
-          <span id="syncStatus" style="font-size:11px;color:#4ade80;opacity:0;transition:opacity 0.5s;"></span>
+        <span id="streakDisplay" title="Streak" class="nav-streak-display"></span>
+        <button onclick="openCodeModal()" id="syncTip" title="Fortschritt & Code" class="nav-code-btn">
+          <span id="syncDot" class="nav-sync-dot"></span>
+          <span class="nav-code-display" id="userCodeDisplay">–</span>
+          <span id="syncStatus" class="nav-sync-status"></span>
         </button>
       </div>
     </div>
@@ -121,9 +81,9 @@
     <button class="nav-tab-link" onclick="showWeek(1);setMobileTabActive(this)">Woche 2</button>
     <button class="nav-tab-link" onclick="showWeek(2);setMobileTabActive(this)">Woche 3</button>
     <button class="nav-tab-link" onclick="showWeek(3);setMobileTabActive(this)">Woche 4</button>
-    <button class="nav-tab-link" onclick="showWeek(4);setMobileTabActive(this)" style="position:relative;">
+    <button class="nav-tab-link nav-tab-with-badge" onclick="showWeek(4);setMobileTabActive(this)">
       Bonus
-      <span id="srsBadgeMobile" style="display:none;position:absolute;top:-4px;right:-4px;background:var(--red);color:#fff;border-radius:50%;padding:2px 5px;font-size:10px;font-weight:700;min-width:16px;text-align:center;height:16px;line-height:10px;">0</span>
+      <span id="srsBadgeMobile" class="nav-mobile-badge">0</span>
     </button>
   </div>
 
@@ -133,38 +93,10 @@
         <div class="hero-badge">Ihr persönlicher Online-Kurs</div>
         <h1 class="hero-title">Business<br>English<br><span>in 4 Wochen</span></h1>
         <p class="hero-sub">Kurze, fokussierte Trainingseinheiten für Meetings, E-Mails und souveräne Formulierungen im Berufsalltag.</p>
-        <div class="hero-actions">
-          <button class="btn-primary" onclick="window.location.href='coach.html?deck=w1_core&source=week-1'">Coach starten</button>
-          <button class="btn-ghost" onclick="document.getElementById('weeks').scrollIntoView({behavior:'smooth'});">Kurs ansehen</button>
-        </div>
-        <div class="hero-proof">
-          <div><strong>4</strong><span>Wochenpfad</span></div>
-          <div><strong>SRS</strong><span>smarte Reviews</span></div>
-          <div><strong>15+</strong><span>Praxis-Decks</span></div>
-        </div>
       </div>
       <div class="hero-duck-wrap">
         <img class="hero-duck" src="images/NoraJonas2.png" alt="Business English">
       </div>
-    </div>
-  </section>
-
-  <section class="course-overview" aria-label="Kursübersicht">
-    <div class="overview-card overview-card-primary">
-      <span>Heute starten</span>
-      <strong>7 Minuten reichen</strong>
-      <p>Kurze Sessions, klare Phrasen und automatische Wiederholung statt endloser Theorie.</p>
-      <button class="btn-primary" onclick="window.location.href='coach.html?deck=w1_core&source=week-1'">Zum Coach</button>
-    </div>
-    <div class="overview-card">
-      <span>Der Pfad</span>
-      <strong>4 Wochen Struktur</strong>
-      <p>Von sicheren Grundlagen über Ton und Feinschliff bis zur Anwendung in Meetings.</p>
-    </div>
-    <div class="overview-card">
-      <span>Für den Beruf</span>
-      <strong>Branchen-Decks</strong>
-      <p>Finance, HR, Tech, Sales, E-Mail, Präsentationen und weitere Praxisbereiche.</p>
     </div>
   </section>
 
@@ -180,27 +112,24 @@
           <div><span>Methode</span><strong>Active Recall + Spaced Repetition</strong></div>
           <div><span>Ergebnis</span><strong>45 Kernphrasen sicher nutzen</strong></div>
         </div>
-        <div style="margin-top: 16px; padding: 12px; background: rgba(220, 53, 69, 0.08); border-left: 4px solid #DC3545; border-radius: 4px;">
-          <div style="font-size: 11px; color: #DC3545; font-weight: 700; margin-bottom: 4px;">📖 AUS DEM BUCH</div>
-          <div style="font-size: 12px; color: #333; line-height: 1.5;">
-            <strong>Kapitel:</strong> "Spaced Repetition" (S. 38), "Dual Coding" (S. 43), "False Friends" (S. 53)<br>
-            <strong>Lernmethoden im Coach:</strong> Wiederholungen in optimalen Abständen · Visuelle Merkhilfen mit Emojis · Häufige Verwechslungen erkennen
-          </div>
+        <div class="coach-method-note">
+          <span>Im Coach</span>
+          <p><strong>Active Recall:</strong> Du siehst die deutsche Aufgabe zuerst und formulierst die englische Phrase selbst. <strong>Spaced Repetition:</strong> Schwierige Karten kommen gezielt wieder.</p>
         </div>
       </div>
       <div class="section-label">Training in Woche 1</div>
       <div class="section-grid">
-        <div class="section-card" style="border:2px solid var(--gold);background:linear-gradient(135deg,#fffbf0,#fff);">
-          <div class="section-card-type" style="color:var(--gold);">Coach · Woche 1 Core</div>
+        <div class="section-card section-card-featured">
+          <div class="section-card-type section-card-type-gold">Coach · Woche 1 Core</div>
           <div class="section-card-title">45 Meeting-Phrasen</div>
           <p class="section-card-desc">Spaced Repetition System mit Dual Coding. Auto-Rate, Timer & Interleaving.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=w1_core&source=week-1'">▶ Coach starten</button>
         </div>
-        <div class="section-card" style="border:2px solid #ef4444;background:linear-gradient(135deg,#fef2f2,#fff);">
-          <div class="section-card-type" style="color:#dc2626;">Coach · False Friends</div>
+        <div class="section-card section-card-alert">
+          <div class="section-card-type section-card-type-red">Coach · False Friends</div>
           <div class="section-card-title">30 Gefährliche Verwechslungen</div>
           <p class="section-card-desc">Klassische Stolperfallen mit SRS lernen. Zeigt RICHTIG vs. FALSCH zum Vergleich.</p>
-          <button class="btn-primary" onclick="window.location.href='coach.html?deck=false_friends&source=week-1'" style="background:#dc2626;border-color:#dc2626;">▶ Coach starten</button>
+          <button class="btn-primary btn-danger" onclick="window.location.href='coach.html?deck=false_friends&source=week-1'">▶ Coach starten</button>
         </div>
       </div>
     </div>
@@ -216,18 +145,15 @@
           <div><span>Methode</span><strong>Interleaving + Retrieval Practice</strong></div>
           <div><span>Ergebnis</span><strong>Mehr Nuance in Meetings und E-Mails</strong></div>
         </div>
-        <div style="margin-top: 16px; padding: 12px; background: rgba(255, 149, 0, 0.08); border-left: 4px solid #FF9500; border-radius: 4px;">
-          <div style="font-size: 11px; color: #FF9500; font-weight: 700; margin-bottom: 4px;">📖 AUS DEM BUCH</div>
-          <div style="font-size: 12px; color: #333; line-height: 1.5;">
-            <strong>Kapitel:</strong> "Interleaving" (S. 74), "Retrieval Practice" (S. 80), "Ton & Grammatik" (S. 87)<br>
-            <strong>Lernmethoden im Coach:</strong> Gemischtes Training (nicht sortiert) · Abrufen unter Druck · Höflichkeitsstufen trainieren
-          </div>
+        <div class="coach-method-note">
+          <span>Im Coach</span>
+          <p><strong>Retrieval Practice:</strong> Du erinnerst aktiv statt nur zu lesen. <strong>Interleaving:</strong> Phrasen werden gemischt, damit du den passenden Ton im Kontext erkennst.</p>
         </div>
       </div>
       <div class="section-label">Training in Woche 2</div>
       <div class="section-grid">
-        <div class="section-card" style="border:2px solid var(--gold);background:linear-gradient(135deg,#fffbf0,#fff);">
-          <div class="section-card-type" style="color:var(--gold);">Coach · Woche 2 Core</div>
+        <div class="section-card section-card-featured">
+          <div class="section-card-type section-card-type-gold">Coach · Woche 2 Core</div>
           <div class="section-card-title">Meeting-Phrasen Woche 2</div>
           <p class="section-card-desc">Spaced Repetition mit Interleaving & Retrieval Practice. Automatischer Timer optional.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=w2_core&source=week-2'">▶ Coach starten</button>
@@ -252,18 +178,15 @@
           <div><span>Methode</span><strong>Varied Contexts + Shadowing</strong></div>
           <div><span>Ergebnis</span><strong>Mehr Sicherheit im Gesprächsfluss</strong></div>
         </div>
-        <div style="margin-top: 16px; padding: 12px; background: rgba(255, 193, 7, 0.08); border-left: 4px solid #FFC107; border-radius: 4px;">
-          <div style="font-size: 11px; color: #FFC107; font-weight: 700; margin-bottom: 4px;">📖 AUS DEM BUCH</div>
-          <div style="font-size: 12px; color: #333; line-height: 1.5;">
-            <strong>Kapitel:</strong> "Retrieval in Varied Contexts" (S. 101), "Shadowing" (S. 111), "Thought Chunking" (S. 118)<br>
-            <strong>Lernmethoden im Coach:</strong> Gleiche Phrasen in verschiedenen Kontexten · Audio zum Nachsprechen · Wie ein Muttersprachler denken
-          </div>
+        <div class="coach-method-note">
+          <span>Im Coach</span>
+          <p><strong>Varied Contexts:</strong> Du rufst Phrasen in unterschiedlichen Situationen ab. <strong>Shadowing:</strong> Die Play-Funktion hilft dir später beim Nachsprechen und Rhythmus.</p>
         </div>
       </div>
       <div class="section-label">Training in Woche 3</div>
       <div class="section-grid">
-        <div class="section-card" style="border:2px solid var(--gold);background:linear-gradient(135deg,#fffbf0,#fff);">
-          <div class="section-card-type" style="color:var(--gold);">Coach · Woche 3 Core</div>
+        <div class="section-card section-card-featured">
+          <div class="section-card-type section-card-type-gold">Coach · Woche 3 Core</div>
           <div class="section-card-title">Meeting-Phrasen Woche 3</div>
           <p class="section-card-desc">Spaced Repetition mit Retrieval in Varied Contexts. Phrasen in unterschiedlichen Situationen trainieren.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=w3_core&source=week-3'">▶ Coach starten</button>
@@ -288,18 +211,15 @@
           <div><span>Methode</span><strong>Self Explanation + Framing</strong></div>
           <div><span>Ergebnis</span><strong>Meetings aktiver mitgestalten</strong></div>
         </div>
-        <div style="margin-top: 16px; padding: 12px; background: rgba(40, 167, 69, 0.08); border-left: 4px solid #28A745; border-radius: 4px;">
-          <div style="font-size: 11px; color: #28A745; font-weight: 700; margin-bottom: 4px;">📖 AUS DEM BUCH</div>
-          <div style="font-size: 12px; color: #333; line-height: 1.5;">
-            <strong>Kapitel:</strong> "Self Explanation" (S. 134), "Elaborative Interrogation" (S. 142), "Framing" (S. 148)<br>
-            <strong>Lernmethoden im Coach:</strong> Erklären warum etwas funktioniert · Tiefe Fragen stellen · Kontext setzen statt nur sprechen
-          </div>
+        <div class="coach-method-note">
+          <span>Im Coach</span>
+          <p><strong>Framing:</strong> Du trainierst, Beiträge einzuordnen statt nur einzelne Sätze zu übersetzen. <strong>Self Explanation:</strong> Du verstehst, warum eine Formulierung funktioniert.</p>
         </div>
       </div>
       <div class="section-label">Training in Woche 4</div>
       <div class="section-grid">
-        <div class="section-card" style="border:2px solid var(--gold);background:linear-gradient(135deg,#fffbf0,#fff);">
-          <div class="section-card-type" style="color:var(--gold);">Coach · Woche 4 Core</div>
+        <div class="section-card section-card-featured">
+          <div class="section-card-type section-card-type-gold">Coach · Woche 4 Core</div>
           <div class="section-card-title">Meeting-Phrasen Woche 4</div>
           <p class="section-card-desc">Spaced Repetition. Finale Woche - alle Techniken vereint.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=w4_core&source=week-4'">▶ Coach starten</button>
@@ -321,256 +241,227 @@
         <p class="week-desc">Branchen-spezifische Coach-Decks, Lerntyp-Quiz und alle Materialien zum Download.</p>
       </div>
       
-      <div class="section-label">🎯 Branchen-spezifischer Wortschatz</div>
-      <p style="color:var(--muted);font-size:14px;margin-bottom:20px;max-width:700px;">
-        Diese Decks trainieren vor allem zentrale Fachbegriffe und typische Business-Wörter. Wähle deine Branche und baue gezielt den Wortschatz auf, der im Arbeitsalltag wirklich auftaucht.
+      <div class="section-label">🎯 Branchen-spezifische Phrasen</div>
+      <p class="section-intro">
+        Diese Decks trainieren keine isolierten Vokabeln, sondern abrufbare Satzbausteine mit Fachbegriffen im Kontext. Wähle deine Branche und übe Formulierungen, die du im Arbeitsalltag wirklich sagen oder schreiben würdest.
       </p>
       <div class="section-grid">
-        <div class="section-card" style="border-left: 3px solid var(--gold);">
-          <div class="section-card-type" style="color: var(--gold);">💼 Coach · Finance & Controlling</div>
-          <div class="section-card-title">25 Finance-Begriffe</div>
-          <p class="section-card-desc">Budget, Revenue, Profit, ROI, EBITDA, Cashflow, Forecast...</p>
+        <div class="section-card section-card-niche">
+          <div class="section-card-type section-card-type-gold">💼 Coach · Finance & Controlling</div>
+          <div class="section-card-title">25 Finance-Phrasen</div>
+          <p class="section-card-desc">Finanzrahmen, Umsatz, Marge, Liquidität und Investitionsrendite im Satzkontext.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=niche_finance&source=week-bonus'">▶ Coach starten</button>
         </div>
         
-        <div class="section-card" style="border-left: 3px solid var(--gold);">
-          <div class="section-card-type" style="color: var(--gold);">👥 Coach · HR & People Management</div>
-          <div class="section-card-title">24 HR-Begriffe</div>
-          <p class="section-card-desc">Performance Review, Onboarding, Feedback, Retention...</p>
+        <div class="section-card section-card-niche">
+          <div class="section-card-type section-card-type-gold">👥 Coach · HR & People Management</div>
+          <div class="section-card-title">24 HR-Phrasen</div>
+          <p class="section-card-desc">Einarbeitung, Leistung, Rückmeldung, Bindung und Entwicklungsgespräche.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=niche_hr&source=week-bonus'">▶ Coach starten</button>
         </div>
         
-        <div class="section-card" style="border-left: 3px solid var(--gold);">
-          <div class="section-card-type" style="color: var(--gold);">💻 Coach · Tech & IT</div>
-          <div class="section-card-title">25 Tech-Begriffe</div>
-          <p class="section-card-desc">Deploy, Sprint, API, Infrastructure, Scalability...</p>
+        <div class="section-card section-card-niche">
+          <div class="section-card-type section-card-type-gold">💻 Coach · Tech & IT</div>
+          <div class="section-card-title">25 Tech-Phrasen</div>
+          <p class="section-card-desc">Versionen veröffentlichen, Schnittstellen erklären und Systeme betreiben.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=niche_tech&source=week-bonus'">▶ Coach starten</button>
         </div>
         
-        <div class="section-card" style="border-left: 3px solid var(--gold);">
-          <div class="section-card-type" style="color: var(--gold);">📈 Coach · Sales & Marketing</div>
-          <div class="section-card-title">30 Sales-Begriffe</div>
-          <p class="section-card-desc">Pipeline, Deal, Quota, Lead Generation, Conversion...</p>
+        <div class="section-card section-card-niche">
+          <div class="section-card-type section-card-type-gold">📈 Coach · Sales & Marketing</div>
+          <div class="section-card-title">30 Sales-Phrasen</div>
+          <p class="section-card-desc">Kampagnen, Leads, Zielgruppen, Kaufquote und Kundenbindung professionell formulieren.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=niche_sales&source=week-bonus'">▶ Coach starten</button>
         </div>
         
-        <div class="section-card" style="border-left: 3px solid var(--gold);">
-          <div class="section-card-type" style="color: var(--gold);">📧 Coach · Email Communication</div>
-          <div class="section-card-title">30 E-Mail-Begriffe</div>
-          <p class="section-card-desc">Follow-up, FYI, ASAP, Loop in, Circle back...</p>
+        <div class="section-card section-card-niche">
+          <div class="section-card-type section-card-type-gold">📧 Coach · Email Communication</div>
+          <div class="section-card-title">30 E-Mail-Phrasen</div>
+          <p class="section-card-desc">Betreff, Anhang, Rückmeldung, Fristen und professionelle Nachfassmails.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=niche_email&source=week-bonus'">▶ Coach starten</button>
         </div>
         
-        <div class="section-card" style="border-left: 3px solid var(--gold);">
-          <div class="section-card-type" style="color: var(--gold);">🎤 Coach · Presentations</div>
-          <div class="section-card-title">27 Präsentations-Begriffe</div>
-          <p class="section-card-desc">Slide, Agenda, Q&A, Key Takeaways, Next Steps...</p>
+        <div class="section-card section-card-niche">
+          <div class="section-card-type section-card-type-gold">🎤 Coach · Presentations</div>
+          <div class="section-card-title">27 Präsentations-Phrasen</div>
+          <p class="section-card-desc">Einleitung, Kernaussage, Übergänge, Visuals und klare nächste Schritte.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=niche_presentation&source=week-bonus'">▶ Coach starten</button>
         </div>
         
-        <div class="section-card" style="border-left: 3px solid var(--gold);">
-          <div class="section-card-type" style="color: var(--gold);">🚀 Coach · Startup & Innovation</div>
-          <div class="section-card-title">27 Startup-Begriffe</div>
-          <p class="section-card-desc">Pivot, MVP, Runway, Burn Rate, Product-Market Fit...</p>
+        <div class="section-card section-card-niche">
+          <div class="section-card-type section-card-type-gold">🚀 Coach · Startup & Innovation</div>
+          <div class="section-card-title">27 Startup-Phrasen</div>
+          <p class="section-card-desc">Kapitalrunden, Bewertung, Anteile, Wachstum und Finanzierung aus eigener Kraft.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=niche_startup&source=week-bonus'">▶ Coach starten</button>
         </div>
         
-        <div class="section-card" style="border-left: 3px solid var(--gold);">
-          <div class="section-card-type" style="color: var(--gold);">🎧 Coach · Customer Service</div>
-          <div class="section-card-title">25 Service-Begriffe</div>
-          <p class="section-card-desc">Escalate, Resolve, SLA, Ticket, Customer Satisfaction...</p>
+        <div class="section-card section-card-niche">
+          <div class="section-card-type section-card-type-gold">🎧 Coach · Customer Service</div>
+          <div class="section-card-title">25 Service-Phrasen</div>
+          <p class="section-card-desc">Anfragen, Beschwerden, Eskalation, Antwortzeiten und Kundenzufriedenheit.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=niche_customer&source=week-bonus'">▶ Coach starten</button>
         </div>
         
-        <div class="section-card" style="border-left: 3px solid var(--gold);">
-          <div class="section-card-type" style="color: var(--gold);">⚖️ Coach · Legal & Compliance</div>
-          <div class="section-card-title">24 Legal-Begriffe</div>
-          <p class="section-card-desc">Contract, Clause, Liability, Due Diligence, NDA...</p>
+        <div class="section-card section-card-niche">
+          <div class="section-card-type section-card-type-gold">⚖️ Coach · Legal & Compliance</div>
+          <div class="section-card-title">24 Legal-Phrasen</div>
+          <p class="section-card-desc">Verträge, Haftung, Datenschutz, Vertraulichkeit und Sorgfaltsprüfung.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=niche_legal&source=week-bonus'">▶ Coach starten</button>
         </div>
         
-        <div class="section-card" style="border-left: 3px solid var(--gold);">
-          <div class="section-card-type" style="color: var(--gold);">🏥 Coach · Healthcare</div>
-          <div class="section-card-title">24 Healthcare-Begriffe</div>
-          <p class="section-card-desc">Treatment, Diagnosis, Patient Care, Protocol...</p>
+        <div class="section-card section-card-niche">
+          <div class="section-card-type section-card-type-gold">🏥 Coach · Healthcare</div>
+          <div class="section-card-title">24 Healthcare-Phrasen</div>
+          <p class="section-card-desc">Studien, Behandlung, Medikamente, Akten, Nachsorge und Patientensicherheit.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=niche_healthcare&source=week-bonus'">▶ Coach starten</button>
         </div>
         
-        <div class="section-card" style="border-left: 3px solid var(--gold);">
-          <div class="section-card-type" style="color: var(--gold);">🏭 Coach · Manufacturing</div>
-          <div class="section-card-title">25 Manufacturing-Begriffe</div>
-          <p class="section-card-desc">Production, Quality Control, Supply Chain, Lean...</p>
+        <div class="section-card section-card-niche">
+          <div class="section-card-type section-card-type-gold">🏭 Coach · Manufacturing</div>
+          <div class="section-card-title">25 Manufacturing-Phrasen</div>
+          <p class="section-card-desc">Lieferketten, Lagerbestand, Qualität, Versand und Produktionskapazität.</p>
           <button class="btn-primary" onclick="window.location.href='coach.html?deck=niche_manufacturing&source=week-bonus'">▶ Coach starten</button>
         </div>
       </div>
       
       <hr class="section-divider">
       <div class="section-label">📥 Alle Downloads</div>
-      <p style="color:var(--muted);font-size:14px;margin-bottom:20px;max-width:700px;">
-        Alle Materialien zum Ausdrucken und Offline-Üben. CSVs für eigene Tools, PDFs für unterwegs.
+      <p class="section-intro section-intro-narrow">
+        PDFs für Offline-Abruftraining, CSVs für eigene Tools wie Anki, Excel oder Notion.
       </p>
-      <button class="btn-primary" onclick="window.location.href='downloads.html'" style="margin-bottom:22px;">CSV-Bibliothek öffnen</button>
+      <button class="btn-primary section-action-spaced" onclick="window.location.href='downloads.html'">Materialbibliothek öffnen</button>
       
       <div class="download-list">
         <!-- Woche 1 -->
-        <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--primary); margin: 24px 0 12px 0; letter-spacing: 0.05em;">
+        <div class="download-group-title">
           Woche 1 – Grundlagen
         </div>
         <div class="download-item">
           <div class="download-item-info">
-            <div class="download-item-name">Vokabelliste Woche 1</div>
+            <div class="download-item-name">Phrasenliste Woche 1</div>
             <div class="download-item-meta">CSV · 45 Phrasen mit Beispielen</div>
           </div>
-          <a class="btn-secondary" href="#" download>↓ Download</a>
-        </div>
-        <div class="download-item">
-          <div class="download-item-info">
-            <div class="download-item-name">False Friends Cheatsheet</div>
-            <div class="download-item-meta">PDF · 12 Stolperfallen</div>
-          </div>
-          <a class="btn-secondary" href="#" download>↓ Download</a>
+          <a class="btn-secondary" href="data/phrases/week1-core.csv" download>↓ Download</a>
         </div>
         
         <!-- Woche 2 -->
-        <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--primary); margin: 24px 0 12px 0; letter-spacing: 0.05em;">
+        <div class="download-group-title">
           Woche 2 – Ton & Flexibilität
         </div>
         <div class="download-item">
           <div class="download-item-info">
-            <div class="download-item-name">Vokabelliste Woche 2</div>
+            <div class="download-item-name">Phrasenliste Woche 2</div>
             <div class="download-item-meta">CSV · Phrasen mit Beispielen</div>
           </div>
-          <a class="btn-secondary" href="#" download>↓ Download</a>
-        </div>
-        <div class="download-item">
-          <div class="download-item-info">
-            <div class="download-item-name">Softener-Techniken Cheatsheet</div>
-            <div class="download-item-meta">PDF · 4 Techniken mit Beispielen</div>
-          </div>
-          <a class="btn-secondary" href="#" download>↓ Download</a>
+          <a class="btn-secondary" href="data/phrases/week2-core.csv" download>↓ Download</a>
         </div>
         
         <!-- Woche 3 -->
-        <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--primary); margin: 24px 0 12px 0; letter-spacing: 0.05em;">
+        <div class="download-group-title">
           Woche 3 – Feinschliff
         </div>
         <div class="download-item">
           <div class="download-item-info">
-            <div class="download-item-name">Vokabelliste Woche 3</div>
+            <div class="download-item-name">Phrasenliste Woche 3</div>
             <div class="download-item-meta">CSV · Phrasen mit Beispielen</div>
           </div>
-          <a class="btn-secondary" href="#" download>↓ Download</a>
-        </div>
-        <div class="download-item">
-          <div class="download-item-info">
-            <div class="download-item-name">Shadowing-Leitfaden</div>
-            <div class="download-item-meta">PDF · Anleitung & Checkliste</div>
-          </div>
-          <a class="btn-secondary" href="#" download>↓ Download</a>
+          <a class="btn-secondary" href="data/phrases/week3-core.csv" download>↓ Download</a>
         </div>
         
         <!-- Woche 4 -->
-        <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--primary); margin: 24px 0 12px 0; letter-spacing: 0.05em;">
+        <div class="download-group-title">
           Woche 4 – Anwendung
         </div>
         <div class="download-item">
           <div class="download-item-info">
-            <div class="download-item-name">Vokabelliste Woche 4</div>
+            <div class="download-item-name">Phrasenliste Woche 4</div>
             <div class="download-item-meta">CSV · Phrasen mit Beispielen</div>
           </div>
-          <a class="btn-secondary" href="#" download>↓ Download</a>
+          <a class="btn-secondary" href="data/phrases/week4-core.csv" download>↓ Download</a>
         </div>
         <div class="download-item">
           <div class="download-item-info">
-            <div class="download-item-name">Gesamte Phrasen-Bank (alle 4 Wochen)</div>
-            <div class="download-item-meta">PDF · Druckfertige Übersicht</div>
+            <div class="download-item-name">Core-Phrasen Workbook</div>
+            <div class="download-item-meta">PDF · 172 Phrasen zum Abdecken und Abrufen</div>
           </div>
-          <a class="btn-secondary" href="#" download>↓ Download</a>
+          <a class="btn-secondary" href="data/pdfs/phrase-bank-overview.pdf" download>↓ Download</a>
         </div>
         
         <!-- Bonus -->
-        <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--primary); margin: 24px 0 12px 0; letter-spacing: 0.05em;">
+        <div class="download-group-title">
           Bonus-Material
         </div>
         <div class="download-item">
           <div class="download-item-info">
-            <div class="download-item-name">UK vs US Business English</div>
-            <div class="download-item-meta">PDF · 29 Unterschiede</div>
+            <div class="download-item-name">Bonus-Workbook</div>
+            <div class="download-item-meta">PDF · Meeting Prep, schwierige Situationen und UK/US-Varianten</div>
           </div>
-          <a class="btn-secondary" href="#" download>↓ Download</a>
-        </div>
-        <div class="download-item">
-          <div class="download-item-info">
-            <div class="download-item-name">Satzanker für Meetings</div>
-            <div class="download-item-meta">PDF · Schnellreferenz</div>
-          </div>
-          <a class="btn-secondary" href="#" download>↓ Download</a>
+          <a class="btn-secondary" href="data/pdfs/bonus-workbook.pdf" download>↓ Download</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- WELCOME MODAL (einmalig nach erstem Login) -->
-  <div id="welcomeModal" style="display:none;position:fixed;inset:0;background:rgba(26,32,53,0.75);backdrop-filter:blur(6px);z-index:700;align-items:center;justify-content:center;padding:24px;">
-    <div style="background:#fff;border-radius:20px;padding:36px 32px;max-width:440px;width:100%;box-shadow:0 24px 80px rgba(0,0,0,0.3);">
-      <div style="text-align:center;margin-bottom:20px;">
-        <div style="font-size:48px;margin-bottom:8px;">🦆</div>
-        <div style="font-family:var(--font-display);font-size:26px;font-weight:900;text-transform:uppercase;color:var(--navy);">Willkommen!</div>
-        <div style="font-size:14px;color:var(--muted);margin-top:4px;">Ihr persönlicher Kurs ist bereit.</div>
+  <div id="welcomeModal" class="progress-modal">
+    <div class="progress-modal-card">
+      <div class="progress-modal-header">
+        <div class="progress-modal-icon">🦆</div>
+        <div class="progress-modal-title">Willkommen!</div>
+        <div class="progress-modal-subtitle">Ihr persönlicher Kurs ist bereit.</div>
       </div>
-      <div style="background:var(--bg);border:2px solid var(--gold);border-radius:12px;padding:16px 18px;margin-bottom:20px;">
-        <div style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:6px;">Ihr persönlicher Fortschritts-Code</div>
-        <div style="font-family:var(--font-display);font-size:28px;font-weight:900;color:var(--navy);letter-spacing:0.06em;" id="welcomeCodeDisplay">–</div>
-        <div style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.5;">
+      <div class="progress-code-box">
+        <div class="progress-code-label">Ihr persönlicher Fortschritts-Code</div>
+        <div class="progress-code-value" id="welcomeCodeDisplay">–</div>
+        <div class="progress-modal-text">
           Mit diesem Code können Sie Ihren Lernfortschritt auf anderen Geräten wiederherstellen.
           <strong>Notieren Sie ihn</strong> – oder klicken Sie jederzeit oben rechts auf den Code.
         </div>
       </div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6;">
+      <div class="progress-modal-body-text">
         ✅ Fortschritt wird automatisch gespeichert<br>
         ✅ Dual-Coding-Anker bleiben erhalten<br>
         ✅ Auf jedem Gerät mit Ihrem Code abrufbar
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px;margin-top:24px;">
-        <button class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;background:linear-gradient(135deg,#0066cc,#003d99);border:none;border-radius:10px;color:white;font-weight:700;cursor:pointer;transition:all 0.2s;" onclick="copyWelcomeCode()" onmouseover="this.style.transform='translateY(-2px);this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">📋 Code kopieren</button>
-        <button style="width:100%;justify-content:center;font-size:16px;padding:16px;background:linear-gradient(135deg,var(--gold),#f59e0b);border:none;border-radius:10px;color:var(--navy);font-weight:700;cursor:pointer;transition:all 0.2s;" onclick="closeWelcomeModal(); event.stopPropagation();" onmouseover="this.style.transform='translateY(-2px);this.style.boxShadow='0 8px 16px rgba(245,158,11,0.3)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">✨ Los geht's →</button>
+      <div class="progress-modal-actions">
+        <button class="btn-primary progress-modal-copy" onclick="copyWelcomeCode()">📋 Code kopieren</button>
+        <button class="progress-modal-start" onclick="closeWelcomeModal(); event.stopPropagation();">✨ Los geht's →</button>
       </div>
     </div>
   </div>
 
   <!-- CODE MODAL -->
-  <div id="codeModal" style="display:none;position:fixed;inset:0;background:rgba(26,32,53,0.7);backdrop-filter:blur(6px);z-index:600;align-items:center;justify-content:center;padding:24px;">
-    <div style="background:#fff;border-radius:20px;padding:36px 32px;max-width:420px;width:100%;box-shadow:0 24px 80px rgba(0,0,0,0.3);position:relative;">
-      <button onclick="closeCodeModal(); event.stopPropagation();" style="position:absolute;top:16px;right:16px;width:32px;height:32px;border:none;background:rgba(0,0,0,0.05);border-radius:50%;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;color:#003366;" onmouseover="this.style.background='rgba(0,0,0,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.05)'">✕</button>
-      <div style="font-family:var(--font-display);font-size:24px;font-weight:900;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">Ihr Fortschritts-Code</div>
-      <div style="font-size:14px;color:var(--muted);margin-bottom:24px;">Mit diesem Code können Sie Ihren Lernfortschritt auf anderen Geräten wiederherstellen. Notieren Sie ihn.</div>
+  <div id="codeModal" class="progress-modal progress-modal-code">
+    <div class="progress-modal-card progress-modal-card-narrow">
+      <button onclick="closeCodeModal(); event.stopPropagation();" class="progress-modal-close">✕</button>
+      <div class="progress-modal-heading">Ihr Fortschritts-Code</div>
+      <div class="progress-modal-lead">Mit diesem Code können Sie Ihren Lernfortschritt auf anderen Geräten wiederherstellen. Notieren Sie ihn.</div>
 
-      <div style="background:var(--bg);border:2px solid var(--border);border-radius:12px;padding:16px 20px;text-align:center;margin-bottom:20px;">
-        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:6px;">Ihr Code</div>
-        <div style="font-family:var(--font-display);font-size:32px;font-weight:900;color:var(--navy);letter-spacing:0.05em;" id="codeModalDisplay"></div>
-        <div style="font-size:12px;color:var(--muted);margin-top:6px;" id="syncStatusModal"></div>
+      <div class="progress-code-box progress-code-box-neutral">
+        <div class="progress-code-label">Ihr Code</div>
+        <div class="progress-code-value progress-code-value-large" id="codeModalDisplay"></div>
+        <div class="progress-modal-text" id="syncStatusModal"></div>
       </div>
 
-      <div style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:8px;">Code von anderem Gerät eingeben:</div>
-      <input id="codeInput" type="text" placeholder="z.B. swift-4821"
-        style="width:100%;background:var(--bg);border:2px solid var(--border);border-radius:10px;padding:11px 14px;font-size:15px;font-family:var(--font-body);color:var(--text);outline:none;margin-bottom:10px;letter-spacing:0.05em;"
-        onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"
+      <div class="progress-form-label">Code von anderem Gerät eingeben:</div>
+      <input id="codeInput" type="text" placeholder="z.B. swift-48291"
+        class="progress-code-input"
         onkeydown="if(event.key==='Enter') switchUserCode(this.value)">
 
-      <div style="display:flex;gap:10px;margin-bottom:16px;">
-        <button class="btn-primary" style="flex:1;justify-content:center;" onclick="switchUserCode(document.getElementById('codeInput').value)">Code laden</button>
+      <div class="progress-form-actions">
+        <button class="btn-primary" onclick="switchUserCode(document.getElementById('codeInput').value)">Code laden</button>
       </div>
 
-      <div style="font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:12px;">
+      <div class="progress-modal-note">
         <strong>Was wird gespeichert?</strong> Abgeschlossene Übungen, Dual-Coding-Emojis, Timer-Einstellungen und Flashcard-Positionen. Kein Name, keine E-Mail.
-        <span id="supabaseStatus" style="display:block;margin-top:6px;"></span>
+        <span id="supabaseStatus" class="progress-status-line"></span>
       </div>
     </div>
   </div>
 
   <footer class="footer">
     © Edgar Allmendinger · Wort Wach Verlag · Business English in 4 Wochen ·
-    <a href="/cdn-cgi/l/email-protection#c6afa8a0a986b5aea9b4b2a5b3b2a3a8a1aaafb5aee8a2a3"><span class="__cf_email__" data-cfemail="2e474048416e5d46415c5a4d5b5a4b404942475d46004a4b">[email&#160;protected]</span></a> ·
+    <a href="mailto:info@shortcutenglish.de">info@shortcutenglish.de</a> ·
     <a href="impressum.html">Impressum</a> ·
     <a href="datenschutz.html">Datenschutz</a>
   </footer>

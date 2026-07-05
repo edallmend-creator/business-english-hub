@@ -1,12 +1,12 @@
 /* ================================================================
    WOCHEN-TABS & INHALTE
    ================================================================ */
-.week-tabs, .weeks-section { max-width: 1100px; margin: 0 auto; 53px 24px; }
+.week-tabs, .weeks-section { max-width: 1100px; margin: 53px auto; padding: 0 24px; }
 .week-tabs-nav { display: flex; gap: 8px; margin-bottom: 36px; flex-wrap: wrap; }
 .week-tab-btn {
   background: transparent; border: 2px solid var(--border); color: var(--text);
   font-family: var(--font-display); font-size: 15px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.05em; 10px 20px;
+  text-transform: uppercase; letter-spacing: 0.05em; padding: 10px 20px;
   border-radius: 10px; cursor: pointer; transition: all 0.2s; white-space: nowrap;
 }
 .week-tab-btn:hover { border-color: var(--accent); color: var(--accent); }
@@ -17,7 +17,7 @@
 /* Week Header */
 .week-header { margin-bottom: 32px; }
 .week-number {
-  font-family: var(--font-display); font-size: 12px; font-weight: 700;
+  font-family: var(--font-display); font-size: 18px; font-weight: 900;
   letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
 }
 .week-title {
@@ -28,7 +28,7 @@
 
 /* Section Cards */
 .section-label {
-  font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+  font-size: 14px; font-weight: 900; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--muted); margin-bottom: 14px;
 }
 .section-grid {
@@ -38,21 +38,96 @@
 .section-card {
   padding: 24px;
   background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
-  26px; display: flex; flex-direction: column; gap: 10px;
+  padding: 26px; display: flex; flex-direction: column; gap: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
 }
 .section-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); border-color: var(--accent); transform: translateY(-2px); }
+
+.section-card-featured {
+  border: 2px solid var(--gold);
+  background: linear-gradient(135deg,#fffbf0,#fff);
+}
+
+.section-card-alert {
+  border: 2px solid #ef4444;
+  background: linear-gradient(135deg,#fef2f2,#fff);
+}
+
+.section-card-niche {
+  border-left: 3px solid var(--gold);
+}
+
+.section-card-type-gold {
+  color: var(--gold);
+}
+
+.section-card-type-red {
+  color: #dc2626;
+}
+
+.btn-danger {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+.section-intro {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+  max-width: 760px;
+}
+
+.section-intro-narrow {
+  max-width: 700px;
+}
+
+.section-action-spaced {
+  margin-bottom: 22px;
+}
+
+.download-group-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 24px 0 12px;
+  letter-spacing: 0.05em;
+}
 .section-card-type {
-  font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+  font-size: 14px; font-weight: 900; letter-spacing: 0.1em;
   text-transform: uppercase; color: var(--accent);
+}
+
+.coach-method-note {
+  margin-top: 18px;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #fff7eb, #ffffff);
+  border: 1px solid rgba(255,149,0,0.24);
+  border-radius: 18px;
+}
+
+.coach-method-note span {
+  display: block;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.coach-method-note p {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.55;
 }
 .section-card-title {
   font-family: var(--font-display); font-size: 22px; font-weight: 800;
   text-transform: uppercase; color: var(--primary); line-height: 1.15;
 }
 .section-card-desc { font-size: 14px; color: var(--muted); flex: 1; }
-.section-divider { border: none; border-top: 1px solid var(--border); 31px 0; }
+.section-divider { border: none; border-top: 1px solid var(--border); margin: 31px 0; }
 
 /* Downloads */
 .download-list { display: flex; flex-direction: column; gap: 12px; }
@@ -115,7 +190,7 @@
 .bonus-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
 .bonus-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
-  26px; display: flex; flex-direction: column; gap: 10px;
+  padding: 26px; display: flex; flex-direction: column; gap: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: box-shadow 0.2s, border-color 0.2s;
 }
 .bonus-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); border-color: var(--accent); }
@@ -129,7 +204,7 @@
   font-size: 15px;
   display: inline-flex; align-items: center; gap: 7px;
   background: var(--primary); color: #fff; border: none; border-radius: 10px;
-  11px 18px; font-size: 14px; font-weight: 700;
+  padding: 11px 18px; font-size: 14px; font-weight: 700;
   font-family: var(--font-display); letter-spacing: 0.04em; text-transform: uppercase;
   cursor: pointer; text-decoration: none;
   transition: background 0.2s, transform 0.1s; align-self: flex-start;
@@ -149,16 +224,249 @@
 /* Tip Box */
 .tip-box {
   background: var(--accent-light); border-left: 3px solid var(--accent); border-radius: 8px;
-  13px 14px; font-size: 13px; color: #4a3800; margin-bottom: 16px;
+  padding: 13px 14px; font-size: 13px; color: #4a3800; margin-bottom: 16px;
 }
 .tip-box strong { color: var(--primary); }
 
 /* Footer */
 .footer {
   background: var(--primary); color: rgba(255,255,255,0.5);
-  31px 24px; text-align: center; font-size: 13px; margin-top: 48px;
+  padding: 31px 24px; text-align: center; font-size: 13px; margin-top: 48px;
 }
 .footer a { color: var(--accent); text-decoration: none; }
+
+.progress-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(26,32,53,0.75);
+  backdrop-filter: blur(6px);
+  z-index: 700;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.progress-modal-code {
+  background: rgba(26,32,53,0.7);
+  z-index: 600;
+}
+
+.progress-modal-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 32px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.3);
+}
+
+.progress-modal-card-narrow {
+  max-width: 420px;
+  position: relative;
+}
+
+.progress-modal-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.progress-modal-icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.progress-modal-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.progress-modal-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.progress-code-box {
+  background: var(--bg);
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+
+.progress-code-box-neutral {
+  border-color: var(--border);
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.progress-code-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.progress-code-value {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--navy);
+  letter-spacing: 0.06em;
+}
+
+.progress-code-value-large {
+  font-size: 32px;
+  letter-spacing: 0.05em;
+}
+
+.progress-modal-text {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.progress-modal-body-text {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.progress-modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.progress-modal-copy,
+.progress-modal-start {
+  width: 100%;
+  justify-content: center;
+  font-size: 16px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.progress-modal-copy {
+  background: linear-gradient(135deg,#0066cc,#003d99);
+  color: #fff;
+}
+
+.progress-modal-start {
+  background: linear-gradient(135deg,var(--gold),#f59e0b);
+  color: var(--navy);
+}
+
+.progress-modal-copy:hover,
+.progress-modal-start:hover,
+.progress-modal-close:hover {
+  transform: translateY(-2px);
+}
+
+.progress-modal-copy:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.progress-modal-start:hover {
+  box-shadow: 0 8px 16px rgba(245,158,11,0.3);
+}
+
+.progress-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: rgba(0,0,0,0.05);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  color: #003366;
+}
+
+.progress-modal-close:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+.progress-modal-heading {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.progress-modal-lead {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.progress-form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.progress-code-input {
+  width: 100%;
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  color: var(--text);
+  outline: none;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+
+.progress-code-input:focus {
+  border-color: var(--gold);
+}
+
+.progress-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.progress-form-actions .btn-primary {
+  flex: 1;
+  justify-content: center;
+}
+
+.progress-modal-note {
+  font-size: 12px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.progress-status-line {
+  display: block;
+  margin-top: 6px;
+}
 
 /* Responsive */
 @media (max-width: 600px) {
@@ -173,7 +481,7 @@
 .weeks-section {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 64px 24px 32px;
+  padding: 44px 24px 32px;
 }
 
 .week-header {
@@ -213,7 +521,7 @@
 .week-module-strip span {
   display: block;
   color: var(--accent);
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -306,32 +614,6 @@
   border-width: 1px;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(18, 38, 63, 0.05);
-}
-
-.download-item a[href="#"] {
-  opacity: 0.55;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.download-item a[href="#"]::after {
-  content: " bald";
-  text-transform: none;
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.download-list::before {
-  content: "Hinweis: CSV-Downloads sind über die Bibliothek verfügbar. PDF-Dateien werden ergänzt, sobald die finalen Druckversionen bereit sind.";
-  display: block;
-  padding: 16px 18px;
-  background: #fff7ed;
-  border: 1px solid rgba(255,149,0,0.25);
-  border-radius: 16px;
-  color: #8a4b00;
-  font-size: 14px;
-  line-height: 1.5;
 }
 
 .modal-overlay.open .btn-secondary {
@@ -686,6 +968,14 @@
 
 .download-library {
   margin-top: 18px;
+}
+
+.download-section-note {
+  max-width: 760px;
+  margin: 10px 0 18px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .page-download-list::before {

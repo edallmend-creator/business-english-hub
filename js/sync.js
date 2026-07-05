@@ -1,7 +1,7 @@
 // ================================================================
 // SYNC – Supabase Config & User Code System
 // Anonymer Code pro Nutzer – kein Login, keine E-Mail
-// Format: adjective-number, z.B. "swift-4821"
+// Format: adjective-number, z.B. "swift-48291"
 // ================================================================
 const SUPABASE_URL     = "https://ahqeqgovcwgslxwlnwsl.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFocWVxZ292Y3dnc2x4d2xud3NsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwNzI3MjcsImV4cCI6MjA5ODY0ODcyN30.4a0Lx8N02Wxf5rUoL839bhudr6OrNRUEYqMlHzrzHsA";
@@ -41,7 +41,13 @@ function supabaseReady() {
 // ── Code Generierung ───────────────────────────────────────────
 function generateCode() {
   const word = CODE_WORDS[Math.floor(Math.random() * CODE_WORDS.length)];
-  const num  = Math.floor(1000 + Math.random() * 9000);
+  const bytes = new Uint32Array(1);
+  if (window.crypto && window.crypto.getRandomValues) {
+    window.crypto.getRandomValues(bytes);
+  } else {
+    bytes[0] = Math.floor(Math.random() * 100000);
+  }
+  const num = String(bytes[0] % 100000).padStart(5, "0");
   return `${word}-${num}`;
 }
 

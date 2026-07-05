@@ -14,12 +14,17 @@ function togglePw() {
 }
 
 function checkLogin() {
-  if (localStorage.getItem(STORAGE_KEY) === "1") unlock();
+  if (localStorage.getItem(STORAGE_KEY) === "1") {
+    unlock();
+  } else {
+    document.body.classList.add("auth-ready");
+  }
 }
 
 function unlock() {
   document.getElementById("gate").style.display = "none";
   document.getElementById("app").style.display = "block";
+  document.body.classList.remove("auth-ready");
   initUserCode();
   handleDeepLink();
   if (!localStorage.getItem("be4w_welcomed")) {
