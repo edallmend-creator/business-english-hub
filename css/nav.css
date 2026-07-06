@@ -449,6 +449,7 @@
   }
 
   .nav-link-secondary {
-    display: none;
+    display: flex;
+    color: rgba(255,255,255,0.72);
   }
 }
