@@ -384,34 +384,9 @@ function recordSRS(cardId, rating) {
  * @returns {Promise<void>}
  */
 async function syncSRSToSupabase(cardId, data) {
-    if (!App.supabase || !App.currentUser) {
-        return;
-    }
-    
-    try {
-        const { error } = await App.supabase
-            .from('card_reviews')
-            .upsert({
-                user_id: App.currentUser.id,
-                card_id: cardId,
-                deck: CONFIG.deckName,
-                correct_count: data.correct_count || 0,
-                wrong_count: data.wrong_count || 0,
-                again_count: data.again_count || 0,
-                last_review: data.last_review,
-                updated_at: new Date().toISOString()
-            }, {
-                onConflict: 'user_id,card_id'
-            });
-        
-        if (error) {
-            console.warn('⚠️ Supabase Upsert Warnung:', error.message);
-        } else {
-            console.log('☁️ SRS zu Supabase synct');
-        }
-    } catch (error) {
-        console.error('❌ Supabase Sync Fehler:', error);
-    }
+    // Coach-specific direct table sync is intentionally disabled.
+    // Hub-wide progress sync uses js/sync.js via controlled Supabase RPC functions.
+    return;
 }
 
 // ================================================================

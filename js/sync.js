@@ -67,8 +67,9 @@ async function initUserCode() {
 async function loadFromSupabase() {
   if (!supabaseReady() || !_userCode) return;
   try {
-    const { data: profile } = await _supabase
-      .from("user_progress").select("*").eq("user_code", _userCode).single();
+    const { data: profiles } = await _supabase
+      .rpc("be4w_get_user_progress", { p_user_code: _userCode });
+    const profile = Array.isArray(profiles) ? profiles[0] : null;
     if (profile) {
       _userData.completed_exercises = profile.completed_exercises || {};
       _userData.dual_coding         = profile.dual_coding         || {};
@@ -82,7 +83,7 @@ async function loadFromSupabase() {
       localStorage.setItem("be4w_dual_coding_v1", JSON.stringify(_userData.dual_coding));
     }
     const { data: reviews } = await _supabase
-      .from("card_reviews").select("*").eq("user_code", _userCode);
+      .rpc("be4w_get_card_reviews", { p_user_code: _userCode });
     if (reviews) {
       _srsCache = {};
       reviews.forEach(r => { _srsCache[r.card_id] = r; });
@@ -101,18 +102,18 @@ async function saveToSupabase() {
     _userData.dual_coding = JSON.parse(localStorage.getItem("be4w_dual_coding_v1") || "{}");
   } catch {}
   try {
-    await _supabase.from("user_progress").upsert({
-      user_code:            _userCode,
-      completed_exercises:  _userData.completed_exercises,
-      dual_coding:          _userData.dual_coding,
-      settings:             _userData.settings,
-      flashcard_positions:  _userData.flashcard_positions,
-      streak_current:       _userData.streak_current  || 0,
-      streak_best:          _userData.streak_best     || 0,
-      streak_last_date:     _userData.streak_last_date || null,
-      total_reviews:        _userData.total_reviews   || 0,
-      total_correct:        _userData.total_correct   || 0
-    }, { onConflict: "user_code" });
+    await _supabase.rpc("be4w_upsert_user_progress", {
+      p_user_code: _userCode,
+      p_completed_exercises: _userData.completed_exercises,
+      p_dual_coding: _userData.dual_coding,
+      p_settings: _userData.settings,
+      p_flashcard_positions: _userData.flashcard_positions,
+      p_streak_current: _userData.streak_current || 0,
+      p_streak_best: _userData.streak_best || 0,
+      p_streak_last_date: _userData.streak_last_date || null,
+      p_total_reviews: _userData.total_reviews || 0,
+      p_total_correct: _userData.total_correct || 0
+    });
     showSyncStatus("✓ Gespeichert");
   } catch (e) { showSyncStatus("⚠ Offline"); }
 }
@@ -128,13 +129,13 @@ async function logSession(exerciseType, deck, cardsReviewed, cardsCorrect, durat
   scheduleSave();
   if (!supabaseReady()) return;
   try {
-    await _supabase.from("session_log").insert({
-      user_code:      _userCode,
-      exercise_type:  exerciseType,
-      deck:           deck || null,
-      cards_reviewed: cardsReviewed,
-      cards_correct:  cardsCorrect,
-      duration_sec:   durationSec
+    await _supabase.rpc("be4w_log_session", {
+      p_user_code: _userCode,
+      p_exercise_type: exerciseType,
+      p_deck: deck || null,
+      p_cards_reviewed: cardsReviewed,
+      p_cards_correct: cardsCorrect,
+      p_duration_sec: durationSec
     });
   } catch (e) {}
 }

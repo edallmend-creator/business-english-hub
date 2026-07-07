@@ -3,9 +3,9 @@
 ## Current App Model
 
 - The hub uses a pseudonymous progress code, not e-mail login.
-- `js/sync.js` writes to Supabase from the browser with the public anon key.
+- `js/sync.js` writes to Supabase through RPC functions with the public anon key.
 - Stored data is learning progress only: completed exercises, SRS reviews, streaks, settings and session logs.
-- The public anon key is expected in a static frontend. It is not a secret. Security must come from RLS and table permissions.
+- The public anon key is expected in a static frontend. It is not a secret. Security must come from RLS, revoked table permissions, and controlled RPC functions.
 
 ## Important Security Note
 
@@ -63,6 +63,12 @@ Required columns:
 
 ## Minimum SQL Setup
 
+Use `docs/SUPABASE_CODE_SYNC_RPC.sql` for the current production model. It creates/updates the required tables, enables RLS, revokes direct table access and grants only controlled RPC functions.
+
+Older direct table access from the browser is intentionally avoided.
+
+Reference table setup:
+
 ```sql
 create table if not exists public.user_progress (
   user_code text primary key,
@@ -111,15 +117,15 @@ alter table public.session_log enable row level security;
 
 ## Policy Decision Before Launch
 
-With the current no-login architecture, strict per-user RLS is not possible from direct browser table access because all visitors use the same `anon` role.
+With the current no-login architecture, strict per-user RLS is not possible from direct browser table access because all visitors use the same `anon` role. Therefore direct table access should remain blocked and sync should go through RPC functions.
 
 There are two realistic options:
 
-### Option A: Accept Pseudonymous Code-Based Sync
+### Option A: Accept Pseudonymous Code-Based RPC Sync
 
-Use high-entropy progress codes and store no personal data. This is acceptable for low-risk learning progress, but a guessed/shared code can access that progress.
+Use memorable progress codes and store no personal data. This is acceptable for low-risk learning progress, but a guessed/shared code can access that progress.
 
-Required policies allow anon read/write on these learning tables. This is simple, but not private in a strong security sense.
+Direct table access remains blocked. RPC functions only return/update rows for the supplied progress code.
 
 ### Option B: Stronger Security
 
@@ -130,6 +136,7 @@ Recommended long-term approach: anonymous Supabase Auth plus server-side restore
 ## Pre-Launch Checks
 
 - Confirm RLS is enabled on all three tables.
+- If Supabase reports `rls_disabled_in_public`, immediately run `docs/SUPABASE_CODE_SYNC_RPC.sql` in the Supabase SQL Editor.
 - Confirm no service-role key appears in frontend files.
 - Confirm no e-mail, name, company or other personal profile data is written to progress tables.
 - Test a new browser profile: progress code appears, progress saves, reload restores.

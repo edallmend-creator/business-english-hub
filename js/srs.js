@@ -56,19 +56,19 @@ async function recordCardReview(cardId, deck, grade) {
 
   if (supabaseReady()) {
     try {
-      await _supabase.from("card_reviews").upsert({
-        user_code:     _userCode,
-        card_id:       cardId,
-        deck,
-        ease_factor:   newRecord.ease_factor,
-        interval_days: newRecord.interval_days,
-        repetitions:   newRecord.repetitions,
-        next_review:   newRecord.next_review,
-        last_reviewed: newRecord.last_reviewed,
-        correct_count: newRecord.correct_count,
-        wrong_count:   newRecord.wrong_count,
-        again_count:   newRecord.again_count
-      }, { onConflict: "user_code,card_id" });
+      await _supabase.rpc("be4w_upsert_card_review", {
+        p_user_code: _userCode,
+        p_card_id: cardId,
+        p_deck: deck,
+        p_ease_factor: newRecord.ease_factor,
+        p_interval_days: newRecord.interval_days,
+        p_repetitions: newRecord.repetitions,
+        p_next_review: newRecord.next_review,
+        p_last_reviewed: newRecord.last_reviewed,
+        p_correct_count: newRecord.correct_count,
+        p_wrong_count: newRecord.wrong_count,
+        p_again_count: newRecord.again_count
+      });
     } catch (e) {}
   }
 }

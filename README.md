@@ -86,7 +86,7 @@ Gespeichert werden nur Lernfortschritt und Einstellungen, keine Namen oder E-Mai
 
 ## Supabase
 
-Supabase wird für optionalen geräteübergreifenden Lernfortschritt genutzt.
+Supabase wird für geräteübergreifenden Lernfortschritt genutzt.
 
 Aktive Frontend-Datei:
 
@@ -101,8 +101,9 @@ Tabellen laut aktueller App:
 Vor Livegang oder nach Supabase-Änderungen prüfen:
 
 - `docs/SUPABASE_LAUNCH_CHECKLIST.md`
+- `docs/SUPABASE_CODE_SYNC_RPC.sql`
 
-Wichtig: Der öffentliche Supabase-Anon-Key im Frontend ist kein Secret. Sicherheit muss über bewusst gesetzte Tabellenrechte/RLS und darüber kommen, dass keine sensiblen personenbezogenen Daten gespeichert werden.
+Wichtig: Der öffentliche Supabase-Anon-Key im Frontend ist kein Secret. Direkter Tabellenzugriff soll durch RLS und entzogene Tabellenrechte blockiert bleiben. Der Hub synchronisiert über kontrollierte RPC-Funktionen, bei denen der Fortschritts-Code den Lernstand lädt und speichert.
 
 ## Inhalte pflegen
 
