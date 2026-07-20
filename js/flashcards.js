@@ -618,7 +618,7 @@ const ROULETTE_SITUATIONS = [
   { emoji: "🏃", text: "Sie kommen 3 Minuten zu spät. Das Meeting hat begonnen. Was sagen Sie?" },
   { emoji: "💡", text: "Eine Idee schießt Ihnen in den Kopf. Alle warten. Jetzt oder nie." },
   { emoji: "🗓️", text: "Spontane Frage: 'Are you free Thursday?' – Sie sind es nicht." },
-  { emoji: "🦆", text: "Ihr innerer Business Duck flüstert Ihnen zu: Sag's auf Englisch." },
+  { emoji: "🦆", text: "Ihr innerer Business Duck flüstert Ihnen zu: Sagen Sie es auf Englisch." },
 ];
 
 let roulette_card = null, roulette_situation = null;
@@ -1521,7 +1521,7 @@ function renderFraming() {
         <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--red);font-weight:700;margin-bottom:6px;">Neutral / schwach</div>
         <div style="font-size:18px;font-weight:700;color:var(--navy);">"${c.neutral}"</div>
       </div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:10px;">Formuliere jetzt laut eine wirkungsvolle Version. Dann aufdecken und vergleichen.</div>
+      <div style="font-size:13px;color:var(--muted);margin-bottom:10px;">Formulieren Sie jetzt laut eine wirkungsvolle Version. Decken Sie danach die Lösung auf und vergleichen Sie.</div>
       <div id="frReveal" style="display:none;">
         <div style="background:var(--bg);border:2px solid #2a7a2a;border-radius:12px;padding:16px 18px;margin-bottom:12px;">
           <div style="font-size:11px;text-transform:uppercase;color:#2a7a2a;font-weight:700;margin-bottom:6px;">✓ Muster-Framing</div>

@@ -1172,7 +1172,7 @@ function renderCard() {
             ${App.showHelp ? `
                 <div style="margin-top: 12px; padding: 12px; background: #FFF4E6; border-left: 3px solid var(--accent); border-radius: 6px; font-size: 12px; line-height: 1.6;">
                     <div style="font-weight: 700; margin-bottom: 6px; color: var(--accent);">📚 So funktioniert's:</div>
-                    <div style="margin-bottom: 4px;"><strong>Dual Coding:</strong> Wähle 1-3 Emojis als visuelle Merkhilfe!</div>
+                    <div style="margin-bottom: 4px;"><strong>Dual Coding:</strong> Wählen Sie 1–3 Emojis als visuelle Merkhilfe!</div>
                     <div style="margin-bottom: 4px;"><strong>Active Recall:</strong> Tippen aktiviert Ihr Gedächtnis stärker!</div>
                     <div style="margin-bottom: 4px;"><strong>Spaced Repetition:</strong> Falsche Phrasen kommen häufiger zurück!</div>
                     <div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--accent); opacity: 0.8;">
@@ -1231,7 +1231,7 @@ function renderCard() {
                 🇩🇪 Deutsch → Englisch ${App.settings.typing ? 'tippen' : 'sprechen'}
             </div>
             <div class="coach-card-instruction">
-                Formuliere die englische Phrase aktiv aus dem Kopf. Erst danach Lösung anzeigen und bewerten.
+                Formulieren Sie die englische Phrase aktiv aus dem Kopf. Zeigen Sie erst danach die Lösung an und bewerten Sie Ihre Antwort.
             </div>
             
             <div class="phrase-de">${card.a}</div>
@@ -1280,7 +1280,7 @@ function renderCard() {
             ${App.settings.typing ? `
                 <div style="margin-top: 20px;">
                     <input type="text" id="userInput" 
-                        placeholder="Tippe die Übersetzung..." 
+                        placeholder="Tippen Sie die Übersetzung ein …" 
                         ${App.revealed ? 'disabled style="opacity: 0.6; cursor: not-allowed;"' : ''}
                         value="${App.revealed && App.userAnswer ? App.userAnswer : ''}"
                         style="width: 100%; padding: 16px 18px; font-size: 16px; border: 2px solid var(--border); border-radius: 10px; font-family: var(--font-body);"
@@ -1340,7 +1340,7 @@ function renderCard() {
                         </div>
                         ${emojis.length >= CONFIG.maxEmojis ? `
                             <div style="font-size: 11px; color: var(--accent); margin-bottom: 8px; font-style: italic;">
-                                💡 Tipp: Klicke auf ein Emoji zum Entfernen!
+                                💡 Tipp: Klicken Sie auf ein Emoji, um es zu entfernen!
                             </div>
                         ` : ''}
                         <div class="emoji-picker">
@@ -1407,7 +1407,7 @@ function renderCard() {
                     `}
                 ` : `
                     <div style="text-align: center; padding: 12px; color: var(--muted); font-size: 14px;">
-                        ${App.settings.emoji ? '✨ Wähle Emojis, dann geht\'s automatisch weiter...' : '⏳ Wird automatisch bewertet...'}
+                        ${App.settings.emoji ? '✨ Wählen Sie Emojis; anschließend geht es automatisch weiter …' : '⏳ Wird automatisch bewertet...'}
                     </div>
                 `}
                 
@@ -2134,7 +2134,7 @@ function showLearningPlan() {
         <div style="margin: 20px 0; padding: 16px; background: #fff3e0; border-left: 4px solid #FF9500; border-radius: 8px;">
             <h3 style="color: #FF9500; margin: 0 0 12px 0;">📙 WOCHE 2: Fortschritt</h3>
             <p style="margin: 8px 0;">• <strong>W1 Reviews</strong> laufen automatisch</p>
-            <p style="margin: 8px 0;">• Starte <strong>W2 Core</strong> parallel</p>
+            <p style="margin: 8px 0;">• Starten Sie <strong>W2 Core</strong> parallel</p>
             <p style="margin: 8px 0;">• Erste Phrasen sitzen schon – spürbar!</p>
             <p style="margin: 8px 0; color: var(--muted); font-size: 14px;">
                 💡 "Rhythmus, nicht Regeln"
@@ -2154,7 +2154,7 @@ function showLearningPlan() {
         <div style="margin: 20px 0; padding: 16px; background: #f3e5f5; border-left: 4px solid #AF52DE; border-radius: 8px;">
             <h3 style="color: #AF52DE; margin: 0 0 12px 0;">📕 WOCHE 4: Anwendung</h3>
             <p style="margin: 8px 0;">• Alle Core-Reviews automatisch</p>
-            <p style="margin: 8px 0;">• Starte <strong>W4 Core</strong></p>
+            <p style="margin: 8px 0;">• Starten Sie <strong>W4 Core</strong></p>
             <p style="margin: 8px 0;">• Bonus/Niche Decks nach Interesse!</p>
             <p style="margin: 8px 0; color: var(--muted); font-size: 14px;">
                 💡 "Im entscheidenden Moment verfügbar"
@@ -2173,7 +2173,7 @@ function showLearningPlan() {
         <div style="margin: 24px 0; padding: 16px; background: var(--surface2); border-radius: 8px;">
             <h4 style="margin: 0 0 12px 0;">🎯 Nach 4 Wochen:</h4>
             <p style="margin: 8px 0;">✅ ~185 Core-Phrasen im Spaced Repetition System</p>
-            <p style="margin: 8px 0;">✅ Automatische Reviews (nur 5-10min/Tag)</p>
+            <p style="margin: 8px 0;">✅ Automatische Reviews (nur 5–10 Min./Tag)</p>
             <p style="margin: 8px 0;">✅ Bonus/Niche Decks als Erweiterung</p>
             <p style="margin: 8px 0;">✅ Sätze sitzen – ohne Anlauf verfügbar!</p>
         </div>
@@ -2270,7 +2270,7 @@ function showDeckSelection() {
 
             <div class="coach-section-heading">
                 <span>Trainingsbereiche</span>
-                <small>Wähle gezielt oder folge der Empfehlung.</small>
+                <small>Wählen Sie gezielt oder folgen Sie der Empfehlung.</small>
             </div>
 
             <section class="coach-deck-grid">
