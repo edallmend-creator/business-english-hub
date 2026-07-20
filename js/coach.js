@@ -1173,10 +1173,10 @@ function renderCard() {
                 <div style="margin-top: 12px; padding: 12px; background: #FFF4E6; border-left: 3px solid var(--accent); border-radius: 6px; font-size: 12px; line-height: 1.6;">
                     <div style="font-weight: 700; margin-bottom: 6px; color: var(--accent);">📚 So funktioniert's:</div>
                     <div style="margin-bottom: 4px;"><strong>Dual Coding:</strong> Wähle 1-3 Emojis als visuelle Merkhilfe!</div>
-                    <div style="margin-bottom: 4px;"><strong>Active Recall:</strong> Tippen aktiviert dein Gedächtnis stärker!</div>
+                    <div style="margin-bottom: 4px;"><strong>Active Recall:</strong> Tippen aktiviert Ihr Gedächtnis stärker!</div>
                     <div style="margin-bottom: 4px;"><strong>Spaced Repetition:</strong> Falsche Phrasen kommen häufiger zurück!</div>
                     <div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--accent); opacity: 0.8;">
-                        💾 Dein Fortschritt wird automatisch gespeichert!
+                        💾 Ihr Fortschritt wird automatisch gespeichert!
                     </div>
                 </div>
             ` : ''}
@@ -1286,7 +1286,7 @@ function renderCard() {
                         style="width: 100%; padding: 16px 18px; font-size: 16px; border: 2px solid var(--border); border-radius: 10px; font-family: var(--font-body);"
                         onkeydown="if(event.key==='Enter' && this.value.trim() && !this.disabled) window.revealAnswer()">
                     <div style="font-size: 12px; color: var(--muted); text-align: center; margin-top: 8px;">
-                        ${App.revealed ? 'Deine Eingabe ↑' : 'Enter zum Aufdecken'}
+                        ${App.revealed ? 'Ihre Eingabe ↑' : 'Enter zum Aufdecken'}
                     </div>
                 </div>
             ` : ''}
@@ -1294,7 +1294,7 @@ function renderCard() {
             ${App.revealed ? `
                 ${App.userAnswer ? `
                     <div style="margin-top: 14px; padding: 10px 12px; background: var(--bg); border-radius: 8px;">
-                        <div style="font-size: 11px; color: var(--muted); margin-bottom: 4px;">Deine Antwort:</div>
+                        <div style="font-size: 11px; color: var(--muted); margin-bottom: 4px;">Ihre Antwort:</div>
                         <div style="font-family: monospace; font-size: 14px;">${App.userAnswer}</div>
                         ${!isExactMatch(App.userAnswer, getEnglishVariant(card)) && getSimilarity(App.userAnswer, getEnglishVariant(card)) > 0.7 ? `
                             <div style="margin-top: 6px; font-size: 11px; color: var(--accent);">
@@ -1382,7 +1382,7 @@ function renderCard() {
                 ${!App.settings.typing ? `
                     ${CONFIG.timer.enabled && App.settings.timer ? `
                         <div style="font-size: 14px; font-weight: 600; text-align: center; margin-bottom: 12px; color: var(--text);">
-                            Wusstest du es?
+                            Wussten Sie es?
                         </div>
                         <div style="display: flex; gap: 12px;">
                             <button onclick="window.rate(0)" title="Nein, wusste ich nicht" style="flex: 1; padding: 16px; border-radius: 12px; border: 2px solid #ef4444; background: #fef2f2; color: #dc2626; font-weight: 700; cursor: pointer; font-size: 15px;">
@@ -1394,7 +1394,7 @@ function renderCard() {
                         </div>
                     ` : `
                         <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 10px; text-align: center; font-weight: 600;">
-                            Hast du's gewusst?
+                            Haben Sie es gewusst?
                         </div>
                         <div style="display: flex; gap: 12px;">
                             <button onclick="window.rate(0)" title="Nicht gewusst" style="flex: 1; padding: 16px; border-radius: 12px; border: 2px solid #ef4444; background: #fef2f2; color: #dc2626; font-weight: 700; cursor: pointer; font-size: 15px;">
@@ -2124,7 +2124,7 @@ function showLearningPlan() {
         <div style="margin: 20px 0; padding: 16px; background: #e3f2fd; border-left: 4px solid #0066CC; border-radius: 8px;">
             <h3 style="color: #0066CC; margin: 0 0 12px 0;">📘 WOCHE 1: Grundlagen</h3>
             <p style="margin: 8px 0;">• Fokus auf <strong>W1 Core</strong></p>
-            <p style="margin: 8px 0;">• Lerne neue Phrasen in <strong>deinem Tempo</strong></p>
+            <p style="margin: 8px 0;">• Lernen Sie neue Phrasen in <strong>Ihrem Tempo</strong></p>
             <p style="margin: 8px 0;">• Folge dem Spaced Repetition System für Reviews</p>
             <p style="margin: 8px 0; color: var(--muted); font-size: 14px;">
                 💡 "Kleine Einstiegssätze, die ohne Anlauf funktionieren"
@@ -2248,12 +2248,12 @@ function showDeckSelection() {
                 <article>
                     <span>1</span>
                     <strong>Deutsch sehen</strong>
-                    <p>Du bekommst eine realistische deutsche Aufgabe statt einer isolierten Vokabel.</p>
+                    <p>Sie bekommen eine realistische deutsche Aufgabe statt einer isolierten Vokabel.</p>
                 </article>
                 <article>
                     <span>2</span>
                     <strong>Englisch abrufen</strong>
-                    <p>Du formulierst die Phrase aktiv aus dem Kopf, gesprochen oder getippt.</p>
+                    <p>Sie formulieren die Phrase aktiv aus dem Kopf, gesprochen oder getippt.</p>
                 </article>
                 <article>
                     <span>3</span>

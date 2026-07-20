@@ -14,6 +14,7 @@ const W4_CONCEPTS = [
   { term: "currently vs. actually", de: "derzeit vs. eigentlich", why: "'Actually' bedeutet auf Englisch 'eigentlich' – ein klassischer False Friend.", example: "We are currently reviewing the proposal.", impact: "Verhindert peinliche Missverständnisse im internationalen Meeting.", why_not: "Why currently and not actually? Because 'actually' means 'eigentlich' in German – a classic false friend trap." },
 ];
 
+
 // Framing-Übungen: neutral → wirkungsvoll
 const W4_FRAMING = [
   { neutral: "The project is expensive.", framed: "This is a strategic investment that positions us ahead of competitors.", tip: "Teuer → Investition mit strategischem Vorteil" },
@@ -62,11 +63,10 @@ const NYC_PITCH_SCENES = [
   },
   {
     scene: "Der Abschluss",
-    setup: "Stille. Alle schauen dich an. Der Investor sagt:",
+    setup: "Stille. Alle schauen Sie an. Der Investor sagt:",
     investor: "Alright. We're interested. What are your next steps?",
     hint: "Signposting + klarer Abschluss. Zwei Punkte, ein Recap.",
     model: "Two things. First, we'll send a one-pager by Thursday. Second, we'd suggest a 30-minute follow-up next week. So to recap: one-pager Thursday, call next week.",
     technique: "Signposting: Two things. First… Second… So to recap…"
   },
 ];
-

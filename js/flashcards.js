@@ -699,7 +699,7 @@ function renderToneExercise(cards) {
         <strong>🧠 Hedging & Signposting:</strong> Englische Höflichkeit entsteht nicht durch Weichheit, sondern durch Struktur. Softener wie <em>could, might, possibly</em> nehmen Druck raus. Signposting wie <em>two quick points</em> bereitet Zuhörer vor.
       </div>
       ${(c.concept === "hedging" || c.concept === "both") ? `<div class="tip-box" style="background:#eef4ff;border-left-color:#3b6fd4;">
-        <strong>🇬🇧 Sprachhinweis:</strong> Hedging ist besonders typisch für britisches Englisch – dort ist es Standard um Reibung zu vermeiden.
+        <strong>🇬🇧 Sprachhinweis:</strong> Hedging ist besonders typisch für britisches Englisch – dort ist es Standard, um Reibung zu vermeiden.
       </div>` : ""}
       <div class="fc-card" style="gap:10px;margin-bottom:16px;">
         <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);">
@@ -948,7 +948,7 @@ function renderCoach(queue, deck, settings, idx, sessionStart) {
           </label>
         </div>
         <div id="settingsHelp" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);line-height:1.5;">
-          <div style="margin-bottom:6px;"><strong style="color:var(--navy);">✍️ Tippen:</strong> Verstärkt aktiven Recall – du musst dich committen!</div>
+          <div style="margin-bottom:6px;"><strong style="color:var(--navy);">✍️ Tippen:</strong> Verstärkt aktiven Recall – Sie müssen sich festlegen!</div>
           ${deck !== 'w1_phrases' && deck !== 'w1_phrases_review' ? `<div style="margin-bottom:6px;"><strong style="color:var(--navy);">⏱️ Timer:</strong> 5 Sek zum Nachdenken – erzwingt schnellen Abruf.</div>` : ''}
           <div><strong style="color:var(--navy);">🖼️ Emojis:</strong> Dual Coding – visuelle Anker für besseres Erinnern.</div>
         </div>
@@ -986,7 +986,7 @@ function renderCoach(queue, deck, settings, idx, sessionStart) {
         
         ${typingEnabled && !revealed ? `
           <div style="margin-top:12px;">
-            <input type="text" id="coachInput" placeholder="Tippe deine Übersetzung..." 
+            <input type="text" id="coachInput" placeholder="Tippen Sie Ihre Übersetzung..." 
               style="width:100%;padding:12px;border:2px solid var(--border);border-radius:8px;font-size:15px;font-family:var(--font-body);transition:border-color 0.2s;"
               onfocus="this.style.borderColor='var(--primary)'" 
               onblur="this.style.borderColor='var(--border)'"
@@ -1000,7 +1000,7 @@ function renderCoach(queue, deck, settings, idx, sessionStart) {
         ${revealed ? `
           ${typingEnabled && userAnswer ? `
             <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);">
-              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:4px;">Deine Antwort</div>
+              <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:4px;">Ihre Antwort</div>
               <div style="font-size:16px;color:var(--text);padding:8px 12px;background:var(--bg);border-radius:6px;font-family:monospace;">${userAnswer}</div>
             </div>
           ` : ''}
@@ -1767,7 +1767,7 @@ function openWeakCards() {
       <div style="text-align:center;padding:40px;">
         <div style="font-size:48px;margin-bottom:12px;">💪</div>
         <div style="font-family:var(--font-display);font-size:24px;font-weight:900;color:var(--navy);margin-bottom:8px;">Keine schwachen Phrasen!</div>
-        <div style="font-size:14px;color:var(--muted);margin-bottom:20px;">Üben Sie mehr Karten um schwache Phrasen zu identifizieren.</div>
+        <div style="font-size:14px;color:var(--muted);margin-bottom:20px;">Üben Sie mehr Karten, um schwache Phrasen zu identifizieren.</div>
         <button class="btn-secondary" onclick="closeModal()">Schließen</button>
       </div>`;
     return;
@@ -1810,7 +1810,7 @@ function renderSoftenerTrainer(cards) {
       
       <div id="softenerChoices" style="margin: 24px 0;">
         <div style="font-size: 13px; font-weight: 600; color: var(--primary); margin-bottom: 12px; text-align: center;">
-          Welche Softener-Technik möchtest du nutzen?
+          Welche Softener-Technik möchten Sie nutzen?
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
           <button onclick="showSoftener('dank')" class="softener-btn" style="padding: 14px; border: 2px solid var(--border); background: white; border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.2s;">
@@ -1940,7 +1940,7 @@ function renderSoftenerTrainer(cards) {
               Gut gemacht!
             </div>
             <div style="font-size: 16px; color: var(--muted); margin-bottom: 24px;">
-              Du hast alle ${cards.length} Situationen gemeistert!
+              Sie haben alle ${cards.length} Situationen gemeistert!
             </div>
             <div style="background: var(--surface); border-radius: 12px; padding: 20px; margin-bottom: 24px;">
               <div style="font-size: 13px; color: var(--muted); margin-bottom: 8px;">Techniken geübt</div>

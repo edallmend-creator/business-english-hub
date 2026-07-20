@@ -25,7 +25,7 @@ CARD_DECKS.tone_cards = [
   },
   {
     q: "Your proposal doesn't work.",
-    a: "Dein Vorschlag funktioniert nicht.",
+    a: "Ihr Vorschlag funktioniert nicht.",
     options: [
       { text: "I see where you're going, though we might face challenges with X.", correct: true, explanation: "Anerkennung + konstruktive Kritik" },
       { text: "That proposal is completely unrealistic.", correct: false, explanation: "Zu harsch" },
