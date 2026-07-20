@@ -44,7 +44,7 @@
       "id": "false_friends",
       "name": "False Friends",
       "description": "Gefährliche Verwechslungen vermeiden",
-      "csvPath": "data/false-friends.csv",
+      "csvPath": "data/phrases/false-friends.csv",
       "category": "special",
       "week": 1,
       "enabled": true,

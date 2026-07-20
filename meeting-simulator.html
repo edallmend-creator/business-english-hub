@@ -349,11 +349,11 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html#week-3" class="back-button">← Zurück zu Woche 4</a>
+        <a href="index.html#week-4" class="back-button">← Zurück zu Woche 4</a>
 
         <div class="header">
             <h1>🎯 Meeting Simulator</h1>
-            <p>Woche 4: Anwendung - Real-World Szenarien trainieren</p>
+            <p>Woche 4: Anwendung - Real-World-Szenarien trainieren</p>
         </div>
 
         <div class="card" id="simulatorCard">
@@ -373,7 +373,7 @@
             <div class="feedback" id="feedback"></div>
 
             <div class="button-group">
-                <button class="btn btn-primary" id="submitBtn" onclick="checkAnswer()">Antwort Prüfen</button>
+                <button class="btn btn-primary" id="submitBtn" onclick="checkAnswer()">Antwort prüfen</button>
             </div>
         </div>
 
@@ -393,8 +393,8 @@
                     </div>
                 </div>
 
-                <button class="btn btn-primary" onclick="restartSimulator()" style="margin-top: 24px;">Simulator Neustarten</button>
-                <button class="btn btn-secondary" onclick="window.location.href='index.html#week-3'" style="margin-top: 10px;">Zurück zu Woche 4</button>
+                <button class="btn btn-primary" onclick="restartSimulator()" style="margin-top: 24px;">Simulator neu starten</button>
+                <button class="btn btn-secondary" onclick="window.location.href='index.html#week-4'" style="margin-top: 10px;">Zurück zu Woche 4</button>
             </div>
         </div>
     </div>
@@ -583,7 +583,7 @@
 
             document.getElementById('feedback').innerHTML = '';
             document.getElementById('feedback').classList.remove('show', 'correct', 'incorrect');
-            document.getElementById('submitBtn').textContent = 'Antwort Prüfen';
+            document.getElementById('submitBtn').textContent = 'Antwort prüfen';
         }
 
         function selectOption(element, option) {
